@@ -1,0 +1,562 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>1. El Lenguaje de Programación &mdash; documentación de GAP para principiantes - 0.0.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="2. Enteros" href="14-enteros.html" />
+    <link rel="prev" title="GAP para principiantes" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GAP para principiantes
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contenidos:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. El Lenguaje de Programación</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#descripcion-general-del-lenguaje">1.1. Descripción general del Lenguaje</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#estructura-lexica">1.2. Estructura léxica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simbolos">1.3. Símbolos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#espacios-en-blanco">1.4. Espacios en blanco</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#palabras-reservadas">1.5. Palabras Reservadas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#identificadores">1.6. Identificadores</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#isvalididentifier">1.6.1. IsValidIdentifier</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#expresiones">1.7. Expresiones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#variable">1.8. Variable</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#argumentos">1.8.1. Argumentos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#identificador">1.8.2. Identificador</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alcance">1.8.3. Alcance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#isbound-para-una-variable-global">1.8.4. IsBound (para una variable global)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#unbind-desvincular-un-variable">1.8.5. Unbind (desvincular un variable)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="14-enteros.html">2. Enteros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="20-booleanos.html">3. Booleanos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="27-strings.html">4. String</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GAP para principiantes</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">1. </span>El Lenguaje de Programación</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/Notas/04-el-lenguaje-de-programacion.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="el-lenguaje-de-programacion">
+<h1><span class="section-number">1. </span>El Lenguaje de Programación<a class="headerlink" href="#el-lenguaje-de-programacion" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Este capítulo describe el lenguaje de programación <strong>GAP</strong>. Debería permitinos, en principio, predecir el resultado de todas y cada una de las entradas. Para saber de qué estamos hablando, primero tenemos que mirar más de cerca el proceso de interpretación y las diversas representaciones de datos involucradas.</p>
+<div class="section" id="descripcion-general-del-lenguaje">
+<span id="id1"></span><h2><span class="section-number">1.1. </span>Descripción general del Lenguaje<a class="headerlink" href="#descripcion-general-del-lenguaje" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Primero tenemos la entrada a <strong>GAP</strong>, dada como una cadena de caracteres. La forma en que esos caracteres ingresan a <strong>GAP</strong> depende del sistema operativo, por ejemplo, pueden ingresarse en una terminal, pegarse con un mouse en una ventana o leerse desde un archivo. El mecanismo no importa. Esta representación de expresiones por caracteres se denomina representación externa de la expresión. Cada expresión tiene al menos una representación externa que se puede ingresar para obtener exactamente esta expresión.</p>
+<p>La entrada, es decir, la representación externa, se transforma en un proceso llamado lectura en una representación interna. En este punto se analiza la entrada y las entradas que no son representaciones externas legales, de acuerdo con las reglas que se dan a continuación, se rechazan como errores. Por lo general, esas reglas se denominan <span class="underline">sintaxis de un lenguaje de programación</span>.</p>
+<p>La representación interna creada por la lectura se llama expresión o declaración. Más adelante distinguiremos entre esos dos términos. Sin embargo, por ahora los usaremos indistintamente. No importa la forma exacta de la representación interna. Podría ser una cadena de caracteres igual a la representación externa, en cuyo caso la lectura solo necesitaría verificar errores. Podría ser una serie de instrucciones de máquina para el procesador en el que se ejecuta GAP, en cuyo caso la lectura se llamaría más apropiadamente compilación. De hecho, es una estructura en forma de árbol.</p>
+<p>Una vez que se ha leído la entrada, se vuelve a transformar en un proceso llamado evaluación o ejecución. Más adelante también distinguiremos entre esos dos términos, pero por el momento los usaremos indistintamente. El nombre insinúa la naturaleza de este proceso, reemplaza una expresión con el valor de la expresión. Esto funciona de forma recursiva, es decir, para evaluar una expresión, primero se evalúan las subexpresiones y luego se calcula el valor de la expresión a partir de esos valores de acuerdo con las reglas que se indican a continuación. Por lo general, esas reglas se denominan semántica de un lenguaje de programación.</p>
+<p>El resultado de la evaluación se llama, como es lógico, valor. Una vez más, la forma en que dicho valor se representa internamente no importa. De hecho, es nuevamente una estructura en forma de árbol.</p>
+<p>El último proceso se llama impresión. Toma el valor producido por la evaluación y crea una representación externa, es decir, nuevamente una cadena de caracteres. Lo que hagas con esta representación externa depende de nosotros. Puede mirarlo, pegarlo con el mouse en otra ventana o escribirlo en un archivo.</p>
+<p>Veamos un ejemplo para aclarar esto. Suponga que escribe la siguiente cadena de <em>8</em> caracteres</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">1</span> <span class="o">+</span> <span class="nv">2</span> <span class="o">*</span> <span class="nv">3</span><span class="o">;</span>
+</pre></div>
+</div>
+<p><strong>GAP</strong> toma esta representación externa y crea una representación interna en forma de árbol, que podemos representar de la siguiente manera</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  +
+ / \
+1   *
+   / \
+  2   3
+</pre></div>
+</div>
+<p>Luego se evalúa esta expresión. Para hacer esto, GAP primero evalúa la subexpresión derecha <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">3</span></code>. Nuevamente, para hacer esto <strong>GAP</strong> primero evalúa sus subexpresiones <code class="docutils literal notranslate"><span class="pre">2</span></code> y <code class="docutils literal notranslate"><span class="pre">3</span></code>. Sin embargo son tan simples que tienen su propio valor, decimos que son autoevaluables. Una vez hecho esto, la regla para <code class="docutils literal notranslate"><span class="pre">*</span></code> nos dice que el valor es el producto de los valores de las dos subexpresiones, que en este caso es claramente <code class="docutils literal notranslate"><span class="pre">6</span></code>.</p>
+<p>Combinando esto con el valor del operando izquierdo del <code class="docutils literal notranslate"><span class="pre">+</span></code>, que también se autoevalúa, nos da el valor de toda la expresión <code class="docutils literal notranslate"><span class="pre">7</span></code>. Esto luego se imprime, es decir, se convierte en la representación externa que consta del carácter único <code class="docutils literal notranslate"><span class="pre">7</span></code>.</p>
+<p>De esta manera podemos predecir el resultado de cada entrada cuando conocemos las reglas sintácticas que gobiernan el proceso de lectura y las reglas semánticas que nos dicen para cada expresión cómo se calcula su valor en términos de los valores de las subexpresiones.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Las reglas sintácticas se dan en las secciones <a class="reference internal" href="#estructura-lexica"><span class="std std-ref">Estructura léxica</span></a>, 4.3, 4.4, <a class="reference internal" href="#palabras-reservadas"><span class="std std-ref">Palabras Reservadas</span></a> y 4.6,</p></li>
+<li><p>las reglas semánticas se dan en las secciones 4.7, 4.8, 4.11, 4.12, 4.13, 4.14, 4.15, 4.16, 4.17, 4.18, 4.19, 4.20, 4.23 y</p></li>
+<li><p>los capítulos que describen los tipos de datos individuales.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="estructura-lexica">
+<span id="id2"></span><h2><span class="section-number">1.2. </span>Estructura léxica<a class="headerlink" href="#estructura-lexica" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La mayor parte de la entrada de <strong>GAP</strong> consta de secuencias de los siguientes caracteres:</p>
+<blockquote>
+<div><ul>
+<li><p>Dígitos,</p></li>
+<li><p>Letras mayúsculas y minúsculas,</p></li>
+<li><p>SPACE,</p></li>
+<li><p>TAB,</p></li>
+<li><p>NEWLINE,</p></li>
+<li><p>RETURN y</p></li>
+<li><p>los caracteres especiales</p>
+<blockquote>
+<div><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&quot; &#39; ( ) * + , - # . / : ; &lt; = &gt; ~ [ \ ] ^ _ { } !
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>Es posible usar otros caracteres en identificadores escapándolos con barras invertidas, pero no recomendamos usar esta función. Dentro de las cadenas (ver Sección <a class="reference internal" href="#simbolos"><span class="std std-ref">Símbolos</span></a> y capítulo 27) y comentarios (ver 4.4) se permite el juego completo de caracteres admitido por la computadora.</p>
+</div>
+<div class="section" id="simbolos">
+<span id="id3"></span><h2><span class="section-number">1.3. </span>Símbolos<a class="headerlink" href="#simbolos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El proceso de lectura, es decir, de ensamblar la entrada en expresiones, tiene un subproceso, llamado escaneo, que ensambla los caracteres en símbolos.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Un <em>símbolo</em> es una secuencia de caracteres que forman una unidad léxica. El conjunto de símbolos consta de palabras reservadas, identificadores, cadenas, números enteros y símbolos de operador y delimitador.</p></li>
+<li><p>Una <em>palabra reservada</em> es una palabra propia del lenguaje, que se reserva para utilizarse en la escritua del código. (ver <a class="reference internal" href="#palabras-reservadas"><span class="std std-ref">Palabras Reservadas</span></a>).</p></li>
+<li><p>Un <em>identificador</em> es una secuencia de letras, dígitos y guiones bajos (u otros caracteres escapados por barras diagonales inversas) que contiene al menos un no dígito y no es una palabra reservada (ver 4.6).</p></li>
+<li><p>Un <em>número entero</em> es una secuencia de dígitos (ver 14), posiblemente precedidos por caracteres de signo <code class="docutils literal notranslate"><span class="pre">-</span></code> y <code class="docutils literal notranslate"><span class="pre">+</span></code>.</p></li>
+<li><p>Una <em>cadena</em> es una secuencia de caracteres arbitrarios entre comillas dobles (ver 27).</p></li>
+<li><p>Los símbolos de operador y delimitador son</p></li>
+</ul>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="o">+</span> <span class="o">-</span> <span class="o">*</span> <span class="o">/</span> <span class="o">^</span> ~ !<span class="o">.</span> <span class="o">=</span> <span class="o">&lt;&gt;</span> <span class="o">&lt;</span> <span class="o">&lt;=</span> <span class="o">&gt;</span> <span class="o">&gt;=</span> !<span class="p">[</span> <span class="o">:=</span> <span class="o">.</span> <span class="o">..</span> <span class="o">-&gt;</span> <span class="o">,</span> <span class="o">;</span> !<span class="p">{</span> <span class="p">[</span> <span class="p">]</span> <span class="p">{</span> <span class="p">}</span> <span class="p">(</span> <span class="p">)</span> :
+</pre></div>
+</div>
+</div></blockquote>
+<p>Tenga en cuenta también que durante el proceso de escaneo se eliminan todos los espacios en blanco (ver <a class="reference internal" href="#espacios-en-blanco"><span class="std std-ref">Espacios en blanco</span></a>).</p>
+</div>
+<div class="section" id="espacios-en-blanco">
+<span id="id4"></span><h2><span class="section-number">1.4. </span>Espacios en blanco<a class="headerlink" href="#espacios-en-blanco" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los caracteres <code class="docutils literal notranslate"><span class="pre">SPACE</span></code>, <code class="docutils literal notranslate"><span class="pre">TAB</span></code>, <code class="docutils literal notranslate"><span class="pre">NEWLINE</span></code> y <code class="docutils literal notranslate"><span class="pre">RETURN</span></code> se denominan caracteres de espacio en blanco. El espacio en blanco se utiliza según sea necesario para separar símbolos léxicos, como números enteros, identificadores o palabras reservadas. Por ejemplo, <code class="docutils literal notranslate"><span class="pre">Thorondor</span></code> es un identificador único, mientras que <code class="docutils literal notranslate"><span class="pre">Th</span></code> u <code class="docutils literal notranslate"><span class="pre">ondor</span></code> es la palabra reservada o entre los dos identificadores <code class="docutils literal notranslate"><span class="pre">Th</span></code> y <code class="docutils literal notranslate"><span class="pre">ondor</span></code>. Los espacios en blanco pueden aparecer entre dos símbolos, pero no dentro de un símbolo. Dos o más caracteres de espacio en blanco adyacentes equivalen a un solo espacio en blanco. Aparte del papel de separador de símbolos, los espacios en blanco son insignificantes. Los caracteres de espacio en blanco también pueden aparecer dentro de una cadena, donde son significativos. Los caracteres de espacio en blanco también deben usarse libremente para mejorar la legibilidad.</p>
+<p>Un comentario comienza con el carácter <code class="docutils literal notranslate"><span class="pre">#</span></code>, que a veces se denomina agudo o sombreado, y continúa hasta el final de la línea en la que aparece el carácter de comentario. El comentario completo, incluidos <code class="docutils literal notranslate"><span class="pre">#</span></code> y el carácter <code class="docutils literal notranslate"><span class="pre">NEWLINE</span></code> se trata como un solo espacio en blanco. Dentro de una cadena, el carácter de comentario <code class="docutils literal notranslate"><span class="pre">#</span></code> pierde su función y es solo un carácter ordinario.</p>
+<p>Por ejemplo, la siguiente declaración</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="nv">i</span><span class="o">&lt;</span><span class="nv">0</span> <span class="k">then</span> <span class="nv">a</span><span class="o">:=-</span><span class="nv">i</span><span class="o">;</span><span class="k">else</span> <span class="nv">a</span><span class="o">:=</span><span class="nv">i</span><span class="o">;</span><span class="k">fi</span><span class="o">;</span>
+</pre></div>
+</div>
+<p>es equivalente a</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="nv">i</span> <span class="o">&lt;</span> <span class="nv">0</span> <span class="k">then</span>    <span class="c1"># if i is negative</span>
+    <span class="nv">a</span> <span class="o">:=</span> <span class="o">-</span><span class="nv">i</span><span class="o">;</span>     <span class="c1"># take its additive inverse</span>
+<span class="k">else</span>             <span class="c1"># otherwise</span>
+    <span class="nv">a</span> <span class="o">:=</span> <span class="nv">i</span><span class="o">;</span>      <span class="c1"># take itself</span>
+<span class="k">fi</span><span class="o">;</span>
+</pre></div>
+</div>
+<p>(que por cierto muestra que es posible escribir comentarios superfluos). Sin embargo, la primera declaración <em>no</em> es equivalente a</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">ifi</span><span class="o">&lt;</span><span class="nv">0thena</span><span class="o">:=-</span><span class="nv">i</span><span class="o">;</span><span class="nv">elsea</span><span class="o">:=</span><span class="nv">i</span><span class="o">;</span><span class="k">fi</span><span class="o">;</span>
+</pre></div>
+</div>
+<p>ya que la palabra reservada <code class="docutils literal notranslate"><span class="pre">if</span></code> debe estar separada del identificador <code class="docutils literal notranslate"><span class="pre">i</span></code> por un espacio en blanco, y de manera similar, <code class="docutils literal notranslate"><span class="pre">then</span></code> y <code class="docutils literal notranslate"><span class="pre">a</span></code>, y <code class="docutils literal notranslate"><span class="pre">else</span></code> y <code class="docutils literal notranslate"><span class="pre">a</span></code> deben estar separados.</p>
+</div>
+<div class="section" id="palabras-reservadas">
+<span id="id5"></span><h2><span class="section-number">1.5. </span>Palabras Reservadas<a class="headerlink" href="#palabras-reservadas" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Las palabras reservadas se utilizan para denotar operaciones especiales o forman parte de declaraciones. No deben utilizarse como identificadores. La lista de palabras reservadas está contenida en el componente <code class="docutils literal notranslate"><span class="pre">GAPInfo.Keywords</span></code> del registro <code class="docutils literal notranslate"><span class="pre">GAPInfo</span></code>. Mostraremos cómo imprimirlo en una bonita tabla, demostrando al mismo tiempo algunas técnicas de manipulación de listas:</p>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-text">palabras reservadas</span><a class="headerlink" href="#id6" title="Enlace permanente a este código fuente">¶</a></div>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">keys</span><span class="o">:=</span><span class="nv">SortedList</span><span class="p">(</span> <span class="nv">GAPInfo</span><span class="o">.</span><span class="nv">Keywords</span> <span class="p">)</span><span class="o">;;</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">l</span><span class="o">:=</span><span class="nv">Length</span><span class="p">(</span> <span class="nv">keys</span> <span class="p">)</span><span class="o">;;</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">arr</span><span class="o">:=</span> <span class="nv">List</span><span class="p">(</span> <span class="p">[</span> <span class="nv">0</span> <span class="o">..</span> <span class="nv">Int</span><span class="p">(</span> <span class="nv">l</span><span class="o">/</span><span class="nv">4</span> <span class="p">)</span><span class="o">-</span><span class="nv">1</span> <span class="p">]</span><span class="o">,</span> <span class="nv">i</span><span class="o">-&gt;</span> <span class="nv">keys</span><span class="p">{</span> <span class="nv">4</span><span class="o">*</span><span class="nv">i</span> <span class="o">+</span> <span class="p">[</span> <span class="nv">1</span> <span class="o">..</span> <span class="nv">4</span> <span class="p">]</span> <span class="p">}</span> <span class="p">)</span><span class="o">;;</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="k">if</span> <span class="nv">l</span> <span class="ow">mod</span> <span class="nv">4</span> <span class="o">&lt;&gt;</span> <span class="nv">0</span> <span class="k">then</span>
+<span class="o">&gt;</span>     <span class="nv">Add</span><span class="p">(</span> <span class="nv">arr</span><span class="o">,</span> <span class="nv">keys</span><span class="p">{[</span> <span class="nv">4</span><span class="o">*</span><span class="nv">Int</span><span class="p">(</span><span class="nv">l</span><span class="o">/</span><span class="nv">4</span><span class="p">)</span> <span class="o">+</span> <span class="nv">1</span> <span class="o">..</span> <span class="nv">l</span> <span class="p">]}</span> <span class="p">)</span><span class="o">;</span>
+<span class="o">&gt;</span> <span class="k">fi</span><span class="o">;</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">Length</span><span class="p">(</span> <span class="nv">keys</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">35</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">PrintArray</span><span class="p">(</span> <span class="nv">arr</span> <span class="p">)</span><span class="o">;</span>
+<span class="p">[</span> <span class="p">[</span>         <span class="k">Assert</span><span class="o">,</span>           <span class="k">Info</span><span class="o">,</span>        <span class="k">IsBound</span><span class="o">,</span>           <span class="k">QUIT</span> <span class="p">]</span><span class="o">,</span>
+  <span class="p">[</span>  <span class="k">TryNextMethod</span><span class="o">,</span>         <span class="k">Unbind</span><span class="o">,</span>            <span class="ow">and</span><span class="o">,</span>         <span class="nv">atomic</span> <span class="p">]</span><span class="o">,</span>
+  <span class="p">[</span>          <span class="k">break</span><span class="o">,</span>       <span class="k">continue</span><span class="o">,</span>             <span class="k">do</span><span class="o">,</span>           <span class="k">elif</span> <span class="p">]</span><span class="o">,</span>
+  <span class="p">[</span>           <span class="k">else</span><span class="o">,</span>            <span class="k">end</span><span class="o">,</span>          <span class="no">false</span><span class="o">,</span>             <span class="k">fi</span> <span class="p">]</span><span class="o">,</span>
+  <span class="p">[</span>            <span class="k">for</span><span class="o">,</span>       <span class="k">function</span><span class="o">,</span>             <span class="k">if</span><span class="o">,</span>             <span class="ow">in</span> <span class="p">]</span><span class="o">,</span>
+  <span class="p">[</span>          <span class="k">local</span><span class="o">,</span>            <span class="ow">mod</span><span class="o">,</span>            <span class="ow">not</span><span class="o">,</span>             <span class="k">od</span> <span class="p">]</span><span class="o">,</span>
+  <span class="p">[</span>             <span class="ow">or</span><span class="o">,</span>           <span class="k">quit</span><span class="o">,</span>       <span class="nv">readonly</span><span class="o">,</span>      <span class="nv">readwrite</span> <span class="p">]</span><span class="o">,</span>
+  <span class="p">[</span>            <span class="k">rec</span><span class="o">,</span>         <span class="k">repeat</span><span class="o">,</span>         <span class="k">return</span><span class="o">,</span>           <span class="k">then</span> <span class="p">]</span><span class="o">,</span>
+  <span class="p">[</span>           <span class="no">true</span><span class="o">,</span>          <span class="k">until</span><span class="o">,</span>          <span class="k">while</span> <span class="p">]</span> <span class="p">]</span>
+<span class="nv">gap</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Tenga en cuenta que (casi) todas las palabras reservadas están escritas en minúsculas y distinguen entre mayúsculas y minúsculas. Por ejemplo, <code class="docutils literal notranslate"><span class="pre">else</span></code> es una palabra reservada; <code class="docutils literal notranslate"><span class="pre">Else</span></code>, <code class="docutils literal notranslate"><span class="pre">eLsE</span></code>, <code class="docutils literal notranslate"><span class="pre">ELSE</span></code> y así sucesivamente son identificadores ordinarios. Las palabras reservada no deben contener espacios en blanco, por ejemplo, el <code class="docutils literal notranslate"><span class="pre">if</span></code> no es lo mismo que <code class="docutils literal notranslate"><span class="pre">elif</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>varios tokens de la lista de palabras reservadas anterior pueden parecer identificadores normales que representan funciones o literales de varios tipos, pero en realidad se implementan como palabras reservadas por razones técnicas. La única consecuencia de esto es que esos identificadores no se pueden reasignar y, en realidad, no tienen objetos de función vinculados a ellos, que podrían asignarse a otras variables o pasarse a funciones. Estas palabras reservadas son <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">Assert</span> <span class="pre">(7.5.3)</span></code>, <code class="docutils literal notranslate"><span class="pre">IsBound</span> <span class="pre">(4.8.1)</span></code>, <code class="docutils literal notranslate"><span class="pre">Unbind</span> <span class="pre">(4.8.2)</span></code>, <code class="docutils literal notranslate"><span class="pre">Info</span> <span class="pre">(7.4.5)</span></code> y <code class="docutils literal notranslate"><span class="pre">TryNextMethod</span> <span class="pre">(78.4.1)</span></code>.</p>
+</div>
+<p>Las palabras reservadas atomic, readonly, readwrite no se utilizan en este momento. Están reservados para la versión futura de <strong>GAP</strong> para evitar su uso accidental como identificadores.</p>
+</div>
+<div class="section" id="identificadores">
+<span id="id7"></span><h2><span class="section-number">1.6. </span>Identificadores<a class="headerlink" href="#identificadores" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Un <em>identificador</em> se usa para referirse a una variable (ver 4.8). Un identificador generalmente consta de letras, dígitos, guiones bajos <code class="docutils literal notranslate"><span class="pre">_</span></code> y caracteres «arroba» <code class="docutils literal notranslate"><span class="pre">&#64;</span></code>, y debe contener al menos un caracter que no sea un dígito. Un identificador termina con el primer carácter que no está en esta clase. Tenga en cuenta que el carácter «arroba» <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> se utiliza para implementar espacios de nombres; consulte la Sección 4.10 para obtener más detalles.</p>
+<p>Ejemplos de identificadores válidos son</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span>           <span class="n">foo</span>         <span class="n">aLongIdentifier</span>
+<span class="n">hello</span>       <span class="n">Hello</span>       <span class="n">HELLO</span>
+<span class="n">x100</span>        <span class="mi">100</span><span class="n">x</span>        <span class="n">_100</span>
+<span class="n">some_people_prefer_underscores_to_separate_words</span>
+<span class="n">WePreferMixedCaseToSeparateWords</span>
+<span class="n">abc</span><span class="nd">@def</span>
+</pre></div>
+</div>
+<p>Tenga en cuenta que el caso es significativo, por lo que se distinguen los tres identificadores de la segunda línea.</p>
+<p>La barra invertida <code class="docutils literal notranslate"><span class="pre">\</span></code> se puede utilizar para incluir otros caracteres en los identificadores; una barra invertida seguida de un carácter es equivalente al carácter, excepto que esta secuencia de escape se considera una letra normal. Por ejemplo</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">G</span>\<span class="p">(</span><span class="mi">2</span>\<span class="p">,</span><span class="mi">5</span>\<span class="p">)</span>
+</pre></div>
+</div>
+<p>es un identificador, no una llamada a una función <code class="docutils literal notranslate"><span class="pre">G</span></code>.</p>
+<p>Un identificador que comienza con una barra invertida nunca es una palabra reservada, por lo que, por ejemplo, <code class="docutils literal notranslate"><span class="pre">\*</span></code> y <code class="docutils literal notranslate"><span class="pre">\mod</span></code> son identificadores.</p>
+<p>La longitud de los identificadores no está limitada, sin embargo, solo los primeros <code class="docutils literal notranslate"><span class="pre">1023</span></code> caracteres son significativos. La secuencia de escape <code class="docutils literal notranslate"><span class="pre">\NEWLINE</span></code> se ignora, lo que permite dividir identificadores largos en varias líneas.</p>
+<div class="section" id="isvalididentifier">
+<span id="id8"></span><h3><span class="section-number">1.6.1. </span>IsValidIdentifier<a class="headerlink" href="#isvalididentifier" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>La función <code class="docutils literal notranslate"><span class="pre">IsValidIdentifier(</span> <span class="pre">str</span> <span class="pre">)</span></code> devuelve <code class="docutils literal notranslate"><span class="pre">true</span></code> si la cadena <code class="docutils literal notranslate"><span class="pre">str</span></code> formaría un identificador válido que consta de letras, dígitos y guiones bajos; de lo contrario, devuelve <code class="docutils literal notranslate"><span class="pre">false</span></code>. No comprueba si str contiene caracteres escapados por una barra invertida <code class="docutils literal notranslate"><span class="pre">\</span></code>.</p>
+<p>Tenga en cuenta que el carácter «arroba» se utiliza para implementar espacios de nombres para variables globales en paquetes. Consulte 4.10 para obtener más detalles.</p>
+</div>
+</div>
+<div class="section" id="expresiones">
+<span id="id9"></span><h2><span class="section-number">1.7. </span>Expresiones<a class="headerlink" href="#expresiones" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Una expresión es una construcción que se evalúa como un valor. Las construcciones sintácticas que se ejecutan para producir un efecto secundario y no devuelven ningún valor se denominan declaraciones (ver 4.14). Las expresiones aparecen como el lado derecho de las asignaciones (ver 4.15), como argumentos reales en llamadas a funciones (ver 4.11) y en declaraciones.</p>
+<p>Tenga en cuenta que una expresión no es lo mismo que un valor. Por ejemplo, <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">11</span></code> es una expresión, cuyo valor es el entero <code class="docutils literal notranslate"><span class="pre">12</span></code>. La representación externa de este entero es la secuencia de caracteres <code class="docutils literal notranslate"><span class="pre">12</span></code>, es decir, esta secuencia se emite si se imprime el entero. Esta secuencia es otra expresión cuyo valor es el entero <code class="docutils literal notranslate"><span class="pre">12</span></code>. El intérprete realiza el proceso de encontrar el valor de una expresión y se denomina evaluación de la expresión.</p>
+<p>Las variables, llamadas a funciones y literales de enteros, permutación, cadena, función, lista y registro (ver 4.8, 4.11, 14, 42, 27, 4.23, 21, 29) son los casos más simples de expresiones.</p>
+<p>Las expresiones, por ejemplo, las expresiones simples mencionadas anteriormente, se pueden combinar con los operadores para formar expresiones más complejas. Por supuesto, esas expresiones se pueden combinar con los operadores para formar expresiones aún más complejas. Los operadores se dividen en tres clases.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Los operadores comparación (ver 4.12 y 30.6). son</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 87%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">=</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">in</span></code></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Los operadores aritméticos (ver 4.13) son</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">+</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">-</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">/</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mod</span></code></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">^</span></code></p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Los operadores lógicos (ver 20.4) son</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">not</span></code></p></td>
+<td><p><a class="reference internal" href="20-booleanos.html#not"><span class="std std-ref">Negación Lógica</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">and</span></code></p></td>
+<td><p><a class="reference internal" href="20-booleanos.html#and"><span class="std std-ref">Conjunción Lógica</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">or</span></code></p></td>
+<td><p><a class="reference internal" href="20-booleanos.html#or"><span class="std std-ref">Disjunción Lógica</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>El siguiente ejemplo muestra una expresión muy simple con valor <code class="docutils literal notranslate"><span class="pre">4</span></code> y una expresión más compleja.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">2</span> <span class="o">*</span> <span class="nv">2</span><span class="o">;</span>
+<span class="nv">4</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">2</span> <span class="o">*</span> <span class="nv">2</span> <span class="o">+</span> <span class="nv">9</span> <span class="o">=</span> <span class="nv">Fibonacci</span><span class="p">(</span><span class="nv">7</span><span class="p">)</span> <span class="ow">and</span> <span class="nv">Fibonacci</span><span class="p">(</span><span class="nv">13</span><span class="p">)</span> <span class="ow">in</span> <span class="nv">Primes</span><span class="o">;</span>
+<span class="no">true</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="variable">
+<span id="id10"></span><h2><span class="section-number">1.8. </span>Variable<a class="headerlink" href="#variable" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Una variable es una ubicación en un programa GAP que tiene asignado un valor. Decimos que la variable está vinculada a este valor. Si se consulta una variable, se devuelve con este valor.</p>
+<div class="section" id="argumentos">
+<span id="id11"></span><h3><span class="section-number">1.8.1. </span>Argumentos<a class="headerlink" href="#argumentos" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>GAP nos permite trabajar con distintos tipos de variables. Una clase especial de variables es la clase de <a class="reference internal" href="#argumentos">argumentos</a> de funciones. Se comportan de manera similar a otras variables, excepto que están vinculadas al valor de los argumentos reales en una llamada de función, que veremos en capítulos más delante.</p>
+</div>
+<div class="section" id="identificador">
+<span id="id12"></span><h3><span class="section-number">1.8.2. </span>Identificador<a class="headerlink" href="#identificador" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Cada variable tiene un nombre que también se llama su <a class="reference internal" href="#identificador">identificador</a>. Esto se debe a que en un ámbito dado un <a class="reference internal" href="#identificador">identificador</a> identifica una variable única.</p>
+<p>Por ejemplo, si realizamos una operación <code class="docutils literal notranslate"><span class="pre">7+5;</span></code> esto nos mostrará por consola <code class="docutils literal notranslate"><span class="pre">12</span></code>. Sin embargo, si queremos utilizar este valor, tenemos que almacenarlo en una <a class="reference internal" href="#variable">variable</a> que llamaremos «<code class="docutils literal notranslate"><span class="pre">x</span></code>», cuya entidad básica almacenará el calculo <code class="docutils literal notranslate"><span class="pre">7+5;</span></code>. En el caso de GAP, esto se realiza con <code class="docutils literal notranslate"><span class="pre">:=</span></code> finalizando la sentencia con <code class="docutils literal notranslate"><span class="pre">;</span></code>. Luego, si consultamos el valor de la variable <code class="docutils literal notranslate"><span class="pre">x</span></code> obtenemos <code class="docutils literal notranslate"><span class="pre">12</span></code>. Si yo asigno un nuevo valor, esta varible se modifica. Veamos todo esto en el siguiente ejemplo.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span>┌───────┐   <span class="nv">GAP</span> <span class="nv">4</span><span class="o">.</span><span class="nv">10</span><span class="o">.</span><span class="nv">2</span> <span class="nv">of</span> <span class="nv">19</span><span class="o">-</span><span class="nv">Jun</span><span class="o">-</span><span class="nv">2019</span>
+│  <span class="nv">GAP</span>  │   <span class="nv">https</span>:<span class="o">//</span><span class="nv">www</span><span class="o">.</span><span class="nv">gap</span><span class="o">-</span><span class="nv">system</span><span class="o">.</span><span class="nv">org</span>
+└───────┘   <span class="nv">Architecture</span>: <span class="nv">i686</span><span class="o">-</span><span class="nv">pc</span><span class="o">-</span><span class="nv">cygwin</span><span class="o">-</span><span class="nv">default32</span><span class="o">-</span><span class="nv">kv3</span>
+<span class="nv">Configuration</span>:  <span class="nv">gmp</span> <span class="nv">6</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">2</span><span class="o">,</span> <span class="nv">readline</span>
+<span class="nv">Loading</span> <span class="nv">the</span> <span class="nv">library</span> <span class="ow">and</span> <span class="nv">packages</span> <span class="o">...</span>
+<span class="nv">Packages</span>: <span class="nv">AClib</span> <span class="nv">1</span><span class="o">.</span><span class="nv">3</span><span class="o">.</span><span class="nv">1</span><span class="o">,</span> <span class="nv">Alnuth</span> <span class="nv">3</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">1</span><span class="o">,</span> <span class="nv">AtlasRep</span> <span class="nv">2</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">0</span><span class="o">,</span> <span class="nv">AutoDoc</span> <span class="nv">2019</span><span class="o">.</span><span class="nv">05</span><span class="o">.</span><span class="nv">20</span><span class="o">,</span> <span class="nv">AutPGrp</span> <span class="nv">1</span><span class="o">.</span><span class="nv">10</span><span class="o">,</span> <span class="nv">Browse</span> <span class="nv">1</span><span class="o">.</span><span class="nv">8</span><span class="o">.</span><span class="nv">8</span><span class="o">,</span>
+          <span class="nv">CRISP</span> <span class="nv">1</span><span class="o">.</span><span class="nv">4</span><span class="o">.</span><span class="nv">4</span><span class="o">,</span> <span class="nv">Cryst</span> <span class="nv">4</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">19</span><span class="o">,</span> <span class="nv">CrystCat</span> <span class="nv">1</span><span class="o">.</span><span class="nv">1</span><span class="o">.</span><span class="nv">9</span><span class="o">,</span> <span class="nv">CTblLib</span> <span class="nv">1</span><span class="o">.</span><span class="nv">2</span><span class="o">.</span><span class="nv">2</span><span class="o">,</span> <span class="nv">FactInt</span> <span class="nv">1</span><span class="o">.</span><span class="nv">6</span><span class="o">.</span><span class="nv">2</span><span class="o">,</span> <span class="nv">FGA</span> <span class="nv">1</span><span class="o">.</span><span class="nv">4</span><span class="o">.</span><span class="nv">0</span><span class="o">,</span>
+          <span class="nv">Forms</span> <span class="nv">1</span><span class="o">.</span><span class="nv">2</span><span class="o">.</span><span class="nv">5</span><span class="o">,</span> <span class="nv">GAPDoc</span> <span class="nv">1</span><span class="o">.</span><span class="nv">6</span><span class="o">.</span><span class="nv">2</span><span class="o">,</span> <span class="nv">genss</span> <span class="nv">1</span><span class="o">.</span><span class="nv">6</span><span class="o">.</span><span class="nv">5</span><span class="o">,</span> <span class="nv">IO</span> <span class="nv">4</span><span class="o">.</span><span class="nv">6</span><span class="o">.</span><span class="nv">0</span><span class="o">,</span> <span class="nv">IRREDSOL</span> <span class="nv">1</span><span class="o">.</span><span class="nv">4</span><span class="o">,</span> <span class="nv">LAGUNA</span> <span class="nv">3</span><span class="o">.</span><span class="nv">9</span><span class="o">.</span><span class="nv">3</span><span class="o">,</span> <span class="nv">orb</span> <span class="nv">4</span><span class="o">.</span><span class="nv">8</span><span class="o">.</span><span class="nv">2</span><span class="o">,</span>
+          <span class="nv">Polenta</span> <span class="nv">1</span><span class="o">.</span><span class="nv">3</span><span class="o">.</span><span class="nv">8</span><span class="o">,</span> <span class="nv">Polycyclic</span> <span class="nv">2</span><span class="o">.</span><span class="nv">14</span><span class="o">,</span> <span class="nv">PrimGrp</span> <span class="nv">3</span><span class="o">.</span><span class="nv">3</span><span class="o">.</span><span class="nv">2</span><span class="o">,</span> <span class="nv">RadiRoot</span> <span class="nv">2</span><span class="o">.</span><span class="nv">8</span><span class="o">,</span> <span class="nv">recog</span> <span class="nv">1</span><span class="o">.</span><span class="nv">3</span><span class="o">.</span><span class="nv">2</span><span class="o">,</span> <span class="nv">ResClasses</span> <span class="nv">4</span><span class="o">.</span><span class="nv">7</span><span class="o">.</span><span class="nv">2</span><span class="o">,</span>
+          <span class="nv">SmallGrp</span> <span class="nv">1</span><span class="o">.</span><span class="nv">3</span><span class="o">,</span> <span class="nv">Sophus</span> <span class="nv">1</span><span class="o">.</span><span class="nv">24</span><span class="o">,</span> <span class="nv">SpinSym</span> <span class="nv">1</span><span class="o">.</span><span class="nv">5</span><span class="o">.</span><span class="nv">1</span><span class="o">,</span> <span class="nv">TomLib</span> <span class="nv">1</span><span class="o">.</span><span class="nv">2</span><span class="o">.</span><span class="nv">8</span><span class="o">,</span> <span class="nv">TransGrp</span> <span class="nv">2</span><span class="o">.</span><span class="nv">0</span><span class="o">.</span><span class="nv">4</span><span class="o">,</span> <span class="nv">utils</span> <span class="nv">0</span><span class="o">.</span><span class="nv">63</span>
+ <span class="nv">Try</span> &#39;??<span class="nv">help</span>&#39; <span class="k">for</span> <span class="nv">help</span><span class="o">.</span> <span class="nv">See</span> <span class="nv">also</span> &#39;?<span class="nv">copyright</span>&#39;<span class="o">,</span> &#39;?<span class="nv">cite</span>&#39; <span class="ow">and</span> &#39;?<span class="nv">authors</span>&#39;
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">7</span><span class="o">+</span><span class="nv">5</span><span class="o">;</span>
+<span class="nv">12</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">x</span><span class="o">:=</span><span class="nv">7</span><span class="o">+</span><span class="nv">5</span><span class="o">;</span>
+<span class="nv">12</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">x</span><span class="o">;</span>
+<span class="nv">12</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">x</span><span class="o">:=</span><span class="nv">15</span><span class="o">;</span>
+<span class="nv">15</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">x</span><span class="o">;</span>
+<span class="nv">15</span>
+<span class="nv">gap</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="alcance">
+<span id="id13"></span><h3><span class="section-number">1.8.3. </span>Alcance<a class="headerlink" href="#alcance" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Un <a class="reference internal" href="#alcance">alcance</a> es una parte léxica de un texto de programa.</p>
+<ul class="simple">
+<li><p>Existe el <strong>alcance global</strong> que encierra todo el texto del programa, y ​​hay ámbitos locales que van desde la palabra clave de función, que denota el comienzo de una definición de función, hasta la palabra clave final correspondiente.</p></li>
+<li><p>Un <strong>alcance local</strong> introduce nuevas variables, cuyos identificadores se dan en la lista de argumentos formales y la declaración local de la función.</p></li>
+</ul>
+<p>El uso de un <a class="reference internal" href="#identificador">identificador</a> en un texto de programa se refiere a la variable en el ámbito más interno que tiene este <a class="reference internal" href="#identificador">identificador</a> como su nombre.</p>
+<p>Debido a que este mapeo de identificadores a variables se realiza cuando se lee el programa, no cuando se ejecuta, se dice que GAP tiene alcance léxico. El siguiente ejemplo muestra cómo un identificador se refiere a diferentes variables en diferentes puntos del texto del programa.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">g</span> <span class="o">:=</span> <span class="nv">0</span><span class="o">;</span> <span class="c1"># variable global g</span>
+<span class="nv">x</span> <span class="o">:=</span> <span class="k">function</span> <span class="p">(</span> <span class="nv">a</span><span class="o">,</span> <span class="nv">b</span><span class="o">,</span> <span class="nv">c</span> <span class="p">)</span>
+    <span class="k">local</span> <span class="nv">y</span><span class="o">;</span>
+    <span class="nv">g</span> <span class="o">:=</span> <span class="nv">c</span><span class="o">;</span> <span class="c1"># c se refiere al argumento c de la función x</span>
+    <span class="nv">y</span> <span class="o">:=</span> <span class="k">function</span> <span class="p">(</span> <span class="nv">y</span> <span class="p">)</span>
+        <span class="k">local</span> <span class="nv">d</span><span class="o">,</span> <span class="nv">e</span><span class="o">,</span> <span class="nv">f</span><span class="o">;</span>
+        <span class="nv">d</span> <span class="o">:=</span> <span class="nv">y</span><span class="o">;</span> <span class="c1"># y se refiere al argumento y de la función y</span>
+        <span class="nv">e</span> <span class="o">:=</span> <span class="nv">b</span><span class="o">;</span> <span class="c1"># b se refiere al argumento b de la función x</span>
+        <span class="nv">f</span> <span class="o">:=</span> <span class="nv">g</span><span class="o">;</span> <span class="c1"># g se refiere a la variable global g</span>
+        <span class="k">return</span> <span class="nv">d</span> <span class="o">+</span> <span class="nv">e</span> <span class="o">+</span> <span class="nv">f</span><span class="o">;</span>
+    <span class="k">end</span><span class="o">;</span>
+    <span class="k">return</span> <span class="nv">y</span><span class="p">(</span> <span class="nv">a</span> <span class="p">)</span><span class="o">;</span> <span class="c1"># y se refiere a la variable local y de la función x</span>
+<span class="k">end</span><span class="o">;</span>
+</pre></div>
+</div>
+<p>Es importante señalar que el concepto de variable en GAP es bastante diferente del concepto de variable en la mayoría de los lenguajes de programación compilados.</p>
+<p>En esos lenjuajes, una variable denota un bloque de memoria. El valor de la variable se almacena en este bloque. Entonces, en esos lenguajes, dos variables pueden tener el mismo valor, pero nunca pueden tener valores idénticos, porque denotan diferentes bloques de memoria. Tenga en cuenta que algunos lenguajes tienen el concepto de argumento de referencia. Parece como si dicho argumento y la variable utilizada en la llamada a la función real tuvieran el mismo valor, ya que cambiar el valor del argumento también cambia el valor de la variable utilizada en la llamada a la función real. Pero esto no es así; el argumento de referencia es en realidad un puntero a la variable utilizada en la llamada a la función real, y es el compilador el que inserta suficiente magia para hacer que el puntero sea invisible. Para que esto funcione, el compilador necesita suficiente información para calcular la cantidad de memoria necesaria para cada variable en un programa, que está disponible en las declaraciones.</p>
+<p>En GAP, por otro lado, cada variable solo apunta a un valor, y diferentes variables pueden compartir el mismo valor.</p>
+</div>
+<div class="section" id="isbound-para-una-variable-global">
+<h3><span class="section-number">1.8.4. </span>IsBound (para una variable global)<a class="headerlink" href="#isbound-para-una-variable-global" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>La función <code class="docutils literal notranslate"><span class="pre">IsBound(ident)</span></code> devuelve <code class="docutils literal notranslate"><span class="pre">true</span></code> si la variable <code class="docutils literal notranslate"><span class="pre">ident</span></code> apunta a un valor y <code class="docutils literal notranslate"><span class="pre">false</span></code> en caso contrario.</p>
+<p>Para registros y listas, <code class="docutils literal notranslate"><span class="pre">IsBound</span></code> se puede usar para verificar si los componentes o las entradas, respectivamente, están vinculados.</p>
+</div>
+<div class="section" id="unbind-desvincular-un-variable">
+<span id="unbind"></span><h3><span class="section-number">1.8.5. </span>Unbind (desvincular un variable)<a class="headerlink" href="#unbind-desvincular-un-variable" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>La función <code class="docutils literal notranslate"><span class="pre">Unbind(ident)</span></code> elimina el identificador <code class="docutils literal notranslate"><span class="pre">ident</span></code>. Si no hay otra variable que apunte al mismo valor que <code class="docutils literal notranslate"><span class="pre">ident</span></code>, este valor será eliminado por la siguiente recolección de basura. Por lo tanto, <code class="docutils literal notranslate"><span class="pre">Unbind</span></code> se puede utilizar para deshacerse de objetos grandes no deseados.</p>
+<p>En el caso de registros y listas, se puede utilizar <a class="reference internal" href="#unbind">Unbind</a> para eliminar componentes o entradas, respectivamente (ver Capítulos 29 y 21).</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="14-enteros.html" class="btn btn-neutral float-right" title="2. Enteros" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="GAP para principiantes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Derechos de autor 2021, Ferreira, Juan David.
+
+    </p>
+  </div>
+    
+    
+    
+    Construido con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
