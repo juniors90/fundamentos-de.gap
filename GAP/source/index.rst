@@ -8,5 +8,7 @@ GAP para principiantes
 
    Notas/04-el-lenguaje-de-programacion
    Notas/14-enteros
+   Notas/17-racionales
+   Notas/18-ciclotomics
    Notas/20-booleanos
    Notas/27-strings
