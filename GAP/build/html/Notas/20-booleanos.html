@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>5. Booleanos &mdash; documentación de GAP para principiantes - 0.0.1</title>
+  <title>6. Booleanos &mdash; documentación de GAP para principiantes - 0.0.1</title>
   
 
   
@@ -42,8 +42,8 @@
     
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
-    <link rel="next" title="6. String" href="27-strings.html" />
-    <link rel="prev" title="4. Ciclotómicas" href="18-ciclotomics.html" /> 
+    <link rel="next" title="7. String" href="27-strings.html" />
+    <link rel="prev" title="5. Números Ciclotómicos" href="18-ciclotomics.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -91,32 +91,33 @@
               <p class="caption"><span class="caption-text">Contenidos:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="04-el-lenguaje-de-programacion.html">1. El Lenguaje de Programación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="14-enteros.html">2. Enteros</a></li>
-<li class="toctree-l1"><a class="reference internal" href="17-racionales.html">3. Racionales</a></li>
-<li class="toctree-l1"><a class="reference internal" href="18-ciclotomics.html">4. Ciclotómicas</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Booleanos</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#isbool-filter">5.1. IsBool (Filter)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#isbool">5.1.1. IsBool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12-objetos-y-elementos.html">2. Objetos y Elementos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14-enteros.html">3. Enteros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17-racionales.html">4. Números Racionales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18-ciclotomics.html">5. Números Ciclotómicos</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Booleanos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#isbool-filter">6.1. IsBool (Filter)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#isbool">6.1.1. IsBool</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#fail-variable">5.2. Fail (Variable)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#fail">5.2.1. fail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fail-variable">6.2. Fail (Variable)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fail">6.2.1. fail</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#comparacion-de-booleanos">5.3. Comparación de Booleanos</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#igualdad-y-desigualdad-de-booleans">5.3.1. Igualdad y desigualdad de Booleans</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ordenacion-de-booleanos">5.3.2. Ordenación de Booleanos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#comparacion-de-booleanos">6.3. Comparación de Booleanos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#igualdad-y-desigualdad-de-booleans">6.3.1. Igualdad y desigualdad de Booleans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ordenacion-de-booleanos">6.3.2. Ordenación de Booleanos</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#operaciones-para-booleanos">5.4. Operaciones para Booleanos</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#disjuncion-logica">5.4.1. Disjunción Lógica</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#conjuncion-logica">5.4.2. Conjunción Lógica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#operaciones-para-booleanos">6.4. Operaciones para Booleanos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#disjuncion-logica">6.4.1. Disjunción Lógica</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conjuncion-logica">6.4.2. Conjunción Lógica</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#negacion-logica">5.5. Negación Lógica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#negacion-logica">6.5. Negación Lógica</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="27-strings.html">6. String</a></li>
+<li class="toctree-l1"><a class="reference internal" href="27-strings.html">7. String</a></li>
 </ul>
 
             
@@ -165,7 +166,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">5. </span>Booleanos</li>
+      <li><span class="section-number">6. </span>Booleanos</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -185,13 +186,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="booleanos">
-<h1><span class="section-number">5. </span>Booleanos<a class="headerlink" href="#booleanos" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1><span class="section-number">6. </span>Booleanos<a class="headerlink" href="#booleanos" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>Los dos valores booleanos principales son <code class="docutils literal notranslate"><span class="pre">true</span></code> y <code class="docutils literal notranslate"><span class="pre">false</span></code>. Representan los valores lógicos del mismo nombre. Aparecen como valores de las condiciones en sentencias <code class="docutils literal notranslate"><span class="pre">if</span></code> y bucles <code class="docutils literal notranslate"><span class="pre">while</span></code>. Los booleanos también son importantes como valores de retorno de <code class="docutils literal notranslate"><span class="pre">filters</span></code> (ver 13.2) como IsFinite (30.4.2) e <a class="reference internal" href="#isbool">IsBool</a> (20.1.1). Tenga en cuenta que es una convención que el nombre de una función que devuelve <code class="docutils literal notranslate"><span class="pre">true</span></code> o <code class="docutils literal notranslate"><span class="pre">false</span></code> según el resultado, comience con <code class="docutils literal notranslate"><span class="pre">Is</span></code>.</p>
 <p>Por razones técnicas, también el valor <a class="reference internal" href="#fail">fail</a> se considera un booleano.</p>
 <div class="section" id="isbool-filter">
-<h2><span class="section-number">5.1. </span>IsBool (Filter)<a class="headerlink" href="#isbool-filter" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><span class="section-number">6.1. </span>IsBool (Filter)<a class="headerlink" href="#isbool-filter" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="isbool">
-<span id="id1"></span><h3><span class="section-number">5.1.1. </span>IsBool<a class="headerlink" href="#isbool" title="Enlazar permanentemente con este título">¶</a></h3>
+<span id="id1"></span><h3><span class="section-number">6.1.1. </span>IsBool<a class="headerlink" href="#isbool" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>La categoría <code class="docutils literal notranslate"><span class="pre">IsBool(obj)</span></code> prueba si <code class="docutils literal notranslate"><span class="pre">obj</span></code> es <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">falso</span></code> o <code class="docutils literal notranslate"><span class="pre">fail</span></code>.</p>
 <div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">IsBool</span><span class="p">(</span> <span class="no">true</span> <span class="p">)</span><span class="o">;</span> <span class="nv">IsBool</span><span class="p">(</span> <span class="no">false</span> <span class="p">)</span><span class="o">;</span> <span class="nv">IsBool</span><span class="p">(</span> <span class="nv">17</span> <span class="p">)</span><span class="o">;</span>
 <span class="no">true</span>
@@ -202,9 +203,9 @@
 </div>
 </div>
 <div class="section" id="fail-variable">
-<h2><span class="section-number">5.2. </span>Fail (Variable)<a class="headerlink" href="#fail-variable" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><span class="section-number">6.2. </span>Fail (Variable)<a class="headerlink" href="#fail-variable" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="fail">
-<span id="id2"></span><h3><span class="section-number">5.2.1. </span>fail<a class="headerlink" href="#fail" title="Enlazar permanentemente con este título">¶</a></h3>
+<span id="id2"></span><h3><span class="section-number">6.2.1. </span>fail<a class="headerlink" href="#fail" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>fail (global variable)</p>
 <p>El valor <a class="reference internal" href="#fail">fail</a> se utiliza para indicar situaciones en las que no se pudo realizar una operación para los argumentos dados, ya sea por deficiencias de los argumentos o por restricciones en la implementación o computabilidad. Entonces, por ejemplo, la Posición devolverá un error si el punto buscado no está en la lista.</p>
 <p><a class="reference internal" href="#fail">fail</a> es simplemente un objeto que es diferente de cualquier otro objeto que él mismo.</p>
@@ -212,9 +213,9 @@
 </div>
 </div>
 <div class="section" id="comparacion-de-booleanos">
-<h2><span class="section-number">5.3. </span>Comparación de Booleanos<a class="headerlink" href="#comparacion-de-booleanos" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><span class="section-number">6.3. </span>Comparación de Booleanos<a class="headerlink" href="#comparacion-de-booleanos" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="igualdad-y-desigualdad-de-booleans">
-<h3><span class="section-number">5.3.1. </span>Igualdad y desigualdad de Booleans<a class="headerlink" href="#igualdad-y-desigualdad-de-booleans" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3><span class="section-number">6.3.1. </span>Igualdad y desigualdad de Booleans<a class="headerlink" href="#igualdad-y-desigualdad-de-booleans" title="Enlazar permanentemente con este título">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">bool1</span> <span class="pre">=</span> <span class="pre">bool2</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">bool1</span> <span class="pre">&lt;&gt;</span> <span class="pre">bool2</span></code></p>
 <ul class="simple">
@@ -232,7 +233,7 @@
 </div>
 </div>
 <div class="section" id="ordenacion-de-booleanos">
-<h3><span class="section-number">5.3.2. </span>Ordenación de Booleanos<a class="headerlink" href="#ordenacion-de-booleanos" title="Enlazar permanentemente con este título">¶</a></h3>
+<h3><span class="section-number">6.3.2. </span>Ordenación de Booleanos<a class="headerlink" href="#ordenacion-de-booleanos" title="Enlazar permanentemente con este título">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">bool1</span> <span class="pre">&lt;</span> <span class="pre">bool2</span></code></p>
 <p>El orden de los valores booleanos se define mediante <code class="docutils literal notranslate"><span class="pre">true</span> <span class="pre">&lt;</span> <span class="pre">false</span> <span class="pre">&lt;</span> <span class="pre">fail</span></code>. Para la comparación de valores booleanos con otros objetos GAP, consulte la Sección 4.12.</p>
 <div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="no">true</span> <span class="o">&lt;</span> <span class="no">false</span><span class="o">;</span> <span class="no">fail</span> <span class="o">&gt;=</span> <span class="no">false</span><span class="o">;</span>
@@ -243,10 +244,10 @@
 </div>
 </div>
 <div class="section" id="operaciones-para-booleanos">
-<h2><span class="section-number">5.4. </span>Operaciones para Booleanos<a class="headerlink" href="#operaciones-para-booleanos" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><span class="section-number">6.4. </span>Operaciones para Booleanos<a class="headerlink" href="#operaciones-para-booleanos" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Las siguientes operaciones booleanas solo se aplican a <code class="docutils literal notranslate"><span class="pre">true</span></code> y <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 <div class="section" id="disjuncion-logica">
-<span id="or"></span><h3><span class="section-number">5.4.1. </span>Disjunción Lógica<a class="headerlink" href="#disjuncion-logica" title="Enlazar permanentemente con este título">¶</a></h3>
+<span id="or"></span><h3><span class="section-number">6.4.1. </span>Disjunción Lógica<a class="headerlink" href="#disjuncion-logica" title="Enlazar permanentemente con este título">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">bool1</span> <span class="pre">or</span> <span class="pre">bool2</span></code></p>
 <p>El operador lógico <a class="reference internal" href="#or">or</a> se evalúa como verdadero si al menos uno de los dos operandos booleanos <code class="docutils literal notranslate"><span class="pre">bool1</span></code> y <code class="docutils literal notranslate"><span class="pre">bool2</span></code> es verdadero, y <code class="docutils literal notranslate"><span class="pre">false</span></code> en caso contrario. <a class="reference internal" href="#or">or</a> primero evalúa <code class="docutils literal notranslate"><span class="pre">bool1</span></code>. Si el valor no es ni verdadero ni falso, se indica un error. Si el valor es verdadero, entonces o devuelve <code class="docutils literal notranslate"><span class="pre">true</span></code> sin evaluar <code class="docutils literal notranslate"><span class="pre">bool2</span></code>. Si el valor es falso, entonces <a class="reference internal" href="#or">or</a> evalúa <code class="docutils literal notranslate"><span class="pre">bool2</span></code>.</p>
 <p>Nuevamente, si el valor no es ni verdadero ni falso, se indica un error. De lo contrario, <a class="reference internal" href="#or">or</a> devuelve el valor de <code class="docutils literal notranslate"><span class="pre">bool2</span></code>. Esta evaluación en cortocircuito es importante si el valor de <code class="docutils literal notranslate"><span class="pre">bool1</span></code> es verdadero y la evaluación de <code class="docutils literal notranslate"><span class="pre">bool2</span></code> tomaría mucho tiempo <a class="reference internal" href="#or">or</a> causaría un error.</p>
@@ -265,7 +266,7 @@
 </div>
 </div>
 <div class="section" id="conjuncion-logica">
-<span id="and"></span><h3><span class="section-number">5.4.2. </span>Conjunción Lógica<a class="headerlink" href="#conjuncion-logica" title="Enlazar permanentemente con este título">¶</a></h3>
+<span id="and"></span><h3><span class="section-number">6.4.2. </span>Conjunción Lógica<a class="headerlink" href="#conjuncion-logica" title="Enlazar permanentemente con este título">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">bool1</span> <span class="pre">and</span> <span class="pre">bool2</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">fil1</span> <span class="pre">and</span> <span class="pre">fil2</span></code></p>
 <p>El operador lógico <a class="reference internal" href="#and">and</a> se evalúa como <code class="docutils literal notranslate"><span class="pre">true</span></code> si ambos operandos booleanos <code class="docutils literal notranslate"><span class="pre">bool1</span></code>, <code class="docutils literal notranslate"><span class="pre">bool2</span></code> son verdaderos y como <code class="docutils literal notranslate"><span class="pre">false</span></code> en caso contrario.</p>
@@ -291,7 +292,7 @@
 </div>
 </div>
 <div class="section" id="negacion-logica">
-<span id="not"></span><h2><span class="section-number">5.5. </span>Negación Lógica<a class="headerlink" href="#negacion-logica" title="Enlazar permanentemente con este título">¶</a></h2>
+<span id="not"></span><h2><span class="section-number">6.5. </span>Negación Lógica<a class="headerlink" href="#negacion-logica" title="Enlazar permanentemente con este título">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">bool</span></code></p>
 <p>El operador lógico <a class="reference internal" href="#not">not</a> devuelve <code class="docutils literal notranslate"><span class="pre">true</span></code> si el valor booleano <code class="docutils literal notranslate"><span class="pre">bool</span></code> es falso y <code class="docutils literal notranslate"><span class="pre">true</span></code> en caso contrario.</p>
 <p>Se indica un error si <code class="docutils literal notranslate"><span class="pre">bool</span></code> no se evalúa como <code class="docutils literal notranslate"><span class="pre">true</span></code> o <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
@@ -313,8 +314,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="27-strings.html" class="btn btn-neutral float-right" title="6. String" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="18-ciclotomics.html" class="btn btn-neutral float-left" title="4. Ciclotómicas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="27-strings.html" class="btn btn-neutral float-right" title="7. String" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="18-ciclotomics.html" class="btn btn-neutral float-left" title="5. Números Ciclotómicos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
     </div>
 
   <hr/>

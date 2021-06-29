@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>2. Enteros &mdash; documentación de GAP para principiantes - 0.0.1</title>
+  <title>3. Enteros &mdash; documentación de GAP para principiantes - 0.0.1</title>
   
 
   
@@ -36,14 +36,15 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
-    <link rel="next" title="3. Racionales" href="17-racionales.html" />
-    <link rel="prev" title="1. El Lenguaje de Programación" href="04-el-lenguaje-de-programacion.html" /> 
+    <link rel="next" title="4. Números Racionales" href="17-racionales.html" />
+    <link rel="prev" title="2. Objetos y Elementos" href="12-objetos-y-elementos.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -91,17 +92,41 @@
               <p class="caption"><span class="caption-text">Contenidos:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="04-el-lenguaje-de-programacion.html">1. El Lenguaje de Programación</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Enteros</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#integers-variables-globales">2.1. Integers: Variables Globales</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#integers-variable-global">2.1.1. Integers (variable global )</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12-objetos-y-elementos.html">2. Objetos y Elementos</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Enteros</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#integers-variables-globales">3.1. Integers: Variables Globales</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#integers-variable-global">3.1.1. Integers (variable global )</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#isintegers">3.1.2. IsIntegers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#operaciones-elementales-para-enteros">3.2. Operaciones elementales para enteros</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#isint">3.2.1. IsInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#isposint">3.2.2. IsPosInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#int">3.2.3. Int</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#isevenint">3.2.4. IsEvenInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#isoddint">3.2.5. IsOddInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#absint">3.2.6. AbsInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#signint">3.2.7. SignInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#logint">3.2.8. LogInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rootint">3.2.9. RootInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#smallestrootint">3.2.10. SmallestRootInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#listofdigits">3.2.11. ListOfDigits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#random-para-enteros">3.2.12. Random (para Enteros)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#cocientes-y-restos">3.3. Cocientes y restos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#quoint">3.3.1. QuoInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bestquoint">3.3.2. BestQuoInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#remint">3.3.3. RemInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gcdint">3.3.4. GcdInt</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="17-racionales.html">3. Racionales</a></li>
-<li class="toctree-l1"><a class="reference internal" href="18-ciclotomics.html">4. Ciclotómicas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="20-booleanos.html">5. Booleanos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="27-strings.html">6. String</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17-racionales.html">4. Números Racionales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18-ciclotomics.html">5. Números Ciclotómicos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="20-booleanos.html">6. Booleanos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="27-strings.html">7. String</a></li>
 </ul>
 
             
@@ -150,7 +175,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">2. </span>Enteros</li>
+      <li><span class="section-number">3. </span>Enteros</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -170,7 +195,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="enteros">
-<h1><span class="section-number">2. </span>Enteros<a class="headerlink" href="#enteros" title="Enlazar permanentemente con este título">¶</a></h1>
+<h1><span class="section-number">3. </span>Enteros<a class="headerlink" href="#enteros" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>Uno de los tipos de datos más fundamentales en todos los lenguajes de programación es el tipo entero. GAP no es una excepción.</p>
 <p>Los números enteros GAP se ingresan como una secuencia de dígitos decimales opcionalmente precedidos por un signo «<code class="docutils literal notranslate"><span class="pre">+</span></code>» para números enteros positivos o un signo «<code class="docutils literal notranslate"><span class="pre">-</span></code>» para números enteros negativos. El tamaño de los números enteros en GAP solo está limitado por la cantidad de memoria disponible, por lo que puede calcular con números enteros que tengan miles de dígitos.</p>
 <div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="o">-</span><span class="nv">1234</span><span class="o">;</span>
@@ -180,21 +205,277 @@
 </pre></div>
 </div>
 <div class="section" id="integers-variables-globales">
-<h2><span class="section-number">2.1. </span>Integers: Variables Globales<a class="headerlink" href="#integers-variables-globales" title="Enlazar permanentemente con este título">¶</a></h2>
+<h2><span class="section-number">3.1. </span>Integers: Variables Globales<a class="headerlink" href="#integers-variables-globales" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="integers-variable-global">
-<h3><span class="section-number">2.1.1. </span>Integers (variable global )<a class="headerlink" href="#integers-variable-global" title="Enlazar permanentemente con este título">¶</a></h3>
+<span id="integers"></span><h3><span class="section-number">3.1.1. </span>Integers (variable global )<a class="headerlink" href="#integers-variable-global" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Integers</span></code> (global variable)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">PositiveIntegers</span></code> (global variable)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">NonnegativeIntegers</span></code> (global variable)</p></li>
 </ul>
 <p>Estas variables globales representan el anillo de números enteros y los semirigidos de números enteros positivos y no negativos, respectivamente.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gap</span><span class="o">&gt;</span> <span class="n">Size</span><span class="p">(</span> <span class="n">Integers</span> <span class="p">);</span> <span class="mi">2</span> <span class="ow">in</span> <span class="n">Integers</span><span class="p">;</span>
-<span class="n">infinity</span>
-<span class="n">true</span>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">Size</span><span class="p">(</span> <span class="nv">Integers</span> <span class="p">)</span><span class="o">;</span> <span class="nv">2</span> <span class="ow">in</span> <span class="nv">Integers</span><span class="o">;</span>
+<span class="no">infinity</span>
+<span class="no">true</span>
 </pre></div>
 </div>
-<p>Enteros es un subconjunto de <a class="reference internal" href="17-racionales.html"><span class="doc">Racionales</span></a>, que es un subconjunto de <a class="reference internal" href="18-ciclotomics.html"><span class="doc">Ciclotómicas</span></a>.</p>
+<p>Enteros es un subconjunto de <a class="reference internal" href="17-racionales.html"><span class="doc">Números Racionales</span></a>, que es un subconjunto de <a class="reference internal" href="18-ciclotomics.html"><span class="doc">Números Ciclotómicos</span></a>.</p>
+</div>
+<div class="section" id="isintegers">
+<h3><span class="section-number">3.1.2. </span>IsIntegers<a class="headerlink" href="#isintegers" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">IsIntegers(obj)</span></code> (Category)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IsPositiveIntegers(obj)</span></code> (Category)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IsNonnegativeIntegers(obj)</span></code> (Category)</p></li>
+</ul>
+<p>son las categorías que definen los dominios <code class="docutils literal notranslate"><span class="pre">Integers</span></code>, <code class="docutils literal notranslate"><span class="pre">PositiveIntegers</span></code> y <code class="docutils literal notranslate"><span class="pre">NonnegativeIntegers</span></code> dadas en <a class="reference internal" href="#integers">Integers</a>.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">IsIntegers</span>?
+<span class="o">&lt;</span><span class="nv">Category</span> <span class="s">&quot;IsIntegers&quot;</span><span class="o">&gt;</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">IsIntegers</span><span class="p">(</span> <span class="nv">Integers</span> <span class="p">)</span><span class="o">;</span> <span class="nv">IsIntegers</span><span class="p">(</span> <span class="nv">Rationals</span> <span class="p">)</span><span class="o">;</span> <span class="nv">IsIntegers</span><span class="p">(</span> <span class="nv">7</span> <span class="p">)</span><span class="o">;</span>
+<span class="no">true</span>
+<span class="no">false</span>
+<span class="no">false</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="operaciones-elementales-para-enteros">
+<h2><span class="section-number">3.2. </span>Operaciones elementales para enteros<a class="headerlink" href="#operaciones-elementales-para-enteros" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="isint">
+<span id="id1"></span><h3><span class="section-number">3.2.1. </span>IsInt<a class="headerlink" href="#isint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">IsInt(obj)</span></code> (Category)</p></li>
+</ul>
+<p>Cada entero racional se encuentra en la categoría IsInt, que es una subcategoría de <code class="docutils literal notranslate"><span class="pre">IsRat</span></code>.</p>
+</div>
+<div class="section" id="isposint">
+<h3><span class="section-number">3.2.2. </span>IsPosInt<a class="headerlink" href="#isposint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>IsPosInt(obj) (Category)</p></li>
+</ul>
+<p>Every positive integer lies in the category IsPosInt.</p>
+</div>
+<div class="section" id="int">
+<span id="id2"></span><h3><span class="section-number">3.2.3. </span>Int<a class="headerlink" href="#int" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Int(elm)</span></code> (attribute)</p></li>
+</ul>
+<p><a class="reference internal" href="#int">Int</a> devuelve un entero <code class="docutils literal notranslate"><span class="pre">int</span></code> cuyo significado depende del tipo de <code class="docutils literal notranslate"><span class="pre">elm</span></code>.</p>
+<p><strong>Por ejemplo:</strong></p>
+<ul class="simple">
+<li><p>Si <code class="docutils literal notranslate"><span class="pre">elm</span></code> es un número racional (Ver <a class="reference internal" href="17-racionales.html"><span class="doc">Números Racionales</span></a>), entonces <code class="docutils literal notranslate"><span class="pre">int</span></code> es la parte entera del cociente del numerador y el denominador de elm (consulte <code class="docutils literal notranslate"><span class="pre">QuoInt</span></code> (14.3.1)).</p></li>
+<li><p>Si <code class="docutils literal notranslate"><span class="pre">elm</span></code> es un elemento de un campo primo finito entonces <code class="docutils literal notranslate"><span class="pre">int</span></code> es el entero no negativo más pequeño tal que <code class="docutils literal notranslate"><span class="pre">elm</span> <span class="pre">=</span> <span class="pre">int</span> <span class="pre">*</span> <span class="pre">One</span> <span class="pre">(elm)</span></code>.</p></li>
+<li><p>Si <code class="docutils literal notranslate"><span class="pre">elm</span></code> es una cadena (Ver <a class="reference internal" href="27-strings.html"><span class="doc">String</span></a>) que consta en su totalidad de dígitos decimales <code class="docutils literal notranslate"><span class="pre">&quot;0&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;1&quot;</span></code>,…, <code class="docutils literal notranslate"><span class="pre">&quot;9&quot;</span></code> y, opcionalmente, un signo «<code class="docutils literal notranslate"><span class="pre">-</span></code>» (en la primera posición), entonces <code class="docutils literal notranslate"><span class="pre">int</span></code> es el número entero descrito por esta cadena. Para todas las demás cadenas, se devuelve <a class="reference internal" href="20-booleanos.html#fail"><span class="std std-ref">fail</span></a>. Ver <code class="docutils literal notranslate"><span class="pre">Int</span></code> (27.9.1).</p></li>
+</ul>
+<p>La operación <code class="docutils literal notranslate"><span class="pre">String</span></code> (27.7.6) se puede utilizar para calcular una cadena para enteros racionales, de hecho para todas las ciclotómicas.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="c1"># Vemos que es un atributo</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">Int</span>?
+<span class="o">&lt;</span><span class="nv">Attribute</span> <span class="s">&quot;Int&quot;</span><span class="o">&gt;</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="c1"># como parte entera</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">Int</span><span class="p">(</span> <span class="nv">4</span><span class="o">/</span><span class="nv">3</span> <span class="p">)</span><span class="o">;</span> <span class="nv">Int</span><span class="p">(</span> <span class="o">-</span><span class="nv">2</span><span class="o">/</span><span class="nv">3</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">1</span>
+<span class="nv">0</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="c1"># elm = Z(5) es un elemento de un campo primo finito</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">int</span><span class="o">:=</span> <span class="nv">Int</span><span class="p">(</span> <span class="nv">Z</span><span class="p">(</span><span class="nv">5</span><span class="p">)</span> <span class="p">)</span><span class="o">;</span> <span class="nv">int</span> <span class="o">*</span> <span class="nv">One</span><span class="p">(</span> <span class="nv">Z</span><span class="p">(</span><span class="nv">5</span><span class="p">)</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">2</span>
+<span class="nv">Z</span><span class="p">(</span><span class="nv">5</span><span class="p">)</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="c1"># si elm es una cadena</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">Int</span><span class="p">(</span> <span class="s">&quot;12345&quot;</span> <span class="p">)</span><span class="o">;</span> <span class="nv">Int</span><span class="p">(</span> <span class="s">&quot;-27&quot;</span> <span class="p">)</span><span class="o">;</span> <span class="nv">Int</span><span class="p">(</span> <span class="s">&quot;-27/3&quot;</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">12345</span>
+<span class="o">-</span><span class="nv">27</span>
+<span class="no">fail</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="isevenint">
+<h3><span class="section-number">3.2.4. </span>IsEvenInt<a class="headerlink" href="#isevenint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">IsEvenInt(n)</span></code> (function)</p></li>
+</ul>
+<p>comprueba si el número entero <span class="math notranslate nohighlight">\(n\)</span> es divisible por <span class="math notranslate nohighlight">\(2\)</span>.</p>
+</div>
+<div class="section" id="isoddint">
+<h3><span class="section-number">3.2.5. </span>IsOddInt<a class="headerlink" href="#isoddint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">IsOddInt(n)</span></code> (function)</p></li>
+</ul>
+<p>comprueba si el número entero <span class="math notranslate nohighlight">\(n\)</span> no es divisible por <span class="math notranslate nohighlight">\(2\)</span>.</p>
+</div>
+<div class="section" id="absint">
+<span id="id3"></span><h3><span class="section-number">3.2.6. </span>AbsInt<a class="headerlink" href="#absint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">AbsInt(n)</span></code> (function)</p></li>
+</ul>
+<p><a class="reference internal" href="#absint">AbsInt</a> devuelve el valor absoluto del número entero <span class="math notranslate nohighlight">\(n\)</span>, es decir, <span class="math notranslate nohighlight">\(n\)</span> si <span class="math notranslate nohighlight">\(n\)</span> es positivo, <span class="math notranslate nohighlight">\(-n\)</span> si <span class="math notranslate nohighlight">\(n\)</span> es negativo y <span class="math notranslate nohighlight">\(0\)</span> si <span class="math notranslate nohighlight">\(n\)</span> es <span class="math notranslate nohighlight">\(0\)</span>.</p>
+<p><a class="reference internal" href="#absint">AbsInt</a> es un caso especial de la operación general <code class="docutils literal notranslate"><span class="pre">EuclideanDegree</span></code> (56.6.2). Consulte también <a class="reference internal" href="18-ciclotomics.html#absolutevalue"><span class="std std-ref">AbsoluteValue</span></a>.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">AbsInt</span><span class="p">(</span> <span class="nv">33</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">33</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">AbsInt</span><span class="p">(</span> <span class="o">-</span><span class="nv">214378</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">214378</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">AbsInt</span><span class="p">(</span> <span class="nv">0</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="signint">
+<span id="id4"></span><h3><span class="section-number">3.2.7. </span>SignInt<a class="headerlink" href="#signint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>SignInt(n) (function)</p></li>
+</ul>
+<p>SignInt devuelve el signo del número entero <span class="math notranslate nohighlight">\(n\)</span>, es decir, <span class="math notranslate nohighlight">\(1\)</span> si <span class="math notranslate nohighlight">\(n\)</span> es positivo, <span class="math notranslate nohighlight">\(-1\)</span> si <span class="math notranslate nohighlight">\(n\)</span> es negativo y <span class="math notranslate nohighlight">\(0\)</span> si <span class="math notranslate nohighlight">\(n\)</span> es <span class="math notranslate nohighlight">\(0\)</span>.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">SignInt</span><span class="p">(</span> <span class="nv">33</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">1</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">SignInt</span><span class="p">(</span> <span class="o">-</span><span class="nv">214378</span> <span class="p">)</span><span class="o">;</span>
+<span class="o">-</span><span class="nv">1</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">SignInt</span><span class="p">(</span> <span class="nv">0</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="logint">
+<span id="id5"></span><h3><span class="section-number">3.2.8. </span>LogInt<a class="headerlink" href="#logint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">LogInt(n,</span> <span class="pre">base)</span></code> (function)</p></li>
+</ul>
+<p><a class="reference internal" href="#logint">LogInt</a> devuelve la parte entera del logaritmo del entero positivo <span class="math notranslate nohighlight">\(n\)</span> con respecto a la base del entero positivo, es decir, el entero positivo más grande <span class="math notranslate nohighlight">\(e\)</span> tal que <span class="math notranslate nohighlight">\(base^{e} \leq n\)</span>. La función <a class="reference internal" href="#logint">LogInt</a> señalará un error si <span class="math notranslate nohighlight">\(n\)</span> o <span class="math notranslate nohighlight">\(base\)</span> no son positivos.</p>
+<p>Para <code class="docutils literal notranslate"><span class="pre">base</span> <span class="pre">=</span> <span class="pre">2</span></code> esto es muy eficiente porque se usa la representación binaria interna del entero.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">LogInt</span><span class="p">(</span> <span class="nv">1030</span><span class="o">,</span> <span class="nv">2</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">10</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">2</span><span class="o">^</span><span class="nv">10</span><span class="o">;</span>
+<span class="nv">1024</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">LogInt</span><span class="p">(</span> <span class="nv">1</span><span class="o">,</span> <span class="nv">10</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rootint">
+<span id="id6"></span><h3><span class="section-number">3.2.9. </span>RootInt<a class="headerlink" href="#rootint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">RootInt(n[,</span> <span class="pre">k])</span></code> (function)</p></li>
+</ul>
+<p><a class="reference internal" href="#rootint">RootInt</a> devuelve la parte entera de la <span class="math notranslate nohighlight">\(k\)</span>-ésima raíz del entero <span class="math notranslate nohighlight">\(n\)</span>. Si no se proporciona el argumento de entero opcional <span class="math notranslate nohighlight">\(k\)</span>, el valor predeterminado es <span class="math notranslate nohighlight">\(2\)</span>, es decir, <a class="reference internal" href="#rootint">RootInt</a> devuelve la parte entera de la raíz cuadrada en este caso.</p>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(n\)</span> es positivo, <a class="reference internal" href="#rootint">RootInt</a> devuelve el mayor entero positivo <span class="math notranslate nohighlight">\(r\)</span> tal que <span class="math notranslate nohighlight">\(r^{k} \leq n\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(n\)</span> es negativo y <span class="math notranslate nohighlight">\(k\)</span> es impar, <a class="reference internal" href="#rootint">RootInt</a> devuelve <code class="docutils literal notranslate"><span class="pre">-RootInt</span> <span class="pre">(-n,</span> <span class="pre">k)</span></code>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(n\)</span> es negativo y <span class="math notranslate nohighlight">\(k\)</span> es par, <a class="reference internal" href="#rootint">RootInt</a> provocará un error. <a class="reference internal" href="#rootint">RootInt</a> también provocará un error si <span class="math notranslate nohighlight">\(k\)</span> es <span class="math notranslate nohighlight">\(0\)</span> o negativo.</p></li>
+</ul>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">RootInt</span><span class="p">(</span> <span class="nv">361</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">19</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">RootInt</span><span class="p">(</span> <span class="nv">2</span> <span class="o">*</span> <span class="nv">10</span><span class="o">^</span><span class="nv">12</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">1414213</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">RootInt</span><span class="p">(</span> <span class="nv">17000</span><span class="o">,</span> <span class="nv">5</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">7</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">7</span><span class="o">^</span><span class="nv">5</span><span class="o">;</span>
+<span class="nv">16807</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="smallestrootint">
+<span id="id7"></span><h3><span class="section-number">3.2.10. </span>SmallestRootInt<a class="headerlink" href="#smallestrootint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SmallestRootInt(n)</span></code> (function)</p></li>
+</ul>
+<p><a class="reference internal" href="#smallestrootint">SmallestRootInt</a> devuelve la raíz más pequeña del entero <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p>La raíz más pequeña de un número entero <span class="math notranslate nohighlight">\(n\)</span> es el número entero <span class="math notranslate nohighlight">\(r\)</span> de valor absoluto más pequeño para el que existe un número entero positivo <span class="math notranslate nohighlight">\(k\)</span> tal que <span class="math notranslate nohighlight">\(n = r^{k}\)</span>.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">SmallestRootInt</span><span class="p">(</span> <span class="nv">2</span><span class="o">^</span><span class="nv">30</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">2</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">SmallestRootInt</span><span class="p">(</span> <span class="o">-</span><span class="p">(</span><span class="nv">2</span><span class="o">^</span><span class="nv">30</span><span class="p">)</span> <span class="p">)</span><span class="o">;</span>
+<span class="o">-</span><span class="nv">4</span>
+</pre></div>
+</div>
+<p>Notar que <span class="math notranslate nohighlight">\((-2)^{30} = +(2^{30})\)</span>.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">SmallestRootInt</span><span class="p">(</span> <span class="nv">279936</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">6</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">LogInt</span><span class="p">(</span> <span class="nv">279936</span><span class="o">,</span> <span class="nv">6</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">7</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">SmallestRootInt</span><span class="p">(</span> <span class="nv">1001</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">1001</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="listofdigits">
+<span id="id8"></span><h3><span class="section-number">3.2.11. </span>ListOfDigits<a class="headerlink" href="#listofdigits" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ListOfDigits(n)</span></code> (function)</p></li>
+</ul>
+<p>Para un entero positivo <span class="math notranslate nohighlight">\(n\)</span>, esta función devuelve una lista <code class="docutils literal notranslate"><span class="pre">l</span></code>, que consta de los dígitos de n en representación decimal.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">ListOfDigits</span><span class="p">(</span><span class="nv">3142</span><span class="p">)</span><span class="o">;</span>
+<span class="p">[</span> <span class="nv">3</span><span class="o">,</span> <span class="nv">1</span><span class="o">,</span> <span class="nv">4</span><span class="o">,</span> <span class="nv">2</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="random-para-enteros">
+<span id="random-integer"></span><h3><span class="section-number">3.2.12. </span>Random (para Enteros)<a class="headerlink" href="#random-para-enteros" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Random(Integers)</span></code> (método)</p></li>
+</ul>
+<p><a class="reference internal" href="#random-integer"><span class="std std-ref">Random (para Enteros)</span></a> devuelve enteros pseudoaleatorios entre <span class="math notranslate nohighlight">\(−10\)</span> y <span class="math notranslate nohighlight">\(10\)</span> distribuidos según una distribución binomial. Para generar enteros distribuidos uniformemente a partir de un rango, use la construcción <code class="docutils literal notranslate"><span class="pre">Random(</span> <span class="pre">[</span> <span class="pre">low</span> <span class="pre">..</span> <span class="pre">high</span> <span class="pre">]</span> <span class="pre">)</span></code> (Ver Random (30.7.1))</p>
+</div>
+</div>
+<div class="section" id="cocientes-y-restos">
+<h2><span class="section-number">3.3. </span>Cocientes y restos<a class="headerlink" href="#cocientes-y-restos" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="quoint">
+<span id="id9"></span><h3><span class="section-number">3.3.1. </span>QuoInt<a class="headerlink" href="#quoint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">QuoInt(n,</span> <span class="pre">m)</span></code> (function)</p></li>
+</ul>
+<p><a class="reference internal" href="#quoint">QuoInt</a> devuelve la parte entera del cociente de sus operandos enteros.</p>
+<p>Si <span class="math notranslate nohighlight">\(n\)</span> y <span class="math notranslate nohighlight">\(m\)</span> son positivos, <a class="reference internal" href="#quoint">QuoInt</a> devuelve el mayor entero positivo <span class="math notranslate nohighlight">\(q\)</span> tal que <span class="math notranslate nohighlight">\(q \ast m \leq n\)</span>. Si <span class="math notranslate nohighlight">\(n\)</span> o <span class="math notranslate nohighlight">\(m\)</span> o ambos son negativos, el valor absoluto de la parte entera del cociente es el cociente de los valores absolutos de <span class="math notranslate nohighlight">\(n\)</span> y <span class="math notranslate nohighlight">\(m\)</span>, y su signo es el producto de los signos de <span class="math notranslate nohighlight">\(n\)</span> y <span class="math notranslate nohighlight">\(m\)</span>.</p>
+<p><a class="reference internal" href="#quoint">QuoInt</a> se usa en un método para la operación general <code class="docutils literal notranslate"><span class="pre">EuclideanQuotient</span></code>.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">QuoInt</span><span class="p">(</span><span class="nv">5</span><span class="o">,</span><span class="nv">3</span><span class="p">)</span><span class="o">;</span>
+<span class="nv">1</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">QuoInt</span><span class="p">(</span><span class="o">-</span><span class="nv">5</span><span class="o">,</span><span class="nv">3</span><span class="p">)</span><span class="o">;</span>
+<span class="o">-</span><span class="nv">1</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">QuoInt</span><span class="p">(</span><span class="nv">5</span><span class="o">,-</span><span class="nv">3</span><span class="p">)</span><span class="o">;</span>
+<span class="o">-</span><span class="nv">1</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">QuoInt</span><span class="p">(</span><span class="o">-</span><span class="nv">5</span><span class="o">,-</span><span class="nv">3</span><span class="p">)</span><span class="o">;</span>
+<span class="nv">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="bestquoint">
+<span id="id10"></span><h3><span class="section-number">3.3.2. </span>BestQuoInt<a class="headerlink" href="#bestquoint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BestQuoInt(n,</span> <span class="pre">m)</span></code> (function)</p></li>
+</ul>
+<p><a class="reference internal" href="#bestquoint">BestQuoInt</a> devuelve el mejor cociente <span class="math notranslate nohighlight">\(q\)</span> de los enteros <span class="math notranslate nohighlight">\(n\)</span> y <span class="math notranslate nohighlight">\(m\)</span>. Este es el cociente tal que <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">-</span> <span class="pre">q</span> <span class="pre">∗</span> <span class="pre">m</span></code> tiene un valor absoluto mínimo. Si hay dos cocientes cuyos residuos tienen el mismo valor absoluto, se elige el cociente con el valor absoluto más pequeño.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">BestQuoInt</span><span class="p">(</span> <span class="nv">5</span><span class="o">,</span> <span class="nv">3</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">2</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">BestQuoInt</span><span class="p">(</span> <span class="o">-</span><span class="nv">5</span><span class="o">,</span> <span class="nv">3</span> <span class="p">)</span><span class="o">;</span>
+<span class="o">-</span><span class="nv">2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="remint">
+<span id="id11"></span><h3><span class="section-number">3.3.3. </span>RemInt<a class="headerlink" href="#remint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">RemInt(n,</span> <span class="pre">m)</span></code> (function)</p></li>
+</ul>
+<p>RemInt devuelve el resto de sus dos operandos enteros.</p>
+<p>Si <span class="math notranslate nohighlight">\(m\)</span> no es igual a cero, RemInt devuelve <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">-</span> <span class="pre">m</span> <span class="pre">*</span> <span class="pre">QuoInt</span> <span class="pre">(n,</span> <span class="pre">m)</span></code>. Tenga en cuenta que las reglas dadas para <a class="reference internal" href="#quoint">QuoInt</a> implican que el valor de retorno de <a class="reference internal" href="#remint">RemInt</a> tiene el mismo signo que <span class="math notranslate nohighlight">\(n\)</span> y su valor absoluto es estrictamente menor que el valor absoluto de <span class="math notranslate nohighlight">\(m\)</span>. Tenga en cuenta también que el valor de retorno es igual a <span class="math notranslate nohighlight">\(n\text{ mod }m\)</span> cuando tanto <span class="math notranslate nohighlight">\(n\)</span> como <span class="math notranslate nohighlight">\(m\)</span> no son negativos. Dividir por <span class="math notranslate nohighlight">\(0\)</span> indica un error.</p>
+<p>RemInt se usa en un método para la operación general <code class="docutils literal notranslate"><span class="pre">EuclideanRemainder</span></code>.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">RemInt</span><span class="p">(</span><span class="nv">5</span><span class="o">,</span><span class="nv">3</span><span class="p">)</span><span class="o">;</span>
+<span class="nv">2</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">RemInt</span><span class="p">(</span><span class="o">-</span><span class="nv">5</span><span class="o">,</span><span class="nv">3</span><span class="p">)</span><span class="o">;</span>
+<span class="o">-</span><span class="nv">2</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">RemInt</span><span class="p">(</span><span class="nv">5</span><span class="o">,-</span><span class="nv">3</span><span class="p">)</span><span class="o">;</span>
+<span class="nv">2</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">RemInt</span><span class="p">(</span><span class="o">-</span><span class="nv">5</span><span class="o">,-</span><span class="nv">3</span><span class="p">)</span><span class="o">;</span>
+<span class="o">-</span><span class="nv">2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="gcdint">
+<span id="id12"></span><h3><span class="section-number">3.3.4. </span>GcdInt<a class="headerlink" href="#gcdint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">GcdInt(m,</span> <span class="pre">n)</span></code> (function)</p></li>
+</ul>
+<p><a class="reference internal" href="#gcdint">GcdInt</a> devuelve el máximo común divisor de sus dos operandos enteros <span class="math notranslate nohighlight">\(n\)</span> y <span class="math notranslate nohighlight">\(m\)</span>, es decir, el mayor número entero que divide <span class="math notranslate nohighlight">\(n\)</span> y <span class="math notranslate nohighlight">\(m\)</span>. El máximo común divisor nunca es negativo, incluso si los argumentos lo son. Definimos <code class="docutils literal notranslate"><span class="pre">GcdInt(</span> <span class="pre">m,</span> <span class="pre">0</span> <span class="pre">)</span> <span class="pre">=</span> <span class="pre">GcdInt(</span> <span class="pre">0,</span> <span class="pre">m</span> <span class="pre">)</span> <span class="pre">=</span> <span class="pre">AbsInt(</span> <span class="pre">m</span> <span class="pre">)</span></code> y <code class="docutils literal notranslate"><span class="pre">GcdInt(</span> <span class="pre">0,</span> <span class="pre">0</span> <span class="pre">)</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
+<p>GcdInt es un método utilizado por la función general <code class="docutils literal notranslate"><span class="pre">Gcd</span></code>.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">GcdInt</span><span class="p">(</span> <span class="nv">123</span><span class="o">,</span> <span class="nv">66</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">3</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -205,8 +486,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="17-racionales.html" class="btn btn-neutral float-right" title="3. Racionales" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="04-el-lenguaje-de-programacion.html" class="btn btn-neutral float-left" title="1. El Lenguaje de Programación" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="17-racionales.html" class="btn btn-neutral float-right" title="4. Números Racionales" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="12-objetos-y-elementos.html" class="btn btn-neutral float-left" title="2. Objetos y Elementos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
     </div>
 
   <hr/>

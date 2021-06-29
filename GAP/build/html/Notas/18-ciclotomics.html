@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>4. Ciclotómicas &mdash; documentación de GAP para principiantes - 0.0.1</title>
+  <title>5. Números Ciclotómicos &mdash; documentación de GAP para principiantes - 0.0.1</title>
   
 
   
@@ -36,14 +36,15 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
-    <link rel="next" title="5. Booleanos" href="20-booleanos.html" />
-    <link rel="prev" title="3. Racionales" href="17-racionales.html" /> 
+    <link rel="next" title="6. Booleanos" href="20-booleanos.html" />
+    <link rel="prev" title="4. Números Racionales" href="17-racionales.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -91,11 +92,20 @@
               <p class="caption"><span class="caption-text">Contenidos:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="04-el-lenguaje-de-programacion.html">1. El Lenguaje de Programación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="14-enteros.html">2. Enteros</a></li>
-<li class="toctree-l1"><a class="reference internal" href="17-racionales.html">3. Racionales</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Ciclotómicas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="20-booleanos.html">5. Booleanos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="27-strings.html">6. String</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12-objetos-y-elementos.html">2. Objetos y Elementos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14-enteros.html">3. Enteros</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17-racionales.html">4. Números Racionales</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Números Ciclotómicos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#operations-para-numeros-ciclotomicos">5.1. Operations para Números Ciclotómicos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#e">5.1.1. E</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iscyclotomic">5.1.2. IsCyclotomic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#absolutevalue">5.1.3. AbsoluteValue</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="20-booleanos.html">6. Booleanos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="27-strings.html">7. String</a></li>
 </ul>
 
             
@@ -144,7 +154,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">4. </span>Ciclotómicas</li>
+      <li><span class="section-number">5. </span>Números Ciclotómicos</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -163,8 +173,69 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="ciclotomicas">
-<h1><span class="section-number">4. </span>Ciclotómicas<a class="headerlink" href="#ciclotomicas" title="Enlazar permanentemente con este título">¶</a></h1>
+  <div class="section" id="numeros-ciclotomicos">
+<h1><span class="section-number">5. </span>Números Ciclotómicos<a class="headerlink" href="#numeros-ciclotomicos" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>GAP admite cálculos en campos de extensión abelianos del campo numérico racional <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>, es decir, campos con un grupo de Galois abeliano sobre <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span>. Estos campos son subcampos de campos ciclotómicos <span class="math notranslate nohighlight">\(\mathbb{Q} (e^{n})\)</span> donde <span class="math notranslate nohighlight">\(\mathbb{Q} (e^{n}) = exp (2 \pi i / n)\)</span> es un complejo primitivo <span class="math notranslate nohighlight">\(n\)</span>-ésima raíz de la unidad. Los elementos de estos campos se denominan ciclotómica.</p>
+<p>La información relativa a las operaciones para los dominios de la ciclotómica, por ejemplo, ciertas bases integrales de los campos de la ciclotómica, se puede encontrar en el Capítulo 60 del manual ofivial de GAP. Para operaciones más generales que toman una extensión de campo como un argumento –posiblemente opcional–, por ejemplo, <code class="docutils literal notranslate"><span class="pre">Trace</span></code> o <code class="docutils literal notranslate"><span class="pre">Coefficients</span></code>, funciones que no desarrollaremos en este tutorial.</p>
+<div class="section" id="operations-para-numeros-ciclotomicos">
+<h2><span class="section-number">5.1. </span>Operations para Números Ciclotómicos<a class="headerlink" href="#operations-para-numeros-ciclotomicos" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="e">
+<span id="id1"></span><h3><span class="section-number">5.1.1. </span>E<a class="headerlink" href="#e" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">E(n)</span></code> (operation)</p></li>
+</ul>
+<p><a class="reference internal" href="#e">E</a> devuelve la raíz <span class="math notranslate nohighlight">\(n\)</span>-ésima primitiva de la unidad <span class="math notranslate nohighlight">\(\mathbb{Q} (e^{n}) = exp (2 \pi i / n)\)</span>. La ciclotómica generalmente se ingresa como sumas de raíces de unidad, con coeficientes racionales, y la ciclotómica irracional se muestra de esa manera. (Para ciclotómicas especiales, consulte 18.4.)</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">E</span><span class="p">(</span><span class="nv">9</span><span class="p">)</span><span class="o">;</span>
+<span class="o">-</span><span class="nv">E</span><span class="p">(</span><span class="nv">9</span><span class="p">)</span><span class="o">^</span><span class="nv">4</span><span class="o">-</span><span class="nv">E</span><span class="p">(</span><span class="nv">9</span><span class="p">)</span><span class="o">^</span><span class="nv">7</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">E</span><span class="p">(</span><span class="nv">9</span><span class="p">)</span><span class="o">^</span><span class="nv">3</span><span class="o">;</span>
+<span class="nv">E</span><span class="p">(</span><span class="nv">3</span><span class="p">)</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">E</span><span class="p">(</span><span class="nv">6</span><span class="p">)</span><span class="o">;</span>
+<span class="o">-</span><span class="nv">E</span><span class="p">(</span><span class="nv">3</span><span class="p">)</span><span class="o">^</span><span class="nv">2</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">E</span><span class="p">(</span><span class="nv">12</span><span class="p">)</span><span class="o">/</span><span class="nv">3</span><span class="o">;</span>
+<span class="o">-</span><span class="nv">1</span><span class="o">/</span><span class="nv">3</span><span class="o">*</span><span class="nv">E</span><span class="p">(</span><span class="nv">12</span><span class="p">)</span><span class="o">^</span><span class="nv">7</span>
+<span class="nv">gap</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Se utiliza una base particular para expresar la ciclotómica; tenga en cuenta que <code class="docutils literal notranslate"><span class="pre">E(9)</span></code> no es un elemento base, como muestra el ejemplo anterior.</p>
+</div>
+<div class="section" id="iscyclotomic">
+<span id="id2"></span><h3><span class="section-number">5.1.2. </span>IsCyclotomic<a class="headerlink" href="#iscyclotomic" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>IsCyclotomic(obj) (Category)</p></li>
+<li><p>IsCyc(obj) (Category)</p></li>
+</ul>
+<p>Todos los objetos de la familia <code class="docutils literal notranslate"><span class="pre">CyclotomicsFamily</span></code> pertenecen a la categoría <a class="reference internal" href="#iscyclotomic">IsCyclotomic</a>. Esto cubre enteros, racionales, ciclotómica propia, el objeto <code class="docutils literal notranslate"><span class="pre">infinity</span></code> (18.2.1) y las incógnitas (ver Capítulo 74).</p>
+<p>Todos estos objetos excepto el <code class="docutils literal notranslate"><span class="pre">infinity</span></code> (18.2.1) y las incógnitas se encuentran también en la categoría <code class="docutils literal notranslate"><span class="pre">IsCyc</span></code> el <code class="docutils literal notranslate"><span class="pre">infinity</span></code> (18.2.1) se encuentra en (y se puede detectar desde) la categoría IsInfinity (18.2.1), y las incógnitas se encuentran en <code class="docutils literal notranslate"><span class="pre">IsUnknown</span></code></p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="c1"># Ejemplo función IsCyclotomic</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">IsCyclotomic</span><span class="p">(</span><span class="nv">0</span><span class="p">)</span><span class="o">;</span>
+<span class="no">true</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">IsCyclotomic</span><span class="p">(</span><span class="nv">1</span><span class="o">/</span><span class="nv">2</span><span class="o">*</span><span class="nv">E</span><span class="p">(</span><span class="nv">3</span><span class="p">))</span><span class="o">;</span>
+<span class="no">true</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">IsCyclotomic</span><span class="p">(</span> <span class="no">infinity</span> <span class="p">)</span><span class="o">;</span>
+<span class="no">true</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="c1"># Ejemplo función IsCyc</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">IsCyc</span><span class="p">(</span><span class="nv">0</span><span class="p">)</span><span class="o">;</span>
+<span class="no">true</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">IsCyc</span><span class="p">(</span><span class="nv">1</span><span class="o">/</span><span class="nv">2</span><span class="o">*</span><span class="nv">E</span><span class="p">(</span><span class="nv">3</span><span class="p">))</span><span class="o">;</span>
+<span class="no">true</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">IsCyc</span><span class="p">(</span> <span class="no">infinity</span> <span class="p">)</span><span class="o">;</span>
+<span class="no">false</span>
+<span class="nv">gap</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="absolutevalue">
+<span id="id3"></span><h3><span class="section-number">5.1.3. </span>AbsoluteValue<a class="headerlink" href="#absolutevalue" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">AbsoluteValue(cyc)</span></code> (attribute)</p></li>
+</ul>
+<p>devuelve el valor absoluto de un número ciclotómico <code class="docutils literal notranslate"><span class="pre">cyc</span></code>. Por el momento solo existen métodos para números racionales.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">AbsoluteValue</span><span class="p">(</span><span class="o">-</span><span class="nv">3</span><span class="p">)</span><span class="o">;</span>
+<span class="nv">3</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
 
@@ -173,8 +244,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="20-booleanos.html" class="btn btn-neutral float-right" title="5. Booleanos" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="17-racionales.html" class="btn btn-neutral float-left" title="3. Racionales" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="20-booleanos.html" class="btn btn-neutral float-right" title="6. Booleanos" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="17-racionales.html" class="btn btn-neutral float-left" title="4. Números Racionales" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
     </div>
 
   <hr/>

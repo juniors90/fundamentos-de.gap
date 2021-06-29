@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>3. Racionales &mdash; documentación de GAP para principiantes - 0.0.1</title>
+  <title>4. Números Racionales &mdash; documentación de GAP para principiantes - 0.0.1</title>
   
 
   
@@ -36,14 +36,15 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
-    <link rel="next" title="4. Ciclotómicas" href="18-ciclotomics.html" />
-    <link rel="prev" title="2. Enteros" href="14-enteros.html" /> 
+    <link rel="next" title="5. Números Ciclotómicos" href="18-ciclotomics.html" />
+    <link rel="prev" title="3. Enteros" href="14-enteros.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -91,11 +92,29 @@
               <p class="caption"><span class="caption-text">Contenidos:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="04-el-lenguaje-de-programacion.html">1. El Lenguaje de Programación</a></li>
-<li class="toctree-l1"><a class="reference internal" href="14-enteros.html">2. Enteros</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Racionales</a></li>
-<li class="toctree-l1"><a class="reference internal" href="18-ciclotomics.html">4. Ciclotómicas</a></li>
-<li class="toctree-l1"><a class="reference internal" href="20-booleanos.html">5. Booleanos</a></li>
-<li class="toctree-l1"><a class="reference internal" href="27-strings.html">6. String</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12-objetos-y-elementos.html">2. Objetos y Elementos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14-enteros.html">3. Enteros</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Números Racionales</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#rational">4.1. Rational</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rationals-global-variables">4.2. Rationals: Global Variables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#rationals">4.2.1. Rationals</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#elementary-operations-for-rationals">4.3. Elementary Operations for Rationals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#israt">4.3.1. IsRat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#isposrat">4.3.2. IsPosRat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#isnegrat">4.3.3. IsNegRat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#numeratorrat">4.3.4. NumeratorRat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#denominatorrat">4.3.5. DenominatorRat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rat">4.3.6. Rat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#random-para-racionales">4.3.7. Random (para racionales)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="18-ciclotomics.html">5. Números Ciclotómicos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="20-booleanos.html">6. Booleanos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="27-strings.html">7. String</a></li>
 </ul>
 
             
@@ -144,7 +163,7 @@
     
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li><span class="section-number">3. </span>Racionales</li>
+      <li><span class="section-number">4. </span>Números Racionales</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -163,8 +182,134 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="racionales">
-<h1><span class="section-number">3. </span>Racionales<a class="headerlink" href="#racionales" title="Enlazar permanentemente con este título">¶</a></h1>
+  <div class="section" id="numeros-racionales">
+<h1><span class="section-number">4. </span>Números Racionales<a class="headerlink" href="#numeros-racionales" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="rational">
+<h2><span class="section-number">4.1. </span>Rational<a class="headerlink" href="#rational" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los racionales forman un cuerpo muy importante. Por un lado, es el cuerpo del cociente de los números enteros (Ver <a class="reference internal" href="14-enteros.html"><span class="doc">Enteros</span></a>). Por otro lado, es el cuerpo principal de los cuerpos de característica cero (ver capítulo 60).</p>
+<p>El primer comentario sugiere la representación realmente utilizada. Un racional se representa como un par de números enteros, llamados numerador y denominador. El numerador y el denominador se reducen, es decir, su máximo común divisor es <span class="math notranslate nohighlight">\(1\)</span>. Si el denominador es <span class="math notranslate nohighlight">\(1\)</span>, el racional es de hecho un número entero y se representa como tal. El numerador tiene el signo de lo racional, por lo que el denominador siempre es positivo.</p>
+<p>Debido a que la aritmética de enteros subyacente puede calcular con enteros de tamaño arbitrario, la aritmética racional es siempre exacta, incluso para racionales cuyos numeradores y denominadores tienen miles de dígitos.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">2</span><span class="o">/</span><span class="nv">3</span><span class="o">;</span>
+<span class="nv">2</span><span class="o">/</span><span class="nv">3</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">66</span><span class="o">/</span><span class="nv">123</span><span class="o">;</span> <span class="c1"># numerator and denominator are made relatively prime</span>
+<span class="nv">22</span><span class="o">/</span><span class="nv">41</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">17</span><span class="o">/-</span><span class="nv">13</span><span class="o">;</span> <span class="c1"># the numerator carries the sign;</span>
+<span class="o">-</span><span class="nv">17</span><span class="o">/</span><span class="nv">13</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">121</span><span class="o">/</span><span class="nv">11</span><span class="o">;</span> <span class="c1"># rationals with denominator 1 (when canceled) are integers</span>
+<span class="nv">11</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rationals-global-variables">
+<h2><span class="section-number">4.2. </span>Rationals: Global Variables<a class="headerlink" href="#rationals-global-variables" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="rationals">
+<span id="isrationals"></span><h3><span class="section-number">4.2.1. </span>Rationals<a class="headerlink" href="#rationals" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Rationals</span></code> (global variable)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IsRationals(obj)</span></code> (filter)</p></li>
+</ul>
+<p><a class="reference internal" href="#isrationals"><span class="std std-ref">Rationals</span></a> es el cuerpo <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> de números enteros racionales, como un conjunto de <a class="reference internal" href="18-ciclotomics.html"><span class="doc">Números Ciclotómicos</span></a>. Las funciones para el cuerpo Racionales se pueden encontrar en los capítulos 58 y 60.</p>
+<p><a class="reference internal" href="#isrationals">IsRationals</a> devuelve <code class="docutils literal notranslate"><span class="pre">true</span></code> para un cuerpo primo que consta de números ciclotómicos (por ejemplo, el objeto GAP Rationals) y <code class="docutils literal notranslate"><span class="pre">false</span></code> para todos los demás objetos GAP.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">Size</span><span class="p">(</span> <span class="nv">Rationals</span> <span class="p">)</span><span class="o">;</span>
+<span class="no">infinity</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">2</span><span class="o">/</span><span class="nv">3</span> <span class="ow">in</span> <span class="nv">Rationals</span><span class="o">;</span>
+<span class="no">true</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="elementary-operations-for-rationals">
+<h2><span class="section-number">4.3. </span>Elementary Operations for Rationals<a class="headerlink" href="#elementary-operations-for-rationals" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="israt">
+<span id="id1"></span><h3><span class="section-number">4.3.1. </span>IsRat<a class="headerlink" href="#israt" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">IsRat(obj)</span></code> (Category)</p></li>
+</ul>
+<p>Todo número racional pertenece a la categoría <a class="reference internal" href="#israt">IsRat</a>, que es una subcategoría de <code class="docutils literal notranslate"><span class="pre">IsCyc</span></code>.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">IsRat</span><span class="p">(</span> <span class="nv">2</span><span class="o">/</span><span class="nv">3</span> <span class="p">)</span><span class="o">;</span>
+<span class="no">true</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">IsRat</span><span class="p">(</span> <span class="nv">17</span><span class="o">/-</span><span class="nv">13</span> <span class="p">)</span><span class="o">;</span>
+<span class="no">true</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">IsRat</span><span class="p">(</span> <span class="nv">11</span> <span class="p">)</span><span class="o">;</span>
+<span class="no">true</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">IsRat</span><span class="p">(</span> <span class="nv">IsRat</span> <span class="p">)</span><span class="o">;</span> <span class="c1"># ‘IsRat’ is a function, not a rational</span>
+<span class="no">false</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="isposrat">
+<h3><span class="section-number">4.3.2. </span>IsPosRat<a class="headerlink" href="#isposrat" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">IsPosRat(obj)</span></code> (Category)</p></li>
+</ul>
+<p>Todo número racional positivo pertenece a la categoría <a class="reference internal" href="#isposrat">IsPosRat</a>.</p>
+</div>
+<div class="section" id="isnegrat">
+<span id="id2"></span><h3><span class="section-number">4.3.3. </span>IsNegRat<a class="headerlink" href="#isnegrat" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">IsNegRat(obj)</span></code> (Category)</p></li>
+</ul>
+<p>Todo número racional negativo se encuentra en la categoría <a class="reference internal" href="#isnegrat">IsNegRat</a>.</p>
+</div>
+<div class="section" id="numeratorrat">
+<h3><span class="section-number">4.3.4. </span>NumeratorRat<a class="headerlink" href="#numeratorrat" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">NumeratorRat(rat)</span></code> (function)</p></li>
+</ul>
+<p><a class="reference internal" href="#numeratorrat">NumeratorRat</a> devuelve el numerador del racional <code class="docutils literal notranslate"><span class="pre">rat</span></code>. Debido a que el numerador tiene el signo del racional, puede ser cualquier número entero. Los enteros son racionales con denominador <span class="math notranslate nohighlight">\(1\)</span>, por lo que NumeratorRat es la función de identidad para los enteros.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">NumeratorRat</span><span class="p">(</span> <span class="nv">2</span><span class="o">/</span><span class="nv">3</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">2</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="c1"># numerator and denominator are made relatively prime:</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">NumeratorRat</span><span class="p">(</span> <span class="nv">66</span><span class="o">/</span><span class="nv">123</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">22</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">NumeratorRat</span><span class="p">(</span> <span class="nv">17</span><span class="o">/-</span><span class="nv">13</span> <span class="p">)</span><span class="o">;</span> <span class="c1"># numerator holds the sign of the rational</span>
+<span class="o">-</span><span class="nv">17</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">NumeratorRat</span><span class="p">(</span> <span class="nv">11</span> <span class="p">)</span><span class="o">;</span> <span class="c1"># integers are rationals with denominator 1</span>
+<span class="nv">11</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="denominatorrat">
+<span id="id3"></span><h3><span class="section-number">4.3.5. </span>DenominatorRat<a class="headerlink" href="#denominatorrat" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DenominatorRat(rat)</span></code> (function)</p></li>
+</ul>
+<p><a class="reference internal" href="#denominatorrat">DenominatorRat</a> devuelve el denominador de racional <code class="docutils literal notranslate"><span class="pre">rat</span></code>. Debido a que el numerador tiene el signo del racional, el denominador es siempre un número entero positivo. Los enteros son racionales con el denominador 1, por lo que <a class="reference internal" href="#denominatorrat">DenominatorRat</a> devuelve <span class="math notranslate nohighlight">\(1\)</span> para los enteros.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">DenominatorRat</span><span class="p">(</span> <span class="nv">2</span><span class="o">/</span><span class="nv">3</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">3</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="c1"># numerator and denominator are made relatively prime:</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">DenominatorRat</span><span class="p">(</span> <span class="nv">66</span><span class="o">/</span><span class="nv">123</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">41</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="c1"># the denominator holds the sign of the rational:</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">DenominatorRat</span><span class="p">(</span> <span class="nv">17</span><span class="o">/-</span><span class="nv">13</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">13</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">DenominatorRat</span><span class="p">(</span> <span class="nv">11</span> <span class="p">)</span><span class="o">;</span> <span class="c1"># integers are rationals with denominator 1</span>
+<span class="nv">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rat">
+<span id="id4"></span><h3><span class="section-number">4.3.6. </span>Rat<a class="headerlink" href="#rat" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Rat(elm)</span></code> (attribute)</p></li>
+</ul>
+<p>Rat devuelve un número racional rata cuyo significado depende del tipo de olmo. Si <code class="docutils literal notranslate"><span class="pre">elm</span></code> es una cadena que consta de dígitos <code class="docutils literal notranslate"><span class="pre">&quot;0&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;1&quot;</span></code>,…, <code class="docutils literal notranslate"><span class="pre">&quot;99&quot;</span></code> y <code class="docutils literal notranslate"><span class="pre">&quot;-&quot;&quot;</span></code> (en la primera posición), «<code class="docutils literal notranslate"><span class="pre">/</span></code>» y el punto decimal «<code class="docutils literal notranslate"><span class="pre">.</span></code>» Entonces rata es el racional descrito por esta cadena. Si <code class="docutils literal notranslate"><span class="pre">elm</span></code> es un número racional, Rat devuelve <code class="docutils literal notranslate"><span class="pre">elm</span></code>. La operación String (27.7.6) se puede utilizar para calcular una cadena para números racionales, de hecho para todas las ciclotómicas.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">Rat</span><span class="p">(</span> <span class="s">&quot;1/2&quot;</span> <span class="p">)</span><span class="o">;</span> <span class="nv">Rat</span><span class="p">(</span> <span class="s">&quot;35/14&quot;</span> <span class="p">)</span><span class="o">;</span> <span class="nv">Rat</span><span class="p">(</span> <span class="s">&quot;35/-27&quot;</span> <span class="p">)</span><span class="o">;</span> <span class="nv">Rat</span><span class="p">(</span> <span class="s">&quot;3.14159&quot;</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">1</span><span class="o">/</span><span class="nv">2</span>
+<span class="nv">5</span><span class="o">/</span><span class="nv">2</span>
+<span class="o">-</span><span class="nv">35</span><span class="o">/</span><span class="nv">27</span>
+<span class="nv">314159</span><span class="o">/</span><span class="nv">100000</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="random-para-racionales">
+<span id="random-rationals"></span><h3><span class="section-number">4.3.7. </span>Random (para racionales)<a class="headerlink" href="#random-para-racionales" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Random(Rationals)</span></code> (operation)</p></li>
+</ul>
+<p><a class="reference internal" href="#random-rationals"><span class="std std-ref">Random (para racionales)</span></a> devuelve racionales pseudoaleatorios que son el cociente de dos números enteros aleatorios. Consulte la descripción de <a class="reference internal" href="14-enteros.html#random-integer"><span class="std std-ref">Random (para Enteros)</span></a> para obtener más detalles. (Ver también Aleatorio (30.7.1).)</p>
+</div>
+</div>
 </div>
 
 
@@ -173,8 +318,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="18-ciclotomics.html" class="btn btn-neutral float-right" title="4. Ciclotómicas" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="14-enteros.html" class="btn btn-neutral float-left" title="2. Enteros" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="18-ciclotomics.html" class="btn btn-neutral float-right" title="5. Números Ciclotómicos" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="14-enteros.html" class="btn btn-neutral float-left" title="3. Enteros" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
     </div>
 
   <hr/>
