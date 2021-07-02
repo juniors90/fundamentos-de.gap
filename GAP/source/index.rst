@@ -12,4 +12,5 @@ GAP para principiantes
    Notas/17-racionales
    Notas/18-ciclotomics
    Notas/20-booleanos
+   Notas/24-matrices
    Notas/27-strings
