@@ -131,6 +131,38 @@
 <li class="toctree-l3"><a class="reference internal" href="#primes">3.4.1. Primes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#isprimeint">3.4.2. IsPrimeInt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#primalityproof">3.4.3. PrimalityProof</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#isprimepowerint">3.4.4. IsPrimePowerInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nextprimeint">3.4.5. NextPrimeInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prevprimeint">3.4.6. PrevPrimeInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#factorsint">3.4.7. FactorsInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#primedivisors">3.4.8. PrimeDivisors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#partialfactorization">3.4.9. PartialFactorization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#printfactorsint">3.4.10. PrintFactorsInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#primepowersint">3.4.11. PrimePowersInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#divisorsint">3.4.12. DivisorsInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#anillos-de-clases-residuales">3.4.13. Anillos de clases residuales</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mod-for-residue-class-rings">3.4.14. mod (for residue class rings)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zmodnz">3.4.15. ZmodnZ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zmodnzobj-para-una-familia-de-clase-de-residuo-y-un-entero">3.4.16. ZmodnZObj (para una familia de clase de residuo y un entero)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#iszmodnzobj">3.4.17. IsZmodnZObj</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#chequear-digitos">3.5. Chequear Digitos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#checkdigitisbn">3.5.1. CheckDigitISBN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#checkdigittestfunction">3.5.2. CheckDigitTestFunction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#random-sources">3.6. Random Sources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#israndomsource">3.6.1. IsRandomSource</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#random-para-fuente-aleatoria-y-lista">3.6.2. Random (para fuente aleatoria y lista)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#state">3.6.3. State</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ismersennetwister">3.6.4. IsMersenneTwister</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#randomsource">3.6.5. RandomSource</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#bitfields">3.7. Bitfields</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#makebitfields">3.7.1. MakeBitfields</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#buildbitfields">3.7.2. BuildBitfields</a></li>
 </ul>
 </li>
 </ul>
@@ -237,13 +269,13 @@
 <div class="section" id="isintegers">
 <h3><span class="section-number">3.1.2. </span>IsIntegers<a class="headerlink" href="#isintegers" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">IsIntegers(obj)</span></code> (Category)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">IsPositiveIntegers(obj)</span></code> (Category)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">IsNonnegativeIntegers(obj)</span></code> (Category)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IsIntegers(obj)</span></code> (Categoría)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IsPositiveIntegers(obj)</span></code> (Categoría)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IsNonnegativeIntegers(obj)</span></code> (Categoría)</p></li>
 </ul>
 <p>son las categorías que definen los dominios <code class="docutils literal notranslate"><span class="pre">Integers</span></code>, <code class="docutils literal notranslate"><span class="pre">PositiveIntegers</span></code> y <code class="docutils literal notranslate"><span class="pre">NonnegativeIntegers</span></code> dadas en <a class="reference internal" href="#integers">Integers</a>.</p>
 <div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">IsIntegers</span>?
-<span class="o">&lt;</span><span class="nv">Category</span> <span class="s">&quot;IsIntegers&quot;</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nv">Categoría</span> <span class="s">&quot;IsIntegers&quot;</span><span class="o">&gt;</span>
 <span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">IsIntegers</span><span class="p">(</span> <span class="nv">Integers</span> <span class="p">)</span><span class="o">;</span> <span class="nv">IsIntegers</span><span class="p">(</span> <span class="nv">Rationals</span> <span class="p">)</span><span class="o">;</span> <span class="nv">IsIntegers</span><span class="p">(</span> <span class="nv">7</span> <span class="p">)</span><span class="o">;</span>
 <span class="no">true</span>
 <span class="no">false</span>
@@ -257,16 +289,16 @@
 <div class="section" id="isint">
 <span id="id1"></span><h3><span class="section-number">3.2.1. </span>IsInt<a class="headerlink" href="#isint" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">IsInt(obj)</span></code> (Category)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IsInt(obj)</span></code> (Categoría)</p></li>
 </ul>
 <p>Cada entero racional se encuentra en la categoría IsInt, que es una subcategoría de <code class="docutils literal notranslate"><span class="pre">IsRat</span></code>.</p>
 </div>
 <div class="section" id="isposint">
 <h3><span class="section-number">3.2.2. </span>IsPosInt<a class="headerlink" href="#isposint" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p>IsPosInt(obj) (Category)</p></li>
+<li><p>IsPosInt(obj) (Categoría)</p></li>
 </ul>
-<p>Every positive integer lies in the category IsPosInt.</p>
+<p>Every positive integer lies in the Categoría IsPosInt.</p>
 </div>
 <div class="section" id="int">
 <span id="id2"></span><h3><span class="section-number">3.2.3. </span>Int<a class="headerlink" href="#int" title="Enlazar permanentemente con este título">¶</a></h3>
@@ -303,21 +335,21 @@
 <div class="section" id="isevenint">
 <h3><span class="section-number">3.2.4. </span>IsEvenInt<a class="headerlink" href="#isevenint" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">IsEvenInt(n)</span></code> (function)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IsEvenInt(n)</span></code> (función)</p></li>
 </ul>
 <p>comprueba si el número entero <span class="math notranslate nohighlight">\(n\)</span> es divisible por <span class="math notranslate nohighlight">\(2\)</span>.</p>
 </div>
 <div class="section" id="isoddint">
 <h3><span class="section-number">3.2.5. </span>IsOddInt<a class="headerlink" href="#isoddint" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">IsOddInt(n)</span></code> (function)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IsOddInt(n)</span></code> (función)</p></li>
 </ul>
 <p>comprueba si el número entero <span class="math notranslate nohighlight">\(n\)</span> no es divisible por <span class="math notranslate nohighlight">\(2\)</span>.</p>
 </div>
 <div class="section" id="absint">
 <span id="id3"></span><h3><span class="section-number">3.2.6. </span>AbsInt<a class="headerlink" href="#absint" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">AbsInt(n)</span></code> (function)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AbsInt(n)</span></code> (función)</p></li>
 </ul>
 <p><a class="reference internal" href="#absint">AbsInt</a> devuelve el valor absoluto del número entero <span class="math notranslate nohighlight">\(n\)</span>, es decir, <span class="math notranslate nohighlight">\(n\)</span> si <span class="math notranslate nohighlight">\(n\)</span> es positivo, <span class="math notranslate nohighlight">\(-n\)</span> si <span class="math notranslate nohighlight">\(n\)</span> es negativo y <span class="math notranslate nohighlight">\(0\)</span> si <span class="math notranslate nohighlight">\(n\)</span> es <span class="math notranslate nohighlight">\(0\)</span>.</p>
 <p><a class="reference internal" href="#absint">AbsInt</a> es un caso especial de la operación general <code class="docutils literal notranslate"><span class="pre">EuclideanDegree</span></code> (56.6.2). Consulte también <a class="reference internal" href="18-ciclotomics.html#absolutevalue"><span class="std std-ref">AbsoluteValue</span></a>.</p>
@@ -333,7 +365,7 @@
 <div class="section" id="signint">
 <span id="id4"></span><h3><span class="section-number">3.2.7. </span>SignInt<a class="headerlink" href="#signint" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p>SignInt(n) (function)</p></li>
+<li><p>SignInt(n) (función)</p></li>
 </ul>
 <p>SignInt devuelve el signo del número entero <span class="math notranslate nohighlight">\(n\)</span>, es decir, <span class="math notranslate nohighlight">\(1\)</span> si <span class="math notranslate nohighlight">\(n\)</span> es positivo, <span class="math notranslate nohighlight">\(-1\)</span> si <span class="math notranslate nohighlight">\(n\)</span> es negativo y <span class="math notranslate nohighlight">\(0\)</span> si <span class="math notranslate nohighlight">\(n\)</span> es <span class="math notranslate nohighlight">\(0\)</span>.</p>
 <div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">SignInt</span><span class="p">(</span> <span class="nv">33</span> <span class="p">)</span><span class="o">;</span>
@@ -348,7 +380,7 @@
 <div class="section" id="logint">
 <span id="id5"></span><h3><span class="section-number">3.2.8. </span>LogInt<a class="headerlink" href="#logint" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">LogInt(n,</span> <span class="pre">base)</span></code> (function)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LogInt(n,</span> <span class="pre">base)</span></code> (función)</p></li>
 </ul>
 <p><a class="reference internal" href="#logint">LogInt</a> devuelve la parte entera del logaritmo del entero positivo <span class="math notranslate nohighlight">\(n\)</span> con respecto a la base del entero positivo, es decir, el entero positivo más grande <span class="math notranslate nohighlight">\(e\)</span> tal que <span class="math notranslate nohighlight">\(base^{e} \leq n\)</span>. La función <a class="reference internal" href="#logint">LogInt</a> señalará un error si <span class="math notranslate nohighlight">\(n\)</span> o <span class="math notranslate nohighlight">\(base\)</span> no son positivos.</p>
 <p>Para <code class="docutils literal notranslate"><span class="pre">base</span> <span class="pre">=</span> <span class="pre">2</span></code> esto es muy eficiente porque se usa la representación binaria interna del entero.</p>
@@ -364,7 +396,7 @@
 <div class="section" id="rootint">
 <span id="id6"></span><h3><span class="section-number">3.2.9. </span>RootInt<a class="headerlink" href="#rootint" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">RootInt(n[,</span> <span class="pre">k])</span></code> (function)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RootInt(n[,</span> <span class="pre">k])</span></code> (función)</p></li>
 </ul>
 <p><a class="reference internal" href="#rootint">RootInt</a> devuelve la parte entera de la <span class="math notranslate nohighlight">\(k\)</span>-ésima raíz del entero <span class="math notranslate nohighlight">\(n\)</span>. Si no se proporciona el argumento de entero opcional <span class="math notranslate nohighlight">\(k\)</span>, el valor predeterminado es <span class="math notranslate nohighlight">\(2\)</span>, es decir, <a class="reference internal" href="#rootint">RootInt</a> devuelve la parte entera de la raíz cuadrada en este caso.</p>
 <ul class="simple">
@@ -386,7 +418,7 @@
 <div class="section" id="smallestrootint">
 <span id="id7"></span><h3><span class="section-number">3.2.10. </span>SmallestRootInt<a class="headerlink" href="#smallestrootint" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">SmallestRootInt(n)</span></code> (function)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SmallestRootInt(n)</span></code> (función)</p></li>
 </ul>
 <p><a class="reference internal" href="#smallestrootint">SmallestRootInt</a> devuelve la raíz más pequeña del entero <span class="math notranslate nohighlight">\(n\)</span>.</p>
 <p>La raíz más pequeña de un número entero <span class="math notranslate nohighlight">\(n\)</span> es el número entero <span class="math notranslate nohighlight">\(r\)</span> de valor absoluto más pequeño para el que existe un número entero positivo <span class="math notranslate nohighlight">\(k\)</span> tal que <span class="math notranslate nohighlight">\(n = r^{k}\)</span>.</p>
@@ -409,7 +441,7 @@
 <div class="section" id="listofdigits">
 <span id="id8"></span><h3><span class="section-number">3.2.11. </span>ListOfDigits<a class="headerlink" href="#listofdigits" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ListOfDigits(n)</span></code> (function)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ListOfDigits(n)</span></code> (función)</p></li>
 </ul>
 <p>Para un entero positivo <span class="math notranslate nohighlight">\(n\)</span>, esta función devuelve una lista <code class="docutils literal notranslate"><span class="pre">l</span></code>, que consta de los dígitos de n en representación decimal.</p>
 <div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">ListOfDigits</span><span class="p">(</span><span class="nv">3142</span><span class="p">)</span><span class="o">;</span>
@@ -430,7 +462,7 @@
 <div class="section" id="quoint">
 <span id="id9"></span><h3><span class="section-number">3.3.1. </span>QuoInt<a class="headerlink" href="#quoint" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">QuoInt(n,</span> <span class="pre">m)</span></code> (function)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">QuoInt(n,</span> <span class="pre">m)</span></code> (función)</p></li>
 </ul>
 <p><a class="reference internal" href="#quoint">QuoInt</a> devuelve la parte entera del cociente de sus operandos enteros.</p>
 <p>Si <span class="math notranslate nohighlight">\(n\)</span> y <span class="math notranslate nohighlight">\(m\)</span> son positivos, <a class="reference internal" href="#quoint">QuoInt</a> devuelve el mayor entero positivo <span class="math notranslate nohighlight">\(q\)</span> tal que <span class="math notranslate nohighlight">\(q \ast m \leq n\)</span>. Si <span class="math notranslate nohighlight">\(n\)</span> o <span class="math notranslate nohighlight">\(m\)</span> o ambos son negativos, el valor absoluto de la parte entera del cociente es el cociente de los valores absolutos de <span class="math notranslate nohighlight">\(n\)</span> y <span class="math notranslate nohighlight">\(m\)</span>, y su signo es el producto de los signos de <span class="math notranslate nohighlight">\(n\)</span> y <span class="math notranslate nohighlight">\(m\)</span>.</p>
@@ -449,7 +481,7 @@
 <div class="section" id="bestquoint">
 <span id="id10"></span><h3><span class="section-number">3.3.2. </span>BestQuoInt<a class="headerlink" href="#bestquoint" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">BestQuoInt(n,</span> <span class="pre">m)</span></code> (function)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">BestQuoInt(n,</span> <span class="pre">m)</span></code> (función)</p></li>
 </ul>
 <p><a class="reference internal" href="#bestquoint">BestQuoInt</a> devuelve el mejor cociente <span class="math notranslate nohighlight">\(q\)</span> de los enteros <span class="math notranslate nohighlight">\(n\)</span> y <span class="math notranslate nohighlight">\(m\)</span>. Este es el cociente tal que <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">-</span> <span class="pre">q</span> <span class="pre">∗</span> <span class="pre">m</span></code> tiene un valor absoluto mínimo. Si hay dos cocientes cuyos residuos tienen el mismo valor absoluto, se elige el cociente con el valor absoluto más pequeño.</p>
 <div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">BestQuoInt</span><span class="p">(</span> <span class="nv">5</span><span class="o">,</span> <span class="nv">3</span> <span class="p">)</span><span class="o">;</span>
@@ -462,7 +494,7 @@
 <div class="section" id="remint">
 <span id="id11"></span><h3><span class="section-number">3.3.3. </span>RemInt<a class="headerlink" href="#remint" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">RemInt(n,</span> <span class="pre">m)</span></code> (function)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RemInt(n,</span> <span class="pre">m)</span></code> (función)</p></li>
 </ul>
 <p>RemInt devuelve el resto de sus dos operandos enteros.</p>
 <p>Si <span class="math notranslate nohighlight">\(m\)</span> no es igual a cero, RemInt devuelve <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">-</span> <span class="pre">m</span> <span class="pre">*</span> <span class="pre">QuoInt</span> <span class="pre">(n,</span> <span class="pre">m)</span></code>. Tenga en cuenta que las reglas dadas para <a class="reference internal" href="#quoint">QuoInt</a> implican que el valor de retorno de <a class="reference internal" href="#remint">RemInt</a> tiene el mismo signo que <span class="math notranslate nohighlight">\(n\)</span> y su valor absoluto es estrictamente menor que el valor absoluto de <span class="math notranslate nohighlight">\(m\)</span>. Tenga en cuenta también que el valor de retorno es igual a <span class="math notranslate nohighlight">\(n\text{ mod }m\)</span> cuando tanto <span class="math notranslate nohighlight">\(n\)</span> como <span class="math notranslate nohighlight">\(m\)</span> no son negativos. Dividir por <span class="math notranslate nohighlight">\(0\)</span> indica un error.</p>
@@ -481,7 +513,7 @@
 <div class="section" id="gcdint">
 <span id="id12"></span><h3><span class="section-number">3.3.4. </span>GcdInt<a class="headerlink" href="#gcdint" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">GcdInt(m,</span> <span class="pre">n)</span></code> (function)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GcdInt(m,</span> <span class="pre">n)</span></code> (función)</p></li>
 </ul>
 <p><a class="reference internal" href="#gcdint">GcdInt</a> devuelve el máximo común divisor de sus dos operandos enteros <span class="math notranslate nohighlight">\(n\)</span> y <span class="math notranslate nohighlight">\(m\)</span>, es decir, el mayor número entero que divide <span class="math notranslate nohighlight">\(n\)</span> y <span class="math notranslate nohighlight">\(m\)</span>. El máximo común divisor nunca es negativo, incluso si los argumentos lo son. Definimos <code class="docutils literal notranslate"><span class="pre">GcdInt(</span> <span class="pre">m,</span> <span class="pre">0</span> <span class="pre">)</span> <span class="pre">=</span> <span class="pre">GcdInt(</span> <span class="pre">0,</span> <span class="pre">m</span> <span class="pre">)</span> <span class="pre">=</span> <span class="pre">AbsInt(</span> <span class="pre">m</span> <span class="pre">)</span></code> y <code class="docutils literal notranslate"><span class="pre">GcdInt(</span> <span class="pre">0,</span> <span class="pre">0</span> <span class="pre">)</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p>
 <p>GcdInt es un método utilizado por la función general <code class="docutils literal notranslate"><span class="pre">Gcd</span></code>.</p>
@@ -493,7 +525,7 @@
 <div class="section" id="gcdex">
 <span id="id13"></span><h3><span class="section-number">3.3.5. </span>Gcdex<a class="headerlink" href="#gcdex" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">Gcdex(m,</span> <span class="pre">n)</span></code> (function)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Gcdex(m,</span> <span class="pre">n)</span></code> (función)</p></li>
 </ul>
 <p>devuelve un registro <code class="docutils literal notranslate"><span class="pre">g</span></code> que describe el máximo común divisor extendido de <span class="math notranslate nohighlight">\(m\)</span> y <span class="math notranslate nohighlight">\(n\)</span>. El componente <code class="docutils literal notranslate"><span class="pre">gcd</span></code> es este <code class="docutils literal notranslate"><span class="pre">mcd</span></code>, los componentes <code class="docutils literal notranslate"><span class="pre">coeff1</span></code> y <code class="docutils literal notranslate"><span class="pre">coeff2</span></code> son cofactores enteros tales que <code class="docutils literal notranslate"><span class="pre">g.gcd</span> <span class="pre">=</span> <span class="pre">g.coeff1</span> <span class="pre">*</span> <span class="pre">m</span> <span class="pre">+</span> <span class="pre">g.coeff2</span> <span class="pre">*</span> <span class="pre">n</span></code>, y los componentes <code class="docutils literal notranslate"><span class="pre">coeff3</span></code> y <code class="docutils literal notranslate"><span class="pre">coeff4</span></code> son cofactores enteros tales que <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">=</span> <span class="pre">g.coeff3</span> <span class="pre">*</span> <span class="pre">m</span> <span class="pre">+</span> <span class="pre">g.coeff4</span> <span class="pre">*</span> <span class="pre">n</span></code>.</p>
 <p>Si <span class="math notranslate nohighlight">\(m\)</span> y <span class="math notranslate nohighlight">\(n\)</span> son distintos de cero, <code class="docutils literal notranslate"><span class="pre">AbsInt(g.coeff1)</span></code> es menor o igual que <code class="docutils literal notranslate"><span class="pre">AbsInt(n)</span> <span class="pre">/</span> <span class="pre">(2</span> <span class="pre">*</span> <span class="pre">g.gcd)</span></code>, y <code class="docutils literal notranslate"><span class="pre">AbsInt(g.coeff2)</span></code> es menor o igual que <code class="docutils literal notranslate"><span class="pre">AbsInt(m)</span> <span class="pre">/</span> <span class="pre">(2</span> <span class="pre">*</span> <span class="pre">g.gcd)</span></code>.</p>
@@ -515,7 +547,7 @@
 <div class="section" id="lcmint">
 <span id="id14"></span><h3><span class="section-number">3.3.6. </span>LcmInt<a class="headerlink" href="#lcmint" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">LcmInt(m,</span> <span class="pre">n)</span></code> (function)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LcmInt(m,</span> <span class="pre">n)</span></code> (función)</p></li>
 </ul>
 <p>devuelve el mínimo común múltiplo de los enteros <span class="math notranslate nohighlight">\(m\)</span> y <span class="math notranslate nohighlight">\(n\)</span>.</p>
 <p><a class="reference internal" href="#lcmint">LcmInt</a> es un método utilizado por la operación general <code class="docutils literal notranslate"><span class="pre">Lcm</span></code>.</p>
@@ -527,7 +559,7 @@
 <div class="section" id="coefficientsqadic">
 <span id="id15"></span><h3><span class="section-number">3.3.7. </span>CoefficientsQadic<a class="headerlink" href="#coefficientsqadic" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">CoefficientsQadic(i,</span> <span class="pre">q)</span></code> (operation)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CoefficientsQadic(i,</span> <span class="pre">q)</span></code> (operación)</p></li>
 </ul>
 <p>devuelve la representación <span class="math notranslate nohighlight">\(q\)</span>-ádica del entero <span class="math notranslate nohighlight">\(i\)</span> como una lista <code class="docutils literal notranslate"><span class="pre">l</span></code> de coeficientes que satisfacen la igualdad</p>
 <div class="math notranslate nohighlight">
@@ -541,14 +573,14 @@
 <div class="section" id="coefficientsmultiadic">
 <span id="id16"></span><h3><span class="section-number">3.3.8. </span>CoefficientsMultiadic<a class="headerlink" href="#coefficientsmultiadic" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">CoefficientsMultiadic(ints,</span> <span class="pre">int)</span></code> (function)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CoefficientsMultiadic(ints,</span> <span class="pre">int)</span></code> (función)</p></li>
 </ul>
 <p>devuelve la expansión multiádica del entero <code class="docutils literal notranslate"><span class="pre">int</span></code> módulo los enteros dados en <code class="docutils literal notranslate"><span class="pre">ints</span></code> (en orden ascendente). Devuelve una lista de coeficientes en orden inverso al de <code class="docutils literal notranslate"><span class="pre">ints</span></code>.</p>
 </div>
 <div class="section" id="chineserem">
 <span id="id17"></span><h3><span class="section-number">3.3.9. </span>ChineseRem<a class="headerlink" href="#chineserem" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">ChineseRem(moduli,</span> <span class="pre">residues)</span></code> (function)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ChineseRem(moduli,</span> <span class="pre">residues)</span></code> (función)</p></li>
 </ul>
 <p><a class="reference internal" href="#chineserem">ChineseRem</a> devuelve la combinación de los <code class="docutils literal notranslate"><span class="pre">residues</span></code> módulo los <code class="docutils literal notranslate"><span class="pre">moduli</span></code>, es decir, el entero único <code class="docutils literal notranslate"><span class="pre">c</span></code> de <code class="docutils literal notranslate"><span class="pre">[0..Lcm(moduli</span> <span class="pre">)-1]</span></code> tal que <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">=</span> <span class="pre">residues</span> <span class="pre">[i]</span></code> módulo <code class="docutils literal notranslate"><span class="pre">moduli</span> <span class="pre">[i]</span></code> para todo <code class="docutils literal notranslate"><span class="pre">i</span></code>, si existe.</p>
 <p>Si no existe tal combinación, <a class="reference internal" href="#chineserem">ChineseRem</a> indica un error.</p>
@@ -561,7 +593,7 @@
 </div>
 <div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">ChineseRem</span><span class="p">(</span> <span class="p">[</span> <span class="nv">6</span><span class="o">,</span> <span class="nv">10</span><span class="o">,</span> <span class="nv">14</span> <span class="p">]</span><span class="o">,</span> <span class="p">[</span> <span class="nv">1</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">3</span> <span class="p">]</span> <span class="p">)</span><span class="o">;</span>
 <span class="nv">Error</span><span class="o">,</span> <span class="nv">the</span> <span class="nv">residues</span> <span class="nv">must</span> <span class="nv">be</span> <span class="nv">equal</span> <span class="nv">modulo</span> <span class="nv">2</span> <span class="nv">at</span> <span class="o">/</span><span class="nv">proc</span><span class="o">/</span><span class="nv">cygdrive</span><span class="o">/</span><span class="nv">C</span><span class="o">/</span><span class="nv">gap</span><span class="o">-</span><span class="nv">4</span><span class="o">.</span><span class="nv">10</span><span class="o">.</span><span class="nv">2</span><span class="o">/</span><span class="nv">lib</span><span class="o">/</span><span class="nv">integer</span><span class="o">.</span><span class="nv">gi</span>:<span class="nv">408</span> <span class="nv">called</span> <span class="nv">from</span>
-<span class="o">&lt;</span><span class="k">function</span> <span class="s">&quot;ChineseRem&quot;</span><span class="o">&gt;</span><span class="p">(</span> <span class="o">&lt;</span><span class="nv">arguments</span><span class="o">&gt;</span> <span class="p">)</span>
+<span class="o">&lt;</span><span class="nv">función</span> <span class="s">&quot;ChineseRem&quot;</span><span class="o">&gt;</span><span class="p">(</span> <span class="o">&lt;</span><span class="nv">arguments</span><span class="o">&gt;</span> <span class="p">)</span>
  <span class="nv">called</span> <span class="nv">from</span> <span class="nv">read</span><span class="o">-</span><span class="nv">eval</span> <span class="nv">loop</span> <span class="nv">at</span> <span class="o">*</span><span class="nv">stdin</span><span class="o">*</span>:<span class="nv">1</span>
 <span class="nv">you</span> <span class="nv">can</span> &#39;<span class="k">quit</span><span class="o">;</span>&#39; <span class="nv">to</span> <span class="k">quit</span> <span class="nv">to</span> <span class="nv">outer</span> <span class="nv">loop</span><span class="o">,</span> <span class="ow">or</span>
 <span class="nv">you</span> <span class="nv">can</span> &#39;<span class="k">return</span><span class="o">;</span>&#39; <span class="nv">to</span> <span class="k">continue</span>
@@ -572,7 +604,7 @@
 <div class="section" id="powermodint">
 <span id="id18"></span><h3><span class="section-number">3.3.10. </span>PowerModInt<a class="headerlink" href="#powermodint" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">PowerModInt(r,</span> <span class="pre">e,</span> <span class="pre">m)</span></code> (function)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PowerModInt(r,</span> <span class="pre">e,</span> <span class="pre">m)</span></code> (función)</p></li>
 </ul>
 <p>devuelve <span class="math notranslate nohighlight">\(r^{e} (\texttt{ mod } m)\)</span> para enteros <code class="docutils literal notranslate"><span class="pre">r</span></code>, <code class="docutils literal notranslate"><span class="pre">e</span></code> y <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p>
 <p>Tenga en cuenta que <a class="reference internal" href="#powermodint">PowerModInt</a> puede reducir los resultados intermedios y, por lo tanto, generalmente será más rápido que usar <code class="docutils literal notranslate"><span class="pre">r^e</span> <span class="pre">mod</span> <span class="pre">m</span></code>, que calcularía <span class="math notranslate nohighlight">\(r^{e}\)</span> primero y reduciría el resultado después.</p>
@@ -602,14 +634,17 @@
 <span class="nv">2</span>
 <span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">Primes</span><span class="p">[</span><span class="nv">100</span><span class="p">]</span><span class="o">;</span>
 <span class="nv">541</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="c1"># Teorema de Wilson</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">RemInt</span><span class="p">(</span><span class="nv">Factorial</span><span class="p">(</span><span class="nv">Primes</span><span class="p">[</span><span class="nv">120</span><span class="p">]</span><span class="o">-</span><span class="nv">1</span><span class="p">)</span><span class="o">+</span><span class="nv">1</span><span class="o">,</span> <span class="nv">Primes</span><span class="p">[</span><span class="nv">120</span><span class="p">])</span><span class="o">;</span>
+<span class="nv">0</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="isprimeint">
 <span id="isprobablyprimeint"></span><h3><span class="section-number">3.4.2. </span>IsPrimeInt<a class="headerlink" href="#isprimeint" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">IsProbablyPrimeInt(n)</span></code> (function)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">IsProbablyPrimeInt(n)</span></code> (function)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IsProbablyPrimeInt(n)</span></code> (función)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IsProbablyPrimeInt(n)</span></code> (función)</p></li>
 </ul>
 <p><a class="reference internal" href="#isprobablyprimeint">IsProbablyPrimeInt</a> devuelve <code class="docutils literal notranslate"><span class="pre">false</span></code> si puede probar que el entero <span class="math notranslate nohighlight">\(n\)</span> es compuesto y <code class="docutils literal notranslate"><span class="pre">true</span></code> en caso contrario.</p>
 <p>Por convención <code class="docutils literal notranslate"><span class="pre">IsProbablyPrimeInt(0)</span> <span class="pre">=</span> <span class="pre">IsProbablyPrimeInt(1)</span> <span class="pre">=</span> <span class="pre">false</span></code> y definimos <code class="docutils literal notranslate"><span class="pre">IsProbablyPrimeInt(-n)</span> <span class="pre">=</span> <span class="pre">IsProbablyPrimeInt(n)</span></code>.</p>
@@ -633,9 +668,442 @@
 <div class="section" id="primalityproof">
 <span id="id20"></span><h3><span class="section-number">3.4.3. </span>PrimalityProof<a class="headerlink" href="#primalityproof" title="Enlazar permanentemente con este título">¶</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">PrimalityProof(n)</span></code> (function)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PrimalityProof(n)</span></code> (función)</p></li>
 </ul>
 <p>Construya una prueba verificable por máquina de la primalidad de (el primo probable) <span class="math notranslate nohighlight">\(n\)</span>, siguiendo las ideas de [BLS75]. La prueba consta de varias pruebas de pseudoprimalidad de Fermat y Lucas, que tomadas en su conjunto prueban la primacía. La prueba se representa como una lista de testigos de dos tipos. El primer tipo, <code class="docutils literal notranslate"><span class="pre">[&quot;F&quot;,</span> <span class="pre">divisor,</span> <span class="pre">base]</span></code>, indica una prueba de pseudoprimalidad de Fermat exitosa, donde <span class="math notranslate nohighlight">\(n\)</span> es un pseudoprime fuerte en la base con orden no divisible por <code class="docutils literal notranslate"><span class="pre">(n</span> <span class="pre">-</span> <span class="pre">1)</span> <span class="pre">/</span> <span class="pre">divisor</span></code>. El segundo tipo, <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">&quot;L&quot;,</span> <span class="pre">divisor,</span> <span class="pre">discriminante,</span> <span class="pre">P</span> <span class="pre">]</span></code> indica una prueba de pseudoprimalidad de Lucas exitosa, para una forma cuadrática del discriminante dado y el término medio <code class="docutils literal notranslate"><span class="pre">P</span></code> con una verificación adicional en <code class="docutils literal notranslate"><span class="pre">(n</span> <span class="pre">+</span> <span class="pre">1)</span> <span class="pre">/</span> <span class="pre">divisor.</span></code></p>
+</div>
+<div class="section" id="isprimepowerint">
+<span id="id21"></span><h3><span class="section-number">3.4.4. </span>IsPrimePowerInt<a class="headerlink" href="#isprimepowerint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">IsPrimePowerInt(n)</span></code> (función)</p></li>
+</ul>
+<p><a class="reference internal" href="#isprimepowerint">IsPrimePowerInt</a> devuelve <code class="docutils literal notranslate"><span class="pre">true</span></code> si el número entero <span class="math notranslate nohighlight">\(n\)</span> es una potencia principal y <code class="docutils literal notranslate"><span class="pre">false</span></code> en caso contrario.</p>
+<p>Un número entero <span class="math notranslate nohighlight">\(n\)</span> es una potencia prima si existe un número primo <span class="math notranslate nohighlight">\(p\)</span> y un número entero positivo <span class="math notranslate nohighlight">\(i\)</span> tal que <span class="math notranslate nohighlight">\(p^{i} = n\)</span>.</p>
+<p>Si <span class="math notranslate nohighlight">\(n\)</span> es negativo, la condición es que debe existir un primo negativo <span class="math notranslate nohighlight">\(p\)</span> y un entero positivo impar <span class="math notranslate nohighlight">\(i\)</span> tal que <span class="math notranslate nohighlight">\(p^{i} = n\)</span>. Los enteros <span class="math notranslate nohighlight">\(1\)</span> y <span class="math notranslate nohighlight">\(-1\)</span> no son poderes primos.</p>
+<p>Tenga en cuenta que <a class="reference internal" href="#isprimepowerint">IsPrimePowerInt</a> usa <a class="reference internal" href="#smallestrootint">SmallestRootInt</a> y una prueba de primalidad probable (consulte <a class="reference internal" href="#isprimeint">IsPrimeInt</a>).</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">IsPrimePowerInt</span><span class="p">(</span> <span class="nv">31</span><span class="o">^</span><span class="nv">5</span> <span class="p">)</span><span class="o">;</span>
+<span class="no">true</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">IsPrimePowerInt</span><span class="p">(</span> <span class="nv">2</span><span class="o">^</span><span class="nv">31</span><span class="o">-</span><span class="nv">1</span> <span class="p">)</span><span class="o">;</span> <span class="c1"># 2^31-1 is actually a prime</span>
+<span class="no">true</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">IsPrimePowerInt</span><span class="p">(</span> <span class="nv">2</span><span class="o">^</span><span class="nv">63</span><span class="o">-</span><span class="nv">1</span> <span class="p">)</span><span class="o">;</span>
+<span class="no">false</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">Filtered</span><span class="p">(</span> <span class="p">[</span><span class="o">-</span><span class="nv">10</span><span class="o">..</span><span class="nv">10</span><span class="p">]</span><span class="o">,</span> <span class="nv">IsPrimePowerInt</span> <span class="p">)</span><span class="o">;</span>
+<span class="p">[</span> <span class="o">-</span><span class="nv">8</span><span class="o">,</span> <span class="o">-</span><span class="nv">7</span><span class="o">,</span> <span class="o">-</span><span class="nv">5</span><span class="o">,</span> <span class="o">-</span><span class="nv">3</span><span class="o">,</span> <span class="o">-</span><span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">3</span><span class="o">,</span> <span class="nv">4</span><span class="o">,</span> <span class="nv">5</span><span class="o">,</span> <span class="nv">7</span><span class="o">,</span> <span class="nv">8</span><span class="o">,</span> <span class="nv">9</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="nextprimeint">
+<span id="id22"></span><h3><span class="section-number">3.4.5. </span>NextPrimeInt<a class="headerlink" href="#nextprimeint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">NextPrimeInt(n)</span></code> (función)</p></li>
+</ul>
+<p><a class="reference internal" href="#nextprimeint">NextPrimeInt</a> devuelve el número primo más pequeño que es estrictamente mayor que el entero <span class="math notranslate nohighlight">\(n\)</span>. Tenga en cuenta que <a class="reference internal" href="#nextprimeint">NextPrimeInt</a> utiliza una prueba de primalidad probable (consulte <a class="reference internal" href="#isprimeint">IsPrimeInt</a>).</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">NextPrimeInt</span><span class="p">(</span> <span class="nv">541</span> <span class="p">)</span><span class="o">;</span> <span class="nv">NextPrimeInt</span><span class="p">(</span> <span class="o">-</span><span class="nv">1</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">547</span>
+<span class="nv">2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="prevprimeint">
+<h3><span class="section-number">3.4.6. </span>PrevPrimeInt<a class="headerlink" href="#prevprimeint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">PrevPrimeInt(n)</span></code> (función)</p></li>
+</ul>
+<p><a class="reference internal" href="#prevprimeint">PrevPrimeInt</a> devuelve el número primo más grande, que es estrictamente menor que el entero <span class="math notranslate nohighlight">\(n\)</span>. Tenga en cuenta que <a class="reference internal" href="#prevprimeint">PrevPrimeInt</a> utiliza una prueba de primalidad probable (consulte <a class="reference internal" href="#isprimeint">IsPrimeInt</a>).</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">PrevPrimeInt</span><span class="p">(</span> <span class="nv">541</span> <span class="p">)</span><span class="o">;</span> <span class="nv">PrevPrimeInt</span><span class="p">(</span> <span class="nv">1</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">523</span>
+<span class="o">-</span><span class="nv">2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="factorsint">
+<span id="id23"></span><h3><span class="section-number">3.4.7. </span>FactorsInt<a class="headerlink" href="#factorsint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">FactorsInt(n)</span></code> (función)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FactorsInt(n:</span> <span class="pre">RhoTrials</span> <span class="pre">:=</span> <span class="pre">trials)</span></code> (función)</p></li>
+</ul>
+<p><a class="reference internal" href="#factorsint">FactorsInt</a> devuelve una lista de factores de un entero <span class="math notranslate nohighlight">\(n\)</span> dado tal que <code class="docutils literal notranslate"><span class="pre">Product(FactorsInt(n))</span> <span class="pre">=</span> <span class="pre">n</span></code>. Si <span class="math notranslate nohighlight">\(| n | \leq 1\)</span> se devuelve la lista <code class="docutils literal notranslate"><span class="pre">[n]</span></code>. De lo contrario, el resultado contiene números primos probables, ordenados por valor absoluto. Todas las entradas serán positivas excepto la primera en caso de una <span class="math notranslate nohighlight">\(n\)</span> negativa.</p>
+<p>Consulte <a class="reference internal" href="#primedivisors">PrimeDivisors</a> para conocer una función que devuelve un conjunto de números primos (probables) que dividen <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<p>Tenga en cuenta que <a class="reference internal" href="#factorsint">FactorsInt</a> utiliza una prueba de primalidad probable (consulte <a class="reference internal" href="#isprimeint">IsPrimeInt</a>). Por lo tanto, <a class="reference internal" href="#factorsint">FactorsInt</a> podría devolver una lista que contiene enteros compuestos. En tal caso, recibirá una advertencia sobre el uso de un cebado probable. Puede desactivar estas advertencias mediante <code class="docutils literal notranslate"><span class="pre">SetInfoLevel(InfoPrimeInt,</span> <span class="pre">0)</span></code>; (también vea <code class="docutils literal notranslate"><span class="pre">SetInfoLevel</span> <span class="pre">(7.4.3)</span></code>).</p>
+<p>El tiempo que tarda <a class="reference internal" href="#factorsint">FactorsInt</a> es aproximadamente proporcional a la raíz cuadrada del segundo factor primo más grande de <span class="math notranslate nohighlight">\(n\)</span>, que es el último que <a class="reference internal" href="#factorsint">FactorsInt</a> tiene que encontrar, ya que el factor más grande es simplemente lo que queda cuando todos los demás han sido eliminados. Por tanto, el tiempo está aproximadamente limitado por la cuarta raíz de <span class="math notranslate nohighlight">\(n\)</span>. Se garantiza que <a class="reference internal" href="#factorsint">FactorsInt</a> encontrará todos los factores menores que <span class="math notranslate nohighlight">\(106\)</span> y encontrará la mayoría de los factores menores que <span class="math notranslate nohighlight">\(1010\)</span>. Si <span class="math notranslate nohighlight">\(n\)</span> contiene múltiples factores mayores que eso, es posible que <a class="reference internal" href="#factorsint">FactorsInt</a> no pueda factorizar <span class="math notranslate nohighlight">\(n\)</span> y luego señalará un error.</p>
+<p><a class="reference internal" href="#factorsint">FactorsInt</a> se utiliza en un método para las operaciones generales de <code class="docutils literal notranslate"><span class="pre">Factors</span></code>.</p>
+<p>En la segunda forma, <a class="reference internal" href="#factorsint">FactorsInt</a> llama a <code class="docutils literal notranslate"><span class="pre">FactorsRho</span></code> con un límite de ensayos en el número de ensayos que realiza. El valor predeterminado es <span class="math notranslate nohighlight">\(8192\)</span>. Tenga en cuenta que la <code class="docutils literal notranslate"><span class="pre">Rho</span></code> de Pollard es el método más rápido para encontrar factores primos con aproximadamente <span class="math notranslate nohighlight">\(5-10\)</span> dígitos decimales, pero se vuelve cada vez más inferior a otras técnicas de factorización como por ejemplo el método de curvas elípticas (ECM) cuanto mayores son los factores primos. Por lo tanto, en lugar de realizar una gran cantidad de pruebas de <code class="docutils literal notranslate"><span class="pre">Rho</span></code>, generalmente es más recomendable instalar el paquete <code class="docutils literal notranslate"><span class="pre">FactInt</span></code> y luego simplemente usar la operación <code class="docutils literal notranslate"><span class="pre">Factors</span></code>. La factorización del octavo número de Fermat por <code class="docutils literal notranslate"><span class="pre">Rho</span></code> de Pollard a continuación ya lleva un tiempo.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">FactorsInt</span><span class="p">(</span> <span class="o">-</span><span class="nv">Factorial</span><span class="p">(</span><span class="nv">6</span><span class="p">)</span> <span class="p">)</span><span class="o">;</span>
+<span class="p">[</span> <span class="o">-</span><span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">3</span><span class="o">,</span> <span class="nv">3</span><span class="o">,</span> <span class="nv">5</span> <span class="p">]</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">Set</span><span class="p">(</span> <span class="nv">FactorsInt</span><span class="p">(</span> <span class="nv">Factorial</span><span class="p">(</span><span class="nv">13</span><span class="p">)</span><span class="o">/</span><span class="nv">11</span> <span class="p">)</span> <span class="p">)</span><span class="o">;</span>
+<span class="p">[</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">3</span><span class="o">,</span> <span class="nv">5</span><span class="o">,</span> <span class="nv">7</span><span class="o">,</span> <span class="nv">13</span> <span class="p">]</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">FactorsInt</span><span class="p">(</span> <span class="nv">2</span><span class="o">^</span><span class="nv">63</span> <span class="o">-</span> <span class="nv">1</span> <span class="p">)</span><span class="o">;</span>
+<span class="p">[</span> <span class="nv">7</span><span class="o">,</span> <span class="nv">7</span><span class="o">,</span> <span class="nv">73</span><span class="o">,</span> <span class="nv">127</span><span class="o">,</span> <span class="nv">337</span><span class="o">,</span> <span class="nv">92737</span><span class="o">,</span> <span class="nv">649657</span> <span class="p">]</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">FactorsInt</span><span class="p">(</span> <span class="nv">10</span><span class="o">^</span><span class="nv">42</span> <span class="o">+</span> <span class="nv">1</span> <span class="p">)</span><span class="o">;</span>
+<span class="p">[</span> <span class="nv">29</span><span class="o">,</span> <span class="nv">101</span><span class="o">,</span> <span class="nv">281</span><span class="o">,</span> <span class="nv">9901</span><span class="o">,</span> <span class="nv">226549</span><span class="o">,</span> <span class="nv">121499449</span><span class="o">,</span> <span class="nv">4458192223320340849</span> <span class="p">]</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">FactorsInt</span><span class="p">(</span><span class="nv">2</span><span class="o">^</span><span class="nv">256</span><span class="o">+</span><span class="nv">1</span>:<span class="nv">RhoTrials</span><span class="o">:=</span><span class="nv">100000000</span><span class="p">)</span><span class="o">;</span>
+<span class="p">[</span> <span class="nv">1238926361552897</span><span class="o">,</span> <span class="nv">93461639715357977769163558199606896584051237541638188580280321</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="primedivisors">
+<span id="id24"></span><h3><span class="section-number">3.4.8. </span>PrimeDivisors<a class="headerlink" href="#primedivisors" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">PrimeDivisors(n)</span></code> (attribute)</p></li>
+</ul>
+<p><a class="reference internal" href="#primedivisors">PrimeDivisors</a> devuelve un número entero distinto de cero n un conjunto de sus divisores primos positivos (probables). En casos raros, el resultado podría contener un número compuesto que pasó ciertas pruebas de primalidad, consulte <a class="reference internal" href="#isprobablyprimeint">IsProbablyPrimeInt</a> y <a class="reference internal" href="#factorsint">FactorsInt</a> para obtener más detalles.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">PrimeDivisors</span><span class="p">(</span><span class="o">-</span><span class="nv">12</span><span class="p">)</span><span class="o">;</span>
+<span class="p">[</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">3</span> <span class="p">]</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">PrimeDivisors</span><span class="p">(</span><span class="nv">1</span><span class="p">)</span><span class="o">;</span>
+<span class="p">[</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="partialfactorization">
+<span id="id25"></span><h3><span class="section-number">3.4.9. </span>PartialFactorization<a class="headerlink" href="#partialfactorization" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">PartialFactorization(n[,</span> <span class="pre">effort])</span></code> (operación)</p></li>
+</ul>
+<p><a class="reference internal" href="#partialfactorization">PartialFactorization</a> devuelve una factorización parcial del entero <span class="math notranslate nohighlight">\(n\)</span>. No se hacen afirmaciones sobre la primordialidad de los factores, excepto los que se mencionan a continuación.</p>
+<p>El esfuerzo <code class="docutils literal notranslate"><span class="pre">effort</span></code>, si se da, especifica la intensidad con la que la función debe intentar determinar los factores de <span class="math notranslate nohighlight">\(n\)</span>.. El valor predeterminado es <code class="docutils literal notranslate"><span class="pre">effort</span> <span class="pre">=</span> <span class="pre">5</span></code>.</p>
+<ul class="simple">
+<li><p>Si <code class="docutils literal notranslate"><span class="pre">effort</span> <span class="pre">=</span> <span class="pre">0</span></code>, se realiza la división de prueba por los números primos por debajo de <span class="math notranslate nohighlight">\(100\)</span>. Se garantiza que los factores devueltos por debajo de <span class="math notranslate nohighlight">\(104\)</span> son primos.</p></li>
+<li><p>Si <code class="docutils literal notranslate"><span class="pre">effort</span> <span class="pre">=</span> <span class="pre">1</span></code>, se realiza la división de prueba por los números primos por debajo de <span class="math notranslate nohighlight">\(1000\)</span>. Se garantiza que los factores devueltos por debajo de <span class="math notranslate nohighlight">\(106\)</span> son primos.</p></li>
+<li><p>Si <code class="docutils literal notranslate"><span class="pre">effort</span> <span class="pre">=</span> <span class="pre">2</span></code>, adicionalmente se realiza una división de prueba por los números de las listas <code class="docutils literal notranslate"><span class="pre">Primes2</span></code> y <code class="docutils literal notranslate"><span class="pre">ProbablePrimes2</span></code>, y se detectan las potencias perfectas. Se garantiza que los factores devueltos por debajo de 106 son primos.</p></li>
+<li><p>Si <code class="docutils literal notranslate"><span class="pre">effort</span> <span class="pre">=</span> <span class="pre">3</span></code>, se usa adicionalmente <code class="docutils literal notranslate"><span class="pre">FactorsRho</span></code> (Rho de Pollard) con <code class="docutils literal notranslate"><span class="pre">RhoTrials</span> <span class="pre">=</span> <span class="pre">256</span></code>.</p></li>
+<li><p>Si <code class="docutils literal notranslate"><span class="pre">effort</span> <span class="pre">=</span> <span class="pre">4</span></code>, como arriba, pero <code class="docutils literal notranslate"><span class="pre">RhoTrials</span> <span class="pre">=</span> <span class="pre">2048</span></code>.</p></li>
+<li><p>Si <code class="docutils literal notranslate"><span class="pre">effort</span> <span class="pre">=</span> <span class="pre">5</span></code>, como arriba, pero <code class="docutils literal notranslate"><span class="pre">RhoTrials</span> <span class="pre">=</span> <span class="pre">8192</span></code>. Se garantiza que los factores devueltos por debajo de <span class="math notranslate nohighlight">\(1012\)</span> son primos, y se garantiza que se encontrarán todos los factores primos por debajo de <span class="math notranslate nohighlight">\(106\)</span>.</p></li>
+<li><p>Si <code class="docutils literal notranslate"><span class="pre">effort</span> <span class="pre">=</span> <span class="pre">6</span></code> y se carga el paquete <code class="docutils literal notranslate"><span class="pre">FactInt</span></code>, además de lo anterior se manejan bastantes casos especiales.</p></li>
+<li><p>Si <code class="docutils literal notranslate"><span class="pre">effort</span> <span class="pre">=</span> <span class="pre">7</span></code> y el paquete <code class="docutils literal notranslate"><span class="pre">FactInt</span></code> está cargado, lo único que no se intenta para obtener una factorización completa en pseudoprimes Baillie-Pomerance-Selfridge-Wagstaff es la aplicación del MPQS a un compuesto restante con más de <span class="math notranslate nohighlight">\(50\)</span> dígitos decimales.</p></li>
+</ul>
+<p>Aumentar el valor del effort de argumento en uno generalmente da como resultado un aumento de los requisitos de tiempo de ejecución en un factor de (¡muy aproximadamente!) <span class="math notranslate nohighlight">\(3\)</span> a <span class="math notranslate nohighlight">\(10\)</span>. (Consulte también CheapFactorsInt (EDIM: CheapFactorsInt)).</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">List</span><span class="p">([</span><span class="nv">0</span><span class="o">..</span><span class="nv">5</span><span class="p">]</span><span class="o">,</span><span class="nv">i</span><span class="o">-&gt;</span><span class="nv">PartialFactorization</span><span class="p">(</span><span class="nv">97</span><span class="o">^</span><span class="nv">35</span><span class="o">-</span><span class="nv">1</span><span class="o">,</span><span class="nv">i</span><span class="p">))</span><span class="o">;</span>
+<span class="p">[</span> <span class="p">[</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">3</span><span class="o">,</span> <span class="nv">11</span><span class="o">,</span> <span class="nv">31</span><span class="o">,</span> <span class="nv">43</span><span class="o">,</span> <span class="nv">2446338959059521520901826365168917110105972824229555319002965029</span> <span class="p">]</span><span class="o">,</span>
+  <span class="p">[</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">3</span><span class="o">,</span> <span class="nv">11</span><span class="o">,</span> <span class="nv">31</span><span class="o">,</span> <span class="nv">43</span><span class="o">,</span> <span class="nv">967</span><span class="o">,</span> <span class="nv">2529823122088440042297648774735177983563570655873376751812787</span> <span class="p">]</span><span class="o">,</span>
+  <span class="p">[</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">3</span><span class="o">,</span> <span class="nv">11</span><span class="o">,</span> <span class="nv">31</span><span class="o">,</span> <span class="nv">43</span><span class="o">,</span> <span class="nv">967</span><span class="o">,</span> <span class="nv">2529823122088440042297648774735177983563570655873376751812787</span> <span class="p">]</span><span class="o">,</span>
+  <span class="p">[</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">3</span><span class="o">,</span> <span class="nv">11</span><span class="o">,</span> <span class="nv">31</span><span class="o">,</span> <span class="nv">43</span><span class="o">,</span> <span class="nv">967</span><span class="o">,</span> <span class="nv">39761</span><span class="o">,</span> <span class="nv">262321</span><span class="o">,</span> <span class="nv">242549173950325921859769421435653153445616962914227</span> <span class="p">]</span><span class="o">,</span>
+  <span class="p">[</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">3</span><span class="o">,</span> <span class="nv">11</span><span class="o">,</span> <span class="nv">31</span><span class="o">,</span> <span class="nv">43</span><span class="o">,</span> <span class="nv">967</span><span class="o">,</span> <span class="nv">39761</span><span class="o">,</span> <span class="nv">262321</span><span class="o">,</span> <span class="nv">687121</span><span class="o">,</span> <span class="nv">352993394104278463123335513593170858474150787</span> <span class="p">]</span><span class="o">,</span>
+  <span class="p">[</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">3</span><span class="o">,</span> <span class="nv">11</span><span class="o">,</span> <span class="nv">31</span><span class="o">,</span> <span class="nv">43</span><span class="o">,</span> <span class="nv">967</span><span class="o">,</span> <span class="nv">39761</span><span class="o">,</span> <span class="nv">262321</span><span class="o">,</span> <span class="nv">687121</span><span class="o">,</span> <span class="nv">20241187</span><span class="o">,</span> <span class="nv">504769301</span><span class="o">,</span> <span class="nv">34549173843451574629911361501</span> <span class="p">]</span> <span class="p">]</span>
+<span class="nv">gap</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="printfactorsint">
+<span id="id26"></span><h3><span class="section-number">3.4.10. </span>PrintFactorsInt<a class="headerlink" href="#printfactorsint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">PrintFactorsInt(n)</span></code> (función)</p></li>
+</ul>
+<p>imprime la factorización prima del entero <span class="math notranslate nohighlight">\(n\)</span> en forma legible por humanos. Consulte también <code class="docutils literal notranslate"><span class="pre">StringPP</span></code>.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">PrintFactorsInt</span><span class="p">(</span> <span class="nv">Factorial</span><span class="p">(</span> <span class="nv">7</span> <span class="p">)</span> <span class="p">)</span><span class="o">;</span>
+<span class="nv">2</span><span class="o">^</span><span class="nv">4</span><span class="o">*</span><span class="nv">3</span><span class="o">^</span><span class="nv">2</span><span class="o">*</span><span class="nv">5</span><span class="o">*</span><span class="nv">7</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="primepowersint">
+<span id="id27"></span><h3><span class="section-number">3.4.11. </span>PrimePowersInt<a class="headerlink" href="#primepowersint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">PrimePowersInt(n)</span></code> (función)</p></li>
+</ul>
+<p>devuelve la factorización prima del entero <span class="math notranslate nohighlight">\(n\)</span> como una lista <span class="math notranslate nohighlight">\([p^{1}, e^{1}, \dots, p^{k}, e^{k}]\)</span> con <span class="math notranslate nohighlight">\(n = p_{1}^{e_{1}} \cdot p_{2}^{e_{2}} \cdot{\dots}\cdot p_{k}^{e_{k}}\)</span>. Para enteros negativos, se toma el valor absoluto. No se permite cero como entrada.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">PrimePowersInt</span><span class="p">(</span> <span class="nv">Factorial</span><span class="p">(</span> <span class="nv">7</span> <span class="p">)</span> <span class="p">)</span><span class="o">;</span>
+<span class="p">[</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">4</span><span class="o">,</span> <span class="nv">3</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">5</span><span class="o">,</span> <span class="nv">1</span><span class="o">,</span> <span class="nv">7</span><span class="o">,</span> <span class="nv">1</span> <span class="p">]</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">PrimePowersInt</span><span class="p">(</span> <span class="nv">Factorial</span><span class="p">(</span> <span class="nv">15</span> <span class="p">)</span> <span class="p">)</span><span class="o">;</span>
+<span class="p">[</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">11</span><span class="o">,</span> <span class="nv">3</span><span class="o">,</span> <span class="nv">6</span><span class="o">,</span> <span class="nv">5</span><span class="o">,</span> <span class="nv">3</span><span class="o">,</span> <span class="nv">7</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">11</span><span class="o">,</span> <span class="nv">1</span><span class="o">,</span> <span class="nv">13</span><span class="o">,</span> <span class="nv">1</span> <span class="p">]</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">PrimePowersInt</span><span class="p">(</span> <span class="nv">1</span> <span class="p">)</span><span class="o">;</span>
+<span class="p">[</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="divisorsint">
+<span id="id28"></span><h3><span class="section-number">3.4.12. </span>DivisorsInt<a class="headerlink" href="#divisorsint" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DivisorsInt(n)</span></code> (función)</p></li>
+</ul>
+<p><a class="reference internal" href="#divisorsint">DivisorsInt</a> devuelve una lista de todos los divisores del entero <span class="math notranslate nohighlight">\(n\)</span>. La lista está ordenada, de modo que comienza con <span class="math notranslate nohighlight">\(1\)</span> y termina con <span class="math notranslate nohighlight">\(n\)</span>. Definimos que <code class="docutils literal notranslate"><span class="pre">DivisorsInt(-n)</span> <span class="pre">=</span> <span class="pre">DivisorsInt(n)</span></code>.</p>
+<p>Dado que el conjunto de divisores de <span class="math notranslate nohighlight">\(0\)</span> es infinito, la llamada <code class="docutils literal notranslate"><span class="pre">DivisorsInt(0)</span></code> provoca un error.</p>
+<p><a class="reference internal" href="#divisorsint">DivisorsInt</a> puede llamar a <a class="reference internal" href="#factorsint">FactorsInt</a> para obtener los factores primos. <code class="docutils literal notranslate"><span class="pre">Sigma</span></code> y <code class="docutils literal notranslate"><span class="pre">Tau</span></code> calculan la suma y el número de divisores positivos, respectivamente.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">DivisorsInt</span><span class="p">(</span> <span class="nv">1</span> <span class="p">)</span><span class="o">;</span>
+<span class="p">[</span> <span class="nv">1</span> <span class="p">]</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">DivisorsInt</span><span class="p">(</span> <span class="nv">20</span> <span class="p">)</span><span class="o">;</span>
+<span class="p">[</span> <span class="nv">1</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">4</span><span class="o">,</span> <span class="nv">5</span><span class="o">,</span> <span class="nv">10</span><span class="o">,</span> <span class="nv">20</span> <span class="p">]</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">DivisorsInt</span><span class="p">(</span> <span class="nv">541</span> <span class="p">)</span><span class="o">;</span>
+<span class="p">[</span> <span class="nv">1</span><span class="o">,</span> <span class="nv">541</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="anillos-de-clases-residuales">
+<span id="clases-residuales"></span><h3><span class="section-number">3.4.13. </span>Anillos de clases residuales<a class="headerlink" href="#anillos-de-clases-residuales" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><a class="reference internal" href="#zmodnz">ZmodnZ</a> devuelve un anillo de clase de residuo de <code class="docutils literal notranslate"><span class="pre">Integers</span></code> módulo un ideal. Estos anillos de clase de residuo son anillos, por lo que se aplican todas las operaciones para anillos.</p>
+</div>
+<div class="section" id="mod-for-residue-class-rings">
+<h3><span class="section-number">3.4.14. </span>mod (for residue class rings)<a class="headerlink" href="#mod-for-residue-class-rings" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">\mod(r/s,</span> <span class="pre">n)</span></code> (operación)</p></li>
+</ul>
+<p>Si <code class="docutils literal notranslate"><span class="pre">r</span></code>, <code class="docutils literal notranslate"><span class="pre">s</span></code> y <code class="docutils literal notranslate"><span class="pre">n</span></code> son números enteros, <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">/</span> <span class="pre">s</span></code> como fracción reducida es <code class="docutils literal notranslate"><span class="pre">p</span> <span class="pre">/</span> <span class="pre">q</span></code>, donde qyn son coprimos, entonces <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">/</span> <span class="pre">s</span> <span class="pre">mod</span> <span class="pre">n</span></code> se define como el producto de <code class="docutils literal notranslate"><span class="pre">p</span></code> y la inversa de <code class="docutils literal notranslate"><span class="pre">q</span></code> módulo <code class="docutils literal notranslate"><span class="pre">n</span></code>.</p>
+<p>Con la definición anterior, <code class="docutils literal notranslate"><span class="pre">4/6</span> <span class="pre">mod</span> <span class="pre">32</span></code> es igual a <code class="docutils literal notranslate"><span class="pre">2/3</span> <span class="pre">mod</span> <span class="pre">32</span></code> y, por lo tanto, existe (y es igual a <code class="docutils literal notranslate"><span class="pre">22</span></code>), a pesar de que <code class="docutils literal notranslate"><span class="pre">6</span></code> no tiene inverso módulo <code class="docutils literal notranslate"><span class="pre">32</span></code></p>
+</div>
+<div class="section" id="zmodnz">
+<span id="id29"></span><h3><span class="section-number">3.4.15. </span>ZmodnZ<a class="headerlink" href="#zmodnz" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ZmodnZ(n)</span></code> (función)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ZmodpZ(p)</span></code> (función)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ZmodpZNC(p)</span></code> (función)</p></li>
+</ul>
+<p><a class="reference internal" href="#zmodnz">ZmodnZ</a> devuelve un anillo <span class="math notranslate nohighlight">\(R\)</span> isomorfo al anillo de clase de residuo de los enteros módulo el ideal generado por <span class="math notranslate nohighlight">\(n\)</span>. El elemento correspondiente a la clase de residuo del entero <span class="math notranslate nohighlight">\(i\)</span> en este anillo se puede obtener mediante <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">*</span> <span class="pre">One(R)</span></code>, y un representante de la clase de residuo correspondiente al elemento <span class="math notranslate nohighlight">\(x \in R\)</span> se puede calcular mediante <code class="docutils literal notranslate"><span class="pre">Int(x)</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ZmodnZ(n)</span></code> es igual a <code class="docutils literal notranslate"><span class="pre">Integers</span> <span class="pre">mod</span> <span class="pre">n</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ZmodpZ</span></code> hace lo mismo si el argumento <span class="math notranslate nohighlight">\(p\)</span> es un número entero primo, además, el resultado es un campo.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ZmodpZNC</span></code> omite la comprobación de si <span class="math notranslate nohighlight">\(p\)</span> es primo.</p></li>
+</ul>
+<p>Cada anillo devuelto por estas funciones contiene la familia completa de sus elementos si <span class="math notranslate nohighlight">\(n\)</span> no es un primo, y está incrustado en la familia de elementos de campo finito de la característica <span class="math notranslate nohighlight">\(n\)</span> si <span class="math notranslate nohighlight">\(n\)</span> es un primo.</p>
+</div>
+<div class="section" id="zmodnzobj-para-una-familia-de-clase-de-residuo-y-un-entero">
+<span id="zmodnzobj"></span><h3><span class="section-number">3.4.16. </span>ZmodnZObj (para una familia de clase de residuo y un entero)<a class="headerlink" href="#zmodnzobj-para-una-familia-de-clase-de-residuo-y-un-entero" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ZmodnZObj(Fam,</span> <span class="pre">r)</span></code> (operación)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ZmodnZObj(r,</span> <span class="pre">n)</span></code> (operación)</p></li>
+</ul>
+<p>Si el primer argumento es una familia de clases residuales <code class="docutils literal notranslate"><span class="pre">Fam</span></code>, entonces <a class="reference internal" href="#zmodnzobj">ZmodnZObj</a> devuelve el elemento en <code class="docutils literal notranslate"><span class="pre">Fam</span></code> cuya clase lateral está representada por el entero <code class="docutils literal notranslate"><span class="pre">r</span></code>.</p>
+<p>Si los dos argumentos son un entero <code class="docutils literal notranslate"><span class="pre">r</span></code> y un entero positivo <code class="docutils literal notranslate"><span class="pre">n</span></code>, <a class="reference internal" href="#zmodnzobj">ZmodnZObj</a> devuelve el elemento en <code class="docutils literal notranslate"><span class="pre">ZmodnZ(n)</span></code> (consulte <a class="reference internal" href="#zmodnz">ZmodnZ</a> ) cuya clase lateral está representada por el entero <code class="docutils literal notranslate"><span class="pre">r</span></code>.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">r</span><span class="o">:=</span> <span class="nv">ZmodnZ</span><span class="p">(</span><span class="nv">15</span><span class="p">)</span><span class="o">;</span>
+<span class="p">(</span><span class="nv">Integers</span> <span class="ow">mod</span> <span class="nv">15</span><span class="p">)</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">fam</span><span class="o">:=</span><span class="nv">ElementsFamily</span><span class="p">(</span><span class="nv">FamilyObj</span><span class="p">(</span><span class="nv">r</span><span class="p">))</span><span class="o">;;</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">a</span><span class="o">:=</span> <span class="nv">ZmodnZObj</span><span class="p">(</span><span class="nv">fam</span><span class="o">,</span><span class="nv">9</span><span class="p">)</span><span class="o">;</span>
+<span class="nv">ZmodnZObj</span><span class="p">(</span> <span class="nv">9</span><span class="o">,</span> <span class="nv">15</span> <span class="p">)</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">a</span><span class="o">+</span><span class="nv">a</span><span class="o">;</span>
+<span class="nv">ZmodnZObj</span><span class="p">(</span> <span class="nv">3</span><span class="o">,</span> <span class="nv">15</span> <span class="p">)</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">Int</span><span class="p">(</span><span class="nv">a</span><span class="o">+</span><span class="nv">a</span><span class="p">)</span><span class="o">;</span>
+<span class="nv">3</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="iszmodnzobj">
+<span id="id30"></span><h3><span class="section-number">3.4.17. </span>IsZmodnZObj<a class="headerlink" href="#iszmodnzobj" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">IsZmodnZObj(obj)</span></code> (Categoría)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IsZmodnZObjNonprime(obj)</span></code> (Categoría)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IsZmodpZObj(obj)</span></code> (Categoría)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IsZmodpZObjSmall(obj)</span></code> (Categoría)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IsZmodpZObjLarge(obj)</span></code> (Categoría)</p></li>
+</ul>
+<p>Los elementos de los anillos <span class="math notranslate nohighlight">\(\mathbb{Z} / n\mathbb{Z}\)</span> están en la categoría <a class="reference internal" href="#iszmodnzobj">IsZmodnZObj</a>. Sin es primo, los elementos también están, por supuesto, en la categoría <code class="docutils literal notranslate"><span class="pre">IsFFE</span></code>; de lo contrario, están en <code class="docutils literal notranslate"><span class="pre">IsZmodnZObjNonprime</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">IsZmodpZObj</span> <span class="pre">``es</span> <span class="pre">una</span> <span class="pre">abreviatura</span> <span class="pre">de</span> <span class="pre">IsZmodnZObj_</span> <span class="pre">e</span> <span class="pre">``IsFFE</span></code>. Esta categoría es la unión disjunta de <code class="docutils literal notranslate"><span class="pre">IsZmodpZObjSmall</span></code> e <code class="docutils literal notranslate"><span class="pre">IsZmodpZObjLarge</span></code>, el primero que contiene todos los elementos con <span class="math notranslate nohighlight">\(n\)</span> como máximo <code class="docutils literal notranslate"><span class="pre">MAXSIZE_GF_INTERNAL</span></code>.</p>
+<p>Las razones para distinguir el caso principal del caso no prioritario son</p>
+<ul class="simple">
+<li><p>que los objetos en <code class="docutils literal notranslate"><span class="pre">IsZmodnZObjNonprime</span></code> tienen una representación externa (es decir, el residuo en el rango <span class="math notranslate nohighlight">\([0, 1, \dots, n - 1]\)</span>),</p></li>
+<li><p>que la comparación de elementos puede definirse como una comparación de los residuos, y</p></li>
+<li><p>que los elementos pertenecen a una familia de tipo <code class="docutils literal notranslate"><span class="pre">IsZmodnZObjNonprimeFamily</span></code> (tenga en cuenta que para el primer <span class="math notranslate nohighlight">\(n\)</span>, la familia debe ser una <code class="docutils literal notranslate"><span class="pre">IsFFEFamily</span></code>).</p></li>
+</ul>
+<p>Las razones para distinguir el caso pequeño y grande son que para <span class="math notranslate nohighlight">\(n\)</span> pequeño los elementos deben ser compatibles con la representación interna de elementos de campo finito, mientras que somos libres de definir la comparación como comparación de residuos para <span class="math notranslate nohighlight">\(n\)</span> grande.</p>
+<p>Tenga en cuenta que no podemos afirmar que cada elemento de campo finito de grado <span class="math notranslate nohighlight">\(1\)</span> está en <a class="reference internal" href="#iszmodnzobj">IsZmodnZObj</a>, ya que los elementos de campo finito en representación interna pueden no saber que se encuentran en el campo principal.</p>
+</div>
+</div>
+<div class="section" id="chequear-digitos">
+<h2><span class="section-number">3.5. </span>Chequear Digitos<a class="headerlink" href="#chequear-digitos" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="checkdigitisbn">
+<span id="id31"></span><h3><span class="section-number">3.5.1. </span>CheckDigitISBN<a class="headerlink" href="#checkdigitisbn" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CheckDigitISBN(n)</span></code> (función)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CheckDigitISBN13(n)</span></code> (función)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CheckDigitPostalMoneyOrder(n)</span></code> (función)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CheckDigitUPC(n)</span></code> (función)</p></li>
+</ul>
+<p>Estas funciones se pueden utilizar para calcular, o verificar, verificar dígitos para algunos elementos cotidianos. En cada caso, lo que se envía como entrada es el número con el dígito de control (en cuyo caso la función devuelve verdadero o falso) o el número sin el dígito de control (en cuyo caso la función devuelve el dígito de control que falta). El número se puede especificar como un entero, como una cadena (por ejemplo, en el caso de ceros a la izquierda) o como una secuencia de argumentos, cada uno de los cuales representa un solo dígito. Los dígitos de control probados son el <code class="docutils literal notranslate"><span class="pre">ISBN</span></code> (International Standard Book Number) de <span class="math notranslate nohighlight">\(10\)</span> dígitos que utiliza <code class="docutils literal notranslate"><span class="pre">CheckDigitISBN</span></code> (dado que la aritmética es el módulo <span class="math notranslate nohighlight">\(11\)</span>, un dígito <span class="math notranslate nohighlight">\(11\)</span> se representa con una <strong>X</strong>);</p>
+<ul class="simple">
+<li><p>El <strong>ISBN-13</strong> de <span class="math notranslate nohighlight">\(13\)</span> dígitos más nuevo con <code class="docutils literal notranslate"><span class="pre">CheckDigitISBN13</span></code>; los números de giros postales estadounidenses de <span class="math notranslate nohighlight">\(11\)</span> dígitos que utilizan <code class="docutils literal notranslate"><span class="pre">CheckDigitPostalMoneyOrder</span></code>; y el código de barras UPC de <span class="math notranslate nohighlight">\(12\)</span> dígitos que se encuentra en los comestibles mediante <code class="docutils literal notranslate"><span class="pre">CheckDigitUPC</span></code>.</p></li>
+</ul>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">CheckDigitISBN</span><span class="p">(</span><span class="s">&quot;052166103&quot;</span><span class="p">)</span><span class="o">;</span>
+<span class="nv">Check</span> <span class="nv">Digit</span> <span class="nv">is</span> &#39;<span class="nv">X</span>&#39;
+&#39;<span class="nv">X</span>&#39;
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">CheckDigitISBN</span><span class="p">(</span><span class="s">&quot;052166103X&quot;</span><span class="p">)</span><span class="o">;</span>
+<span class="nv">Checksum</span> <span class="nv">test</span> <span class="nv">satisfied</span>
+<span class="no">true</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">CheckDigitISBN</span><span class="p">(</span><span class="nv">0</span><span class="o">,</span><span class="nv">5</span><span class="o">,</span><span class="nv">2</span><span class="o">,</span><span class="nv">1</span><span class="o">,</span><span class="nv">6</span><span class="o">,</span><span class="nv">6</span><span class="o">,</span><span class="nv">1</span><span class="o">,</span><span class="nv">0</span><span class="o">,</span><span class="nv">3</span><span class="o">,</span><span class="nv">1</span><span class="p">)</span><span class="o">;</span>
+<span class="nv">Checksum</span> <span class="nv">test</span> <span class="nv">failed</span>
+<span class="no">false</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">CheckDigitISBN</span><span class="p">(</span><span class="nv">0</span><span class="o">,</span><span class="nv">5</span><span class="o">,</span><span class="nv">2</span><span class="o">,</span><span class="nv">1</span><span class="o">,</span><span class="nv">6</span><span class="o">,</span><span class="nv">6</span><span class="o">,</span><span class="nv">1</span><span class="o">,</span><span class="nv">0</span><span class="o">,</span><span class="nv">3</span><span class="o">,</span>&#39;<span class="nv">X</span>&#39;<span class="p">)</span><span class="o">;</span> <span class="c1"># note single quotes!</span>
+<span class="nv">Checksum</span> <span class="nv">test</span> <span class="nv">satisfied</span>
+<span class="no">true</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">CheckDigitISBN13</span><span class="p">(</span><span class="s">&quot;9781420094527&quot;</span><span class="p">)</span><span class="o">;</span>
+<span class="nv">Checksum</span> <span class="nv">test</span> <span class="nv">satisfied</span>
+<span class="no">true</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">CheckDigitUPC</span><span class="p">(</span><span class="s">&quot;07164183001&quot;</span><span class="p">)</span><span class="o">;</span>
+<span class="nv">Check</span> <span class="nv">Digit</span> <span class="nv">is</span> <span class="nv">1</span>
+<span class="nv">1</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">CheckDigitPostalMoneyOrder</span><span class="p">(</span><span class="nv">16786457155</span><span class="p">)</span><span class="o">;</span>
+<span class="nv">Checksum</span> <span class="nv">test</span> <span class="nv">satisfied</span>
+<span class="no">true</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="checkdigittestfunction">
+<span id="id32"></span><h3><span class="section-number">3.5.2. </span>CheckDigitTestFunction<a class="headerlink" href="#checkdigittestfunction" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CheckDigitTestFunction(l,</span> <span class="pre">m,</span> <span class="pre">f)</span></code> (función)</p></li>
+</ul>
+<p>Esta función crea funciones de prueba de dígitos de control como <a class="reference internal" href="#checkdigitisbn">CheckDigitISBN</a> para esquemas de dígitos de control que utilizan los productos internos con un vector fijo módulo un número. El esquema que crea utilizará cadenas de <code class="docutils literal notranslate"><span class="pre">l</span></code> dígitos (incluidos los dígitos de control), el control consiste en tomar el producto estándar del vector de dígitos con el vector fijo <code class="docutils literal notranslate"><span class="pre">f</span></code> módulo <code class="docutils literal notranslate"><span class="pre">m</span></code>; el resultado debe ser <span class="math notranslate nohighlight">\(0\)</span>. La función devuelve una función que luego puede usarse para probar o determinar dígitos de control.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">isbntest</span><span class="o">:=</span><span class="nv">CheckDigitTestFunction</span><span class="p">(</span><span class="nv">10</span><span class="o">,</span><span class="nv">11</span><span class="o">,</span><span class="p">[</span><span class="nv">1</span><span class="o">,</span><span class="nv">2</span><span class="o">,</span><span class="nv">3</span><span class="o">,</span><span class="nv">4</span><span class="o">,</span><span class="nv">5</span><span class="o">,</span><span class="nv">6</span><span class="o">,</span><span class="nv">7</span><span class="o">,</span><span class="nv">8</span><span class="o">,</span><span class="nv">9</span><span class="o">,-</span><span class="nv">1</span><span class="p">])</span><span class="o">;</span>
+<span class="k">function</span><span class="p">(</span> <span class="nv">arg</span><span class="o">...</span> <span class="p">)</span> <span class="o">...</span> <span class="k">end</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">isbntest</span><span class="p">(</span><span class="s">&quot;038794680&quot;</span><span class="p">)</span><span class="o">;</span>
+<span class="nv">Check</span> <span class="nv">Digit</span> <span class="nv">is</span> <span class="nv">2</span>
+<span class="nv">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="random-sources">
+<h2><span class="section-number">3.6. </span>Random Sources<a class="headerlink" href="#random-sources" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>GAP proporciona métodos <code class="docutils literal notranslate"><span class="pre">Random</span></code> para muchas colecciones de objetos. En un nivel inferior, estos métodos utilizan fuentes aleatorias que proporcionan números enteros aleatorios y opciones aleatorias de listas.</p>
+<div class="section" id="israndomsource">
+<span id="id33"></span><h3><span class="section-number">3.6.1. </span>IsRandomSource<a class="headerlink" href="#israndomsource" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">IsRandomSource(obj)</span></code> (Categoría)</p></li>
+</ul>
+<p>Esta es la categoría de objetos de origen aleatorio que se definen para tener, para un objeto <code class="docutils literal notranslate"><span class="pre">rs</span></code> en esta categoría, métodos disponibles para las siguientes operaciones que se explican con más detalle a continuación:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Random(rs,</span> <span class="pre">list)</span></code> dando un elemento aleatorio de una lista, <code class="docutils literal notranslate"><span class="pre">Random(rs,</span> <span class="pre">low,</span> <span class="pre">high)</span></code> dando un número entero aleatorio entre <code class="docutils literal notranslate"><span class="pre">low</span> <span class="pre">``y</span> <span class="pre">``high</span></code> (inclusive), <code class="docutils literal notranslate"><span class="pre">Init</span></code>, <a class="reference internal" href="#state">State</a> y <code class="docutils literal notranslate"><span class="pre">Reset</span></code>.</p>
+<p>Utilice <a class="reference internal" href="#randomsource">RandomSource</a> para construir nuevas fuentes aleatorias.</p>
+<p>Una idea detrás de proporcionar varias fuentes independientes (pseudo) aleatorias es hacer algoritmos que utilicen algún tipo de elección aleatoria determinista. Pueden usar su propia fuente aleatoria nueva creada con una semilla fija y hacer exactamente lo mismo en diferentes llamadas.</p>
+<p>Los objetos de origen aleatorio pertenecen a la familia <code class="docutils literal notranslate"><span class="pre">RandomSourcesFamily</span></code>.</p>
+</div>
+<div class="section" id="random-para-fuente-aleatoria-y-lista">
+<span id="random-fuente-aleatoria-y-lista"></span><h3><span class="section-number">3.6.2. </span>Random (para fuente aleatoria y lista)<a class="headerlink" href="#random-para-fuente-aleatoria-y-lista" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Random(rs,</span> <span class="pre">list)</span></code> (operation)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Random(rs,</span> <span class="pre">low,</span> <span class="pre">high)</span></code> (operation)</p></li>
+</ul>
+<p>Esta operación devuelve un elemento aleatorio de la lista de la lista, o un número entero en el rango de los números enteros dados (posiblemente grandes) de menor a mayor (<code class="docutils literal notranslate"><span class="pre">low</span></code> to <code class="docutils literal notranslate"><span class="pre">high</span></code>), respectivamente.</p>
+<p>La elección solo debería depender de las fuentes aleatorias  <code class="docutils literal notranslate"><span class="pre">rs</span></code> y no afectará a otras fuentes aleatorias.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">mysource</span> <span class="o">:=</span> <span class="nv">RandomSource</span><span class="p">(</span><span class="nv">IsMersenneTwister</span><span class="o">,</span> <span class="nv">42</span><span class="p">)</span><span class="o">;;</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">Random</span><span class="p">(</span><span class="nv">mysource</span><span class="o">,</span> <span class="nv">1</span><span class="o">,</span> <span class="nv">10</span><span class="o">^</span><span class="nv">60</span><span class="p">)</span><span class="o">;</span>
+<span class="nv">999331861769949319194941485000557997842686717712198687315183</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="state">
+<span id="id34"></span><h3><span class="section-number">3.6.3. </span>State<a class="headerlink" href="#state" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">State(rs)</span></code> (operación)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Reset(rs[,</span> <span class="pre">seed])</span></code> (operación)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Init(prers[,</span> <span class="pre">seed])</span></code> (operación)</p></li>
+</ul>
+<p>Estas son las operaciones básicas para las que las fuentes aleatorias (consulte <a class="reference internal" href="#israndomsource">IsRandomSource</a>) deben tener métodos.</p>
+<p><a class="reference internal" href="#state">State</a> debe devolver una estructura de datos que permita recuperar el estado de la fuente aleatoria de modo que se pueda reproducir una secuencia de llamadas aleatorias utilizando esta fuente aleatoria. Si una fuente aleatoria no se puede restablecer (digamos, utiliza datos físicos verdaderamente aleatorios), el estado debería devolver el <code class="docutils literal notranslate"><span class="pre">fail</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Reset(rs,</span> <span class="pre">seed)</span></code> restablece la fuente aleatoria <code class="docutils literal notranslate"><span class="pre">rs</span></code> a un estado descrito por <code class="docutils literal notranslate"><span class="pre">seed</span></code>, si la fuente aleatoria se puede restablecer (de lo contrario, no debería hacer nada). Aquí, la semilla puede ser una salida de <a class="reference internal" href="#state">State</a> y luego debería restablecerse a ese estado. Además, los métodos siempre deben permitir números enteros como semilla. Sin el argumento semilla, se usa la forma predeterminada <code class="docutils literal notranslate"><span class="pre">seed</span> <span class="pre">=</span> <span class="pre">1</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Init</span></code> es el constructor de una fuente aleatoria, obtiene un objeto componente vacío prers que ya tiene el tipo correcto y debe completar los datos reales que se necesitan. Opcionalmente, debería permitir que uno especifique una semilla para el estado inicial, como se explica para Restablecer.</p>
+<p>La mayoría de los métodos para <code class="docutils literal notranslate"><span class="pre">Random</span></code> en la biblioteca GAP utilizan <code class="docutils literal notranslate"><span class="pre">GlobalMersenneTwister</span></code> como fuente aleatoria. Se puede restablecer a un estado conocido como en el siguiente ejemplo.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">seed</span> <span class="o">:=</span> <span class="nv">Reset</span><span class="p">(</span><span class="nv">GlobalMersenneTwister</span><span class="p">)</span><span class="o">;;</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">seed</span> <span class="o">=</span> <span class="nv">State</span><span class="p">(</span><span class="nv">GlobalMersenneTwister</span><span class="p">)</span><span class="o">;</span>
+<span class="no">true</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">List</span><span class="p">([</span><span class="nv">1</span><span class="o">..</span><span class="nv">10</span><span class="p">]</span><span class="o">,</span><span class="nv">i</span><span class="o">-&gt;</span><span class="nv">Random</span><span class="p">(</span><span class="nv">Integers</span><span class="p">))</span><span class="o">;</span>
+<span class="p">[</span> <span class="o">-</span><span class="nv">3</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="o">-</span><span class="nv">1</span><span class="o">,</span> <span class="o">-</span><span class="nv">2</span><span class="o">,</span> <span class="o">-</span><span class="nv">1</span><span class="o">,</span> <span class="o">-</span><span class="nv">1</span><span class="o">,</span> <span class="nv">1</span><span class="o">,</span> <span class="o">-</span><span class="nv">4</span><span class="o">,</span> <span class="nv">1</span><span class="o">,</span> <span class="nv">0</span> <span class="p">]</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">List</span><span class="p">([</span><span class="nv">1</span><span class="o">..</span><span class="nv">10</span><span class="p">]</span><span class="o">,</span><span class="nv">i</span><span class="o">-&gt;</span><span class="nv">Random</span><span class="p">(</span><span class="nv">Integers</span><span class="p">))</span><span class="o">;</span>
+<span class="p">[</span> <span class="o">-</span><span class="nv">1</span><span class="o">,</span> <span class="o">-</span><span class="nv">1</span><span class="o">,</span> <span class="o">-</span><span class="nv">1</span><span class="o">,</span> <span class="nv">1</span><span class="o">,</span> <span class="o">-</span><span class="nv">1</span><span class="o">,</span> <span class="nv">1</span><span class="o">,</span> <span class="o">-</span><span class="nv">2</span><span class="o">,</span> <span class="o">-</span><span class="nv">1</span><span class="o">,</span> <span class="o">-</span><span class="nv">2</span><span class="o">,</span> <span class="nv">0</span> <span class="p">]</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">Reset</span><span class="p">(</span><span class="nv">GlobalMersenneTwister</span><span class="o">,</span> <span class="nv">seed</span><span class="p">)</span><span class="o">;;</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">List</span><span class="p">([</span><span class="nv">1</span><span class="o">..</span><span class="nv">10</span><span class="p">]</span><span class="o">,</span><span class="nv">i</span><span class="o">-&gt;</span><span class="nv">Random</span><span class="p">(</span><span class="nv">Integers</span><span class="p">))</span><span class="o">;</span>
+<span class="p">[</span> <span class="o">-</span><span class="nv">3</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="o">-</span><span class="nv">1</span><span class="o">,</span> <span class="o">-</span><span class="nv">2</span><span class="o">,</span> <span class="o">-</span><span class="nv">1</span><span class="o">,</span> <span class="o">-</span><span class="nv">1</span><span class="o">,</span> <span class="nv">1</span><span class="o">,</span> <span class="o">-</span><span class="nv">4</span><span class="o">,</span> <span class="nv">1</span><span class="o">,</span> <span class="nv">0</span> <span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ismersennetwister">
+<span id="id35"></span><h3><span class="section-number">3.6.4. </span>IsMersenneTwister<a class="headerlink" href="#ismersennetwister" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">IsMersenneTwister(rs)</span></code> (Categoría)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IsGAPRandomSource(rs)</span></code> (Categoría)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">IsGlobalRandomSource(rs)</span></code> (Categoría)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GlobalMersenneTwister</span></code> (variable global)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GlobalRandomSource</span></code> (variable global)</p></li>
+</ul>
+<p>Actualmente, la biblioteca GAP proporciona tres tipos de fuentes aleatorias, que se distinguen por las tres categorías enumeradas.</p>
+<p><code class="docutils literal notranslate"><span class="pre">IsMersenneTwister</span></code> son fuentes aleatorias que utilizan un generador aleatorio rápido de números de <span class="math notranslate nohighlight">\(32\)</span> bits, llamado Twister de Mersenne. La secuencia pseudoaleatoria tiene un período de <span class="math notranslate nohighlight">\(2^{19937}-1\)</span> y los números tienen una equidistribución de <span class="math notranslate nohighlight">\(623\)</span> dimensiones. Para obtener más detalles y el origen del código utilizado en el <a class="reference external" href="http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html.">kernel</a> de GAP.</p>
+<p>Utilice el tornado de Mersenne si es posible, en particular para generar muchos números enteros aleatorios grandes.</p>
+<p>También hay una fuente aleatoria global predefinida <code class="docutils literal notranslate"><span class="pre">GlobalMersenneTwister</span></code> que es utilizada por la mayoría de los métodos de biblioteca para <code class="docutils literal notranslate"><span class="pre">Random</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">IsGAPRandomSource</span></code> utiliza el mismo generador de números que <code class="docutils literal notranslate"><span class="pre">IsGlobalRandomSource</span></code>, pero puede crear varias de estas fuentes aleatorias que generan sus números aleatorios independientemente de todas las demás fuentes aleatorias.</p>
+<p><code class="docutils literal notranslate"><span class="pre">IsGlobalRandomSource</span></code> da acceso al generador aleatorio global clásico que fue utilizado por GAP en versiones anteriores. No es necesario construir nuevas fuentes aleatorias de este tipo, que utilizarían todas la misma estructura de datos global. Simplemente use la fuente aleatoria existente <code class="docutils literal notranslate"><span class="pre">GlobalRandomSource</span></code>.</p>
+<p>Esto usa el generador aditivo de números aleatorios descrito en [Knu98] (algoritmo A en 3.2.2 con retraso 30).</p>
+</div>
+<div class="section" id="randomsource">
+<span id="id36"></span><h3><span class="section-number">3.6.5. </span>RandomSource<a class="headerlink" href="#randomsource" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">RandomSource(cat[,</span> <span class="pre">seed])</span></code> (operación)</p></li>
+</ul>
+<p>Esta operación se utiliza para crear nuevas fuentes aleatorias. El primer argumento cat es la categoría que describe el tipo de generador aleatorio, se puede dar una semilla opcional que puede ser un número entero o una estructura de datos específica de tipo para especificar el estado inicial.</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">rs1</span> <span class="o">:=</span> <span class="nv">RandomSource</span><span class="p">(</span><span class="nv">IsMersenneTwister</span><span class="p">)</span><span class="o">;</span>
+<span class="o">&lt;</span><span class="nv">RandomSource</span> <span class="ow">in</span> <span class="nv">IsMersenneTwister</span><span class="o">&gt;</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">state1</span> <span class="o">:=</span> <span class="nv">State</span><span class="p">(</span><span class="nv">rs1</span><span class="p">)</span><span class="o">;;</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">l1</span> <span class="o">:=</span> <span class="nv">List</span><span class="p">([</span><span class="nv">1</span><span class="o">..</span><span class="nv">10000</span><span class="p">]</span><span class="o">,</span> <span class="nv">i</span><span class="o">-&gt;</span> <span class="nv">Random</span><span class="p">(</span><span class="nv">rs1</span><span class="o">,</span> <span class="p">[</span><span class="nv">1</span><span class="o">..</span><span class="nv">6</span><span class="p">]))</span><span class="o">;;</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">rs2</span> <span class="o">:=</span> <span class="nv">RandomSource</span><span class="p">(</span><span class="nv">IsMersenneTwister</span><span class="p">)</span><span class="o">;;</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">l2</span> <span class="o">:=</span> <span class="nv">List</span><span class="p">([</span><span class="nv">1</span><span class="o">..</span><span class="nv">10000</span><span class="p">]</span><span class="o">,</span> <span class="nv">i</span><span class="o">-&gt;</span> <span class="nv">Random</span><span class="p">(</span><span class="nv">rs2</span><span class="o">,</span> <span class="p">[</span><span class="nv">1</span><span class="o">..</span><span class="nv">6</span><span class="p">]))</span><span class="o">;;</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">l1</span> <span class="o">=</span> <span class="nv">l2</span><span class="o">;</span>
+<span class="no">true</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">l1</span> <span class="o">=</span> <span class="nv">List</span><span class="p">([</span><span class="nv">1</span><span class="o">..</span><span class="nv">10000</span><span class="p">]</span><span class="o">,</span> <span class="nv">i</span><span class="o">-&gt;</span> <span class="nv">Random</span><span class="p">(</span><span class="nv">rs1</span><span class="o">,</span> <span class="p">[</span><span class="nv">1</span><span class="o">..</span><span class="nv">6</span><span class="p">]))</span><span class="o">;</span>
+<span class="no">false</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">n</span> <span class="o">:=</span> <span class="nv">Random</span><span class="p">(</span><span class="nv">rs1</span><span class="o">,</span> <span class="nv">1</span><span class="o">,</span> <span class="nv">2</span><span class="o">^</span><span class="nv">220</span><span class="p">)</span><span class="o">;</span>
+<span class="nv">1077726777923092117987668044202944212469136000816111066409337432400</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="bitfields">
+<h2><span class="section-number">3.7. </span>Bitfields<a class="headerlink" href="#bitfields" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Los campos de bits son una característica de bajo nivel destinada a admitir la subdivisión eficiente de enteros inmediatos en campos de bits de varios anchos. Esto suele ser útil para implementar estructuras de datos eficientes en cuanto al espacio y/o la memoria caché. Esta característica debe usarse con cuidado porque (entre otras cosas) tiene diferentes limitaciones en arquitecturas de <span class="math notranslate nohighlight">\(32\)</span> y <span class="math notranslate nohighlight">\(64\)</span> bits.</p>
+<div class="section" id="makebitfields">
+<span id="id37"></span><h3><span class="section-number">3.7.1. </span>MakeBitfields<a class="headerlink" href="#makebitfields" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">MakeBitfields(width....</span> <span class="pre">)</span></code> (function)</p></li>
+</ul>
+<p>Esta función configura la maquinaria para un conjunto de campos de bits de los anchos dados. Todos los valores de campo de bits se tratan como sin signo. El total de los anchos no debe exceder los <span class="math notranslate nohighlight">\(60\)</span> bits en la arquitectura de 64 bits o los <span class="math notranslate nohighlight">\(28\)</span> bits en una arquitectura de <span class="math notranslate nohighlight">\(32\)</span> bits. Por razones de rendimiento, se omiten algunas comprobaciones que uno podría desear hacer. En particular, las funciones de constructor y definidor no verifican si los valores que se les pasan son negativos o demasiado grandes (a menos que GAP esté especialmente compilado para depuración). El comportamiento cuando se pasan tales argumentos no está definido. Puede saber en qué tipo de arquitectura se está ejecutando accediendo a <code class="docutils literal notranslate"><span class="pre">GAPInfo.BytesPerVariable</span></code>, que es <span class="math notranslate nohighlight">\(8\)</span> en <span class="math notranslate nohighlight">\(64\)</span> bits y <span class="math notranslate nohighlight">\(4\)</span> en <span class="math notranslate nohighlight">\(32\)</span>. El valor de retorno cuando se dan n anchos es un registro cuyos campos son</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">widths</span></code></p>
+<blockquote>
+<div><p>una copia de los argumentos, por conveniencia,</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">getters</span></code></p>
+<blockquote>
+<div><p>una lista de <span class="math notranslate nohighlight">\(n\)</span> funciones de un argumento, cada una de las cuales extrae uno de los campos de un entero inmediato</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setters</span></code></p>
+<blockquote>
+<div><p>una lista de <span class="math notranslate nohighlight">\(n\)</span> funciones, cada una de las cuales toma dos argumentos: un valor empaquetado y un nuevo valor para uno de sus campos y devuelve un nuevo valor empaquetado. La función <span class="math notranslate nohighlight">\(i\)</span>-ésima devolvió el nuevo valor empaquetado en el que el campo <span class="math notranslate nohighlight">\(i\)</span>-ésimo se reemplazó por el nuevo valor. Tenga en cuenta que esto NO modifica el valor empaquetado original.</p>
+</div></blockquote>
+</li>
+</ul>
+<p>Pueden estar presentes dos campos adicionales si cualquiera de los anchos de campo es uno. Cada uno es una lista y solo tiene encuadernado en las posiciones correspondientes a los campos de ancho <span class="math notranslate nohighlight">\(1\)</span>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">booleanGetters</span></code></p>
+<blockquote>
+<div><p>si se establece la <span class="math notranslate nohighlight">\(i\)</span>-ésima posición de esta lista, contiene una función que extrae el <span class="math notranslate nohighlight">\(i\)</span>-ésimo campo (que tendrá un ancho de uno) y devuelve verdadero si contiene <span class="math notranslate nohighlight">\(1\)</span> y falso si contiene <span class="math notranslate nohighlight">\(0\)</span>.</p>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">booleanSetters</span></code></p>
+<blockquote>
+<div><p>si se establece la <span class="math notranslate nohighlight">\(i\)</span>-ésima posición de esta lista, contiene una función de dos argumentos. El primer argumento es un valor empaquetado, el segundo es verdadero o falso. Devuelve un nuevo valor empaquetado en el que el <span class="math notranslate nohighlight">\(i\)</span>-ésimo campo se establece en <span class="math notranslate nohighlight">\(1\)</span> si el segundo argumento era verdadero y <span class="math notranslate nohighlight">\(0\)</span> si era falso. El comportamiento de cualquier otro valor no está definido.</p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="buildbitfields">
+<span id="id38"></span><h3><span class="section-number">3.7.2. </span>BuildBitfields<a class="headerlink" href="#buildbitfields" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">BuildBitfields(widths,</span> <span class="pre">vals...</span> <span class="pre">)</span></code> (function)</p></li>
+</ul>
+<p>Esta función toma uno o más argumentos. Su primer argumento es una lista de anchos de campo, como se encuentra en la entrada de anchos de un registro devuelto por <a class="reference internal" href="#makebitfields">MakeBitfields</a>. Los argumentos restantes son valores enteros sin signo, iguales en número a las entradas de la lista de anchos de campo. Devuelve un pequeño entero en el que esas entradas se empaquetan en campos de bits de los anchos dados. La primera entrada ocupa los bits menos significativos. <code class="docutils literal notranslate"><span class="pre">DeclareGlobalFunction(&quot;BuildBitfields&quot;)</span></code>;</p>
+<div class="highlight-gap notranslate"><div class="highlight"><pre><span></span><span class="nv">bf</span> <span class="o">:=</span> <span class="nv">MakeBitfields</span><span class="p">(</span><span class="nv">1</span><span class="o">,</span><span class="nv">2</span><span class="o">,</span><span class="nv">3</span><span class="p">)</span><span class="o">;</span>
+<span class="k">rec</span><span class="p">(</span> <span class="nv">booleanGetters</span> <span class="o">:=</span> <span class="p">[</span> <span class="k">function</span><span class="p">(</span> <span class="nv">data</span> <span class="p">)</span> <span class="o">...</span> <span class="k">end</span> <span class="p">]</span><span class="o">,</span> <span class="nv">booleanSetters</span> <span class="o">:=</span> <span class="p">[</span> <span class="k">function</span><span class="p">(</span> <span class="nv">data</span><span class="o">,</span> <span class="nv">val</span> <span class="p">)</span> <span class="o">...</span> <span class="k">end</span> <span class="p">]</span><span class="o">,</span>
+  <span class="nv">getters</span> <span class="o">:=</span> <span class="p">[</span> <span class="k">function</span><span class="p">(</span> <span class="nv">data</span> <span class="p">)</span> <span class="o">...</span> <span class="k">end</span><span class="o">,</span> <span class="k">function</span><span class="p">(</span> <span class="nv">data</span> <span class="p">)</span> <span class="o">...</span> <span class="k">end</span><span class="o">,</span> <span class="k">function</span><span class="p">(</span> <span class="nv">data</span> <span class="p">)</span> <span class="o">...</span> <span class="k">end</span> <span class="p">]</span><span class="o">,</span>
+  <span class="nv">setters</span> <span class="o">:=</span> <span class="p">[</span> <span class="k">function</span><span class="p">(</span> <span class="nv">data</span><span class="o">,</span> <span class="nv">val</span> <span class="p">)</span> <span class="o">...</span> <span class="k">end</span><span class="o">,</span> <span class="k">function</span><span class="p">(</span> <span class="nv">data</span><span class="o">,</span> <span class="nv">val</span> <span class="p">)</span> <span class="o">...</span> <span class="k">end</span><span class="o">,</span> <span class="k">function</span><span class="p">(</span> <span class="nv">data</span><span class="o">,</span> <span class="nv">val</span> <span class="p">)</span> <span class="o">...</span> <span class="k">end</span> <span class="p">]</span><span class="o">,</span>
+  <span class="nv">widths</span> <span class="o">:=</span> <span class="p">[</span> <span class="nv">1</span><span class="o">,</span> <span class="nv">2</span><span class="o">,</span> <span class="nv">3</span> <span class="p">]</span> <span class="p">)</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">x</span> <span class="o">:=</span> <span class="nv">BuildBitfields</span><span class="p">(</span><span class="nv">bf</span><span class="o">.</span><span class="nv">widths</span><span class="o">,</span><span class="nv">0</span><span class="o">,</span><span class="nv">3</span><span class="o">,</span><span class="nv">5</span><span class="p">)</span><span class="o">;</span>
+<span class="nv">46</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">bf</span><span class="o">.</span><span class="nv">getters</span><span class="p">[</span><span class="nv">3</span><span class="p">](</span><span class="nv">x</span><span class="p">)</span><span class="o">;</span>
+<span class="nv">5</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">y</span> <span class="o">:=</span> <span class="nv">bf</span><span class="o">.</span><span class="nv">setters</span><span class="p">[</span><span class="nv">1</span><span class="p">](</span><span class="nv">x</span><span class="o">,</span><span class="nv">1</span><span class="p">)</span><span class="o">;</span>
+<span class="nv">47</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">x</span><span class="o">;</span>
+<span class="nv">46</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">bf</span><span class="o">.</span><span class="nv">booleanGetters</span><span class="p">[</span><span class="nv">1</span><span class="p">](</span><span class="nv">x</span><span class="p">)</span><span class="o">;</span>
+<span class="no">false</span>
+<span class="nv">gap</span><span class="o">&gt;</span> <span class="nv">bf</span><span class="o">.</span><span class="nv">booleanGetters</span><span class="p">[</span><span class="nv">1</span><span class="p">](</span><span class="nv">y</span><span class="p">)</span><span class="o">;</span>
+<span class="no">true</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
