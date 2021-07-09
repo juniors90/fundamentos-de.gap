@@ -648,7 +648,7 @@ TriangulizeMat
 
 - ``TriangulizeMat(mat)`` (operación)
 
-Aplica el algoritmo gaussiano al tapete de matriz mutable y cambia el tapete de modo que esté en forma normal triangular superior (a veces llamada "forma normal de Hermite" o "forma escalonada de fila reducida").
+Aplica el algoritmo gaussiano a la matriz mutable ``mat`` y cambia a ``mat`` modo que esté en forma normal triangular superior (a veces llamada "forma normal de Hermite" o "forma escalonada de fila reducida").
 
 .. code-block:: gap
     
@@ -685,9 +685,9 @@ NullspaceMatDestructive
 
 - ``TriangulizedNullspaceMatDestructive(mat)`` (operación)
 
-Esta función hace lo mismo que NullspaceMat_. Sin embargo, la última función hace una copia del tapete para evitar tener que cambiarlo. Esta función no hace eso; devuelve el espacio nulo y puede destruir mat; esto ahorra mucha memoria en caso de que el tapete sea grande. El tapete de matriz debe ser mutable.
+Esta función hace lo mismo que NullspaceMat_. Sin embargo, la última función hace una copia de ``mat`` para evitar tener que cambiarlo. Esta función no hace eso; devuelve el espacio nulo y puede destruir ``mat``; esto ahorra mucha memoria en caso de que ``mat`` sea grande. ``mat`` debe ser una matriz mutable.
 
-La variante TriangulizedNullspaceMatDestructive devuelve una base del espacio nulo en forma triangulizada. Puede destruir la estera de matriz.
+La variante ``TriangulizedNullspaceMatDestructive`` devuelve una base del espacio nulo en forma triangulizada. Puede destruir la estera de matriz.
 
 .. code-block:: gap
     
@@ -718,7 +718,7 @@ SolutionMatDestructive
 
 - ``SolutionMatDestructive(mat, vec)`` (operación)
 
-Hace lo mismo que ``SolutionMat(mat, vec)`` excepto que puede destruir la matriz ``mat`` y el vector ``vec``. El tapete de matriz debe ser mutable.
+Hace lo mismo que ``SolutionMat(mat, vec)`` excepto que puede destruir la matriz ``mat`` y el vector ``vec``. La matriz ``mat`` debe ser mutable.
 
 .. code-block:: gap
     
@@ -806,6 +806,10 @@ Eigenvectors
 Los vectores propios de la matriz ``A`` sobre el cuerpo ``F``.
 
 
+Elementary Divisors
+---------------------
+
+
 .. _ElementaryDivisorsMat:
 
 ElementaryDivisorsMat
@@ -874,17 +878,19 @@ La función ``ElementaryDivisorsTransformationsMatDestructive`` produce el mismo
           [ 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0 ],
           [ 0, 0, 0, 0, 0, 0, x-1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, x^7-x^6-2*x^4+2*x^3+x-1 ] ],
       rowtrans := [ [ 1, 0, 0, 0, 0, 0, 0, 0 ], [ 1, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 0, 0 ],
-          [ 1, 0, 0, 1, 0, 0, 0, 0 ], [ -x+2, -x, 0, 0, 1, 0, 0, 0 ], [ 2*x^2-4*x+2, 2*x^2-x, 0, 2, -2*x+1, 0, 0, 1 ],
+          [ 1, 0, 0, 1, 0, 0, 0, 0 ], [ -x+2, -x, 0, 0, 1, 0, 0, 0 ],
+          [ 2*x^2-4*x+2, 2*x^2-x, 0, 2, -2*x+1, 0, 0, 1 ],
           [ 3*x^3-6*x^2+3*x, 3*x^3-2*x^2, 2, 3*x, -3*x^2+2*x, 0, 1, 2*x ],
           [ 1/6*x^8-7/6*x^7+2*x^6-4/3*x^5+7/3*x^4-4*x^3+13/6*x^2-7/6*x+2,
               1/6*x^8-17/18*x^7+13/18*x^6-5/18*x^5+35/18*x^4-31/18*x^3+1/9*x^2-x+2,
               1/9*x^5-5/9*x^4+1/9*x^3-1/9*x^2+14/9*x-1/9, 1/6*x^6-5/6*x^5+1/6*x^4-1/6*x^3+11/6*x^2-1/6*x,
               -1/6*x^7+17/18*x^6-13/18*x^5+5/18*x^4-35/18*x^3+31/18*x^2-1/9*x+1, 1,
-              1/18*x^5-5/18*x^4+1/18*x^3-1/18*x^2+23/18*x-1/18, 1/9*x^6-5/9*x^5+1/9*x^4-1/9*x^3+14/9*x^2-1/9*x ] ] )
+              1/18*x^5-5/18*x^4+1/18*x^3-1/18*x^2+23/18*x-1/18,
+              1/9*x^6-5/9*x^5+1/9*x^4-1/9*x^3+14/9*x^2-1/9*x ] ] )
     gap> t.rowtrans*mat*t.coltrans;
-    [ [ 1, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 0, 0 ], [ 0, 0, 0, 1, 0, 0, 0, 0 ],
-      [ 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0 ], [ 0, 0, 0, 0, 0, 0, x-1, 0 ],
-      [ 0, 0, 0, 0, 0, 0, 0, x^7-x^6-2*x^4+2*x^3+x-1 ] ]
+    [ [ 1, 0, 0, 0, 0, 0, 0, 0 ], [ 0, 1, 0, 0, 0, 0, 0, 0 ], [ 0, 0, 1, 0, 0, 0, 0, 0 ], 
+      [ 0, 0, 0, 1, 0, 0, 0, 0 ], [ 0, 0, 0, 0, 1, 0, 0, 0 ], [ 0, 0, 0, 0, 0, 1, 0, 0 ],
+      [ 0, 0, 0, 0, 0, 0, x-1, 0 ], [ 0, 0, 0, 0, 0, 0, 0, x^7-x^6-2*x^4+2*x^3+x-1 ] ]
     gap>
 
 
@@ -905,3 +911,254 @@ trae la matriz mutable ``mat``, considerado como una matriz sobre anillo ``ring`
     [ [ 1, 0 ], [ 0, 3 ] ]
     gap>
 
+
+.. _Echelonized-Matrices:
+
+Matrices Escalonadas
+-----------------------
+
+.. _SemiEchelonMat:
+
+SemiEchelonMat
+~~~~~~~~~~~~~~~~~~
+
+- ``SemiEchelonMat(mat)`` (atributo)
+
+Una matriz sobre un cuerpo :math:`\mathbb{F}` está en forma de semi-escalón si el primer elemento distinto de cero en cada fila es la identidad de :math:`\mathbb{F}`, y todos los valores exactamente debajo de estos pivotes son el cero de :math:`\mathbb{F}`.
+
+SemiEchelonMat_ devuelve un registro que contiene información sobre una forma semiescalonada de matriz la ``math``.
+
+Los componentes de este registro son
+
+- ``vectors``
+
+    lista de vectores de fila, cada uno con el elemento pivote la identidad de :math:`\mathbb{F}`,
+
+- ``heads``
+
+    lista que contiene en la posición ``i``, si es distinto de cero, el número de la fila para la que el elemento pivote está en la columna ``i``.
+
+.. _SemiEchelonMatDestructive:
+
+SemiEchelonMatDestructive
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- ``SemiEchelonMatDestructive(mat)`` (operación)
+
+Esto hace lo mismo que ``SemiEchelonMat(mat)``, excepto que puede (y probablemente lo hará) destruir la matriz ``mat``.
+
+.. code-block:: gap
+    
+    gap> mm:=[[1,2,3],[4,5,6],[7,8,9]];;
+    gap> SemiEchelonMatDestructive( mm );
+    rec( heads := [ 1, 2, 0 ], vectors := [ [ 1, 2, 3 ], [ 0, 1, 2 ] ] )
+    gap> mm;
+    [ [ 1, 2, 3 ], [ 0, 1, 2 ], [ 0, 0, 0 ] ]
+
+
+.. _SemiEchelonMatTransformation:
+
+SemiEchelonMatTransformation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- ``SemiEchelonMatTransformation(mat)`` (atributo)
+
+hace lo mismo que SemiEchelonMat_ pero además almacena la transformación lineal :math:`T` realizada en la matriz. Los componentes adicionales del resultado son
+
+- ``coeffs``
+    
+    una lista de vectores de coeficientes de la componente de vectores, con respecto a las filas de mat, es decir, ``coeff * mat`` es la componente de vectores.
+
+- ``relations``
+    
+    una lista de vectores base para el espacio nulo (izquierda) de ``mat``.
+
+.. code-block:: gap
+    
+    gap> SemiEchelonMatTransformation([[1,2,3],[0,0,1]]);
+    rec( coeffs := [ [ 1, 0 ], [ 0, 1 ] ], heads := [ 1, 0, 2 ],
+    relations := [ ], vectors := [ [ 1, 2, 3 ], [ 0, 0, 1 ] ] )
+
+
+.. _SemiEchelonMats:
+
+SemiEchelonMats
+~~~~~~~~~~~~~~~~~
+
+- ``SemiEchelonMats(mats)`` (operation)
+
+Una lista de matrices sobre un cuerpo :math:`\mathbb{F}` está en forma de semiescalón si la lista de vectores de fila obtenida al concatenar las filas de cada matriz es una matriz semiescalonada (ver SemiEchelonMat_).
+
+SemiEchelonMats_ devuelve un registro que contiene información acerca de una forma semiescalonada de las tablas de lista de matrices.
+
+Los componentes de este registro son
+
+- ``vectors``
+
+    lista de matrices, cada una con el elemento pivote la identidad de ``F``,
+
+- ``heads``
+
+    matriz que contiene en la posición ``[i, j]``, si es diferente de cero, el número de la matriz que tiene el elemento pivote en esta posición
+
+
+.. _SemiEchelonMatsDestructive:
+
+SemiEchelonMatsDestructive
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- ``SemiEchelonMatsDestructive(mats)`` (operación)
+
+Hace lo mismo que SemiEchelonmats_, excepto que puede destruir su argumento. Por lo tanto, el argumento debe ser una lista de matrices re mutables.
+
+
+Matrices como base de un espacio de filas
+----------------------------------------------------------------------
+
+.. _BaseMat:
+
+BaseMat
+~~~~~~~~~~
+
+- ``BaseMat(mat)`` (atributo)
+
+devuelve una base para el espacio de fila generado por las filas de ``mat`` en forma de una matriz inmutable.
+
+.. _BaseMatDestructive:
+
+BaseMatDestructive
+~~~~~~~~~~~~~~~~~~~
+
+- ``BaseMatDestructive(mat)`` (operación)
+
+Hace lo mismo que BaseMat_, con la diferencia de que puede destruir de la matriz ``mat``. La matriz ``mat`` debe ser mutable.
+
+.. code-block:: gap
+    
+    gap> mat:=[[1,2,3],[4,5,6],[7,8,9]];;
+    gap> BaseMat(mat);
+    [ [ 1, 2, 3 ], [ 0, 1, 2 ] ]
+    gap> mm:= [[1,2,3],[4,5,6],[5,7,9]];;
+    gap> BaseMatDestructive( mm );
+    [ [ 1, 2, 3 ], [ 0, 1, 2 ] ]
+    gap> mm;
+    [ [ 1, 2, 3 ], [ 0, 1, 2 ], [ 0, 0, 0 ] ]
+
+
+.. _BaseOrthogonalSpaceMat:
+
+- ``BaseOrthogonalSpaceMat(mat)`` (atributo)
+
+Sea :math:`V` el espacio de fila generado por las filas de ``mat`` (sobre cualquier campo que contenga todas las entradas de ``mat``). ``BaseOrthogonalSpaceMat(mat)`` calcula una base del espacio ortogonal de :math:`V`.
+
+No es necesario que las filas de estera sean linealmente independientes.
+
+.. _SumIntersectionMat:
+
+SumIntersectionMat
+~~~~~~~~~~~~~~~~~~~
+
+- ``SumIntersectionMat(M1, M2)`` (operación)
+
+realiza el algoritmo de Zassenhaus para calcular las bases de la suma y la intersección de los espacios generados por las filas de las matrices ``M1``, ``M2``.
+
+Devuelve una lista de longitud :math:`2`, en la primera posición una base de la suma, en la segunda posición una base de la intersección. Ambas bases están en forma de semi-escalón (ver :ref:`Echelonized-Matrices`).
+
+.. code-block:: gap
+    
+    gap> SumIntersectionMat(mat,[[2,7,6],[5,9,4]]);
+    [ [ [ 1, 2, 3 ], [ 0, 1, 2 ], [ 0, 0, 1 ] ], [ [ 1, -3/4, -5/2 ] ] ]
+
+
+.. _BaseSteinitzVectors:
+
+BaseSteinitzVectors
+~~~~~~~~~~~~~~~~~~~~~
+
+- ``BaseSteinitzVectors(bas, mat)`` (función)
+
+encuentre vectores que extiendan ``mat`` hasta una base que abarque el intervalo de bas. Tanto bas como ``mat`` deben ser matrices de rango completo (fila). Devuelve un registro con los siguientes componentes:
+
+``subspace``
+
+    es una base del espacio atravesado por ``mat`` en forma triangular superior con los primeros en todos los escalones y ceros por encima de estos.
+
+``factorspace``
+
+    es una lista de vectores que se extienden en forma triangular superior.
+
+``factorzero``
+    
+    es un vector cero.
+
+``heads``
+    
+    es una lista de números enteros que se pueden utilizar para descomponer vectores en los vectores base. La ``i``-ésima entrada indica el vector que da un escalón en la posición ``i``. Un número negativo indica un escalón en el subespacio, un número positivo un escalón en el complemento, el valor absoluto da la posición del vector en las listas subespacio y factorespacio.
+
+.. code-block:: gap
+    
+    gap> BaseSteinitzVectors(IdentityMat(3,1),[[11,13,15]]);
+    rec( factorspace := [ [ 0, 1, 15/13 ], [ 0, 0, 1 ] ], factorzero := [ 0, 0, 0 ], heads := [ -1, 1, 2 ],
+      subspace := [ [ 1, 13/11, 15/11 ] ] )
+    gap>
+
+
+Matrices Triangulares
+----------------------
+
+.. _DiagonalOfMat:
+
+DiagonalOfMat
+~~~~~~~~~~~~~~
+
+- ``DiagonalOfMat(mat)`` (función)
+
+devuelve la diagonal de la matriz ``mat``. Si ``mat`` no es una matriz cuadrada, el resultado tiene la misma longitud que las filas de ``mat`` y se rellena con ceros si ``mat`` tiene menos filas que columnas.
+
+.. code-block:: gap
+    
+    gap> DiagonalOfMat([[1,2,3],[4,5,6]]);
+    [ 1, 5, 0 ]
+
+.. _UpperSubdiagonal:
+
+UpperSubdiagonal
+~~~~~~~~~~~~~~~~~
+
+- ``UpperSubdiagonal(mat, pos)`` (operación)
+
+devuelve una lista mutable que contiene las entradas de la ``pos``-ésima subdiagonal superior de ``mat``.
+
+.. code-block:: gap
+    
+    gap> mat:=[[1,2,3],[4,5,6],[7,8,9]];;
+    gap> mat;
+    [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ]
+    gap> Display(mat);
+    [ [  1,  2,  3 ],
+      [  4,  5,  6 ],
+      [  7,  8,  9 ] ]
+    gap> UpperSubdiagonal(mat,1);
+    [ 2, 6 ]
+    gap> UpperSubdiagonal(mat,2);
+    [ 3 ]
+    gap> UpperSubdiagonal(mat,3);
+    [  ]
+
+
+
+.. _DepthOfUpperTriangularMatrix:
+
+DepthOfUpperTriangularMatrix
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- ``DepthOfUpperTriangularMatrix(mat)`` (atributo)
+
+Si ``mat`` es una matriz triangular superior, este atributo devuelve el índice de la primera diagonal distinta de cero.
+
+.. code-block:: gap
+    
+    gap> DepthOfUpperTriangularMatrix([[0,1,2],[0,0,1],[0,0,0]]);
+    1
+    gap> DepthOfUpperTriangularMatrix([[0,0,2],[0,0,0],[0,0,0]]);
+    2
